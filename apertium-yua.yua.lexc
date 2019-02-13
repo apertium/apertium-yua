@@ -1,5 +1,7 @@
 Multichar_Symbols
 
+%<v%>    ! Verb
+
 %<n%>    ! Noun
 %<pl%>   ! Plural
 
@@ -7,17 +9,43 @@ Multichar_Symbols
 %<med%>  ! Medial 'that _'
 %<dst%>  ! Distal 'that _ over there'
 
-%<attr%> ! Attributive
-%<der_l%> ! Adjective derivation
+%<neg%>
 
-%{o%}    ! Either 'o' or nothing
-%{V%}    ! Copy stem vowel
+%<s_sg1%>
+%<s_sg2%>
+%<s_sg3%>
+%<s_pl1%>
+%<s_pl2%>
+%<s_pl3%>
 
-%>       ! Morpheme boundary
+%<o_sg1%>
+%<o_sg2%>
+%<o_sg3%>
+%<o_pl1%>
+%<o_pl2%>
+%<o_pl3%>
+
+
+%<tv%>            !
+%<iv%>            ! 
+
+%<attr%>          ! Attributive
+%<der_l%>         ! Adjective derivation
+
+%{o%}             ! Either 'o' or nothing
+%{V%}             ! Copy stem vowel
+
+%>                ! Morpheme boundary
 
 LEXICON Root
 
+Miscellaneous ;
 Nouns ;
+Verbs ;
+
+LEXICON Miscellaneous
+
+%<neg%>:ma # ;
 
 LEXICON Dem
 
@@ -62,6 +90,39 @@ LEXICON N-IXIM ! singularia tantum
 %<n%>:                Dem ; ! Unmarked
 %<n%>:                Deriv ; ! Derivations
 
+!
+LEXICON V-SET-IV-B
+
+%<s_sg1%>:%>en # ;
+%<s_sg2%>:%>ech # ;
+!%<s_sg3%>:%>i # ;
+%<s_sg3%>:%> # ;
+%<s_pl1%>:%>oon # ;
+%<s_pl2%>:%>eex # ;
+%<s_pl3%>:%>oob # ;
+
+LEXICON V-FORMS-TV
+
+%<aor%>:%>ic    # ;          ! general
+%<perf%>:%>ah   # ;          ! second
+%<impf%>:%>mah  # ;           ! third
+%<fut%>:%>      # ;         ! fourth ! -e with verb 'hay'
+
+LEXICON V-FORMS-IV 
+
+%<aor%>:%>%{V%}l  # ;
+%<perf%>:%>i V-SET-IV-B ;
+%<impf%>:%>aan V-SET-IV-B ;
+%<fut%>:%>%{V%}c V-SET-IV-B ; 
+
+LEXICON V-TV 
+
+%<v%>%<tv%>: V-FORMS-TV ;
+%<v%>%<pass%>:aal # ;
+
+LEXICON V-IV 
+
+%<v%>%<iv%>: V-FORMS-IV ;
 
 LEXICON Nouns
 
@@ -71,9 +132,9 @@ tzimn:tzimn N-PEK ; ! "caballo, horse"
 cħicħ:cħicħ N-PEK ; ! "pájaro"
 be:be N-PEK ; ! "camino"
 ku:ku N-PEK ; ! "nido" 
-nal:nal N-NAL ; ! "maís"
+nal:nal N-NAL ; ! "maíz"
 ixim:ixim N-IXIM ; ! ""
-pal:pal N-PAL ; ! "child"
+pal:pal N-PAL ; ! "niño, child"
 cay:cay N-PEK ; ! "" 
 ac:ac N-AC ; ! ""
 uah:uah N-PEK ; ! "tortilla"
@@ -85,3 +146,10 @@ xib:xib N-PEK ; ! "" ! TODO: Check pl
 boc:boc N-PEK ; ! "" ! TODO: Check pl
 cħup:cħup N-PEK ; ! "" ! TODO: Check pl
 
+LEXICON Verbs
+
+uk:ukul V-IV ; ! ""
+uk:uk V-TV ; ! ""
+
+han:han V-IV ; ! ""
+han:hant V-TV ; ! ""
