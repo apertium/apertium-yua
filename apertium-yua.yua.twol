@@ -1,0 +1,37 @@
+Alphabet
+
+m n b p t k %' z c h s x j h w l y r a e i o u 
+
+%{V%}:a %{V%}:i %{V%}:o %{V%}:u %{V%}:e
+%{o%}:0 %{o%}:o 
+
+%>:0 
+
+;
+
+Sets 
+
+Vow = a e i o u ; 
+
+Cns = m n b p t k %' z c h s x j h w l y r ;
+
+Rules
+
+"Alternation in plural morpheme"
+%{o%}:0 <=> Vow %>: _ ;  
+                    _ o b %>: [ a | o | e ] ;
+
+!@ p e k > {o}:0 o b > a
+
+!@ p e k >:0 {o}:o o b
+!@ n a >:0 {o}:0 o b
+
+!  25.  -Vl: Adjectives can be formed from nouns by tacking a vowel which agrees with last vowel in the noun onto the noun and ending the word with -l ( (noun)-Vl ). Examples:
+
+"Alternation in adjectivisal suffix (a)"
+%{V%}:Vx <=> :Vx Cns+ %>: _ ; 
+       where Vx in ( a e i o u )  ;
+
+
+!@ c a a n >:0 {V}:a l
+!@ p e t >:0 {V}:e l
