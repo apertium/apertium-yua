@@ -1,9 +1,13 @@
 Alphabet
 
-m n b p t k %' z c h s x j h w l y r a e i o u 
+m n b p t k %' z c h s x j h w l y r
+
+a e i o u 
+á é í ó ú 
 
 %{V%}:a %{V%}:i %{V%}:o %{V%}:u %{V%}:e
 %{o%}:0 %{o%}:o 
+%{e%}:0 %{e%}:o 
 
 %>:0 
 
@@ -11,15 +15,16 @@ m n b p t k %' z c h s x j h w l y r a e i o u
 
 Sets 
 
-Vow = a e i o u ; 
+Vow = a e i o u á é í ó ú ; 
 
 Cns = m n b p t k %' z c h s x j h w l y r ;
 
 Rules
 
-"Alternation in plural morpheme"
-%{o%}:0 <=> Vow %>: _ ;  
+"Alternation in plural pronouns"
+Vx:0 <=> Vow %>: _ ;  
                     _ o b %>: [ a | o | e ] ;
+        where Vx in ( %{o%} %{e%} )  ; 
 
 !@ p e k > {o}:0 o b > a
 
