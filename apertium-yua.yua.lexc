@@ -12,6 +12,13 @@ Multichar_Symbols
 %<med%>  ! Medial 'that _'
 %<dst%>  ! Distal 'that _ over there'
 
+%<incomp%> ! "ongoing incomplete"
+%<past%> ! "Completed simple past"
+%<perf%> ! "Completed Present Perfect"
+%<subjun%> ! "Subjunctive"
+
+%<hab%>
+
 %<neg%>
 
 %<s_sg1%>
@@ -34,6 +41,9 @@ Multichar_Symbols
 
 %<attr%>          ! Attributive
 %<der_l%>         ! Adjective derivation
+%<term%>          ! Terminative morpheme
+%<top%>          ! Topicalized
+%<loc%>           ! locative
 
 %{o%}             ! Either 'o' or nothing
 %{e%}             ! Either 'e' or nothing
@@ -61,7 +71,10 @@ LEXICON Dem
 %<prx%>:%>aʼ # ;
 %<med%>:%>oʼ # ;
 %<dst%>:%>eʼ # ;
-              # ; 
+%<top%>:%>eʼ # ;
+%<neg%>:%>iʼ # ;
+%<loc%>:%>iʼ # ;
+             # ; 
 
 LEXICON Deriv
 
@@ -119,6 +132,8 @@ LEXICON V-SET-IV-B ! iv=subj
 %<s_pl2%>:%>%{e%}ʼex # ;
 %<s_pl3%>:%>%{o%}ʼob # ;
 
+
+
 ! Incompletivo: TV = -ik, IV = -Vl, PASS -aʼ- = -aʼal
 ! Completivo: TV = -aj, IV = -ø, PASS -aʼ- = -aʼab
 ! Subjuntivo: TV = -ø, IV = -Vk, PASS -aʼ- = -aʼak
@@ -127,7 +142,7 @@ LEXICON V-SET-IV-B ! iv=subj
 LEXICON V-FORMS-TV
 
 %<aor%>:%>ik    V-SET-TV-B ;            ! general
-%<perf%>:%>aj   V-SET-TV-B ;            ! segunda 
+
 !%<impf%>:%>mah  # ;            ! tercera
 !%<fut%>:%>      # ;            ! cuarta ! -e with verb 'hay'
 
@@ -193,12 +208,14 @@ le%<det%>%<dem%>:le # ;
 LEXICON Pronouns 
 
 teen%<prn%>%<pers%>:teen # ; 
+ten%<prn%>%<pers%>:ten # ; 
 teech%<prn%>%<pers%>:teech # ; 
+tech%<prn%>%<pers%>:tech # ; 
 letiʼ%<prn%>%<pers%>:letiʼ # ; 
 toʼon%<prn%>%<pers%>:toʼon # ; 
 teʼex%<prn%>%<pers%>:teʼex # ; 
 letiʼob%<prn%>%<pers%>:letiʼob # ; 
-
+letiʼoʼob%<prn%>%<pers%>:letiʼoʼob # ; 
 ten%<prn%>%<pers%>%<dat%>:ten # ; 
 tech%<prn%>%<pers%>%<dat%>:tech # ; 
 tiʼ%<prn%>%<pers%>%<dat%>:tiʼ # ; 
@@ -212,6 +229,16 @@ u%<prn%>%<pos%>:u # ;
 k%<prn%>%<pos%>:k # ;
 a%<prn%>%<pos%>:a # ; ! (a)w...e'ex
 u%<prn%>%<pos%>:u # ; ! (u)y...o'ob
+
+! Set A subject in ongoing incomplete
+in%<prn%>%<s_sg1%>:in # ;
+kin%<prn%>%<s_sg1%>%<hab%>:kin # ;
+
+a%<prn%>%<s_sg2%>:a # ;
+u%<prn%>%<s_sg3%>:u # ;
+k%<prn%>%<s_pl1%>:k # ;
+a%<prn%>%<s_pl2%>:a # ; ! (a)w...e'ex
+u%<prn%>%<s_pl3%>:u # ; ! (u)y...o'ob
 
 baʼax%<prn%>%<itg%>:baʼax # ; ! "qué"
 máax%<prn%>%<itg%>:máax # ; ! "quién"
@@ -244,6 +271,18 @@ paal:paal N-PAAL ; ! "niño, child"
 xiʼipal:xiʼipal N-PAAL ; ! "muchacho, lad"
 xiʼipal:xiʼibpal N-PAAL ; ! "muchacho, lad" ! TODO: Check
 chʼúupal:chʼúupal N-PAAL ; ! "muchacha, girl"
+
+kʼàaba:kʼàaba N-LOOL ; ! "nombre, name"
+hu'unalte:hu'unalte N-LOOL ; ! "libro, book"
+
+ùuluum:ùuluum N-LOOL ; ! "pavo, turkey"
+bàatsil:bàatsil N-LOOL ; ! "amigo, friend"
+p'áak:p'áak ; !	"tomate, tomato"
+ba'alche':ba'alche' ; ! "animal silvestre, wild animal"
+àalak':àalak' ; ! "animal domestico, domestic animal"
+mìis:mìis ;	! "cat"
+míis	broom
+tsíimin	horse
 
 kʼáax:kʼáax N-LOOL ; ! "monte, mountain"
 kʼiin:kʼiin N-LOOL ; ! "día, day"
