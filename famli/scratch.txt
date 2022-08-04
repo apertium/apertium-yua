@@ -1,0 +1,10 @@
+>>> in káambaleno'ob
+
+> káambaleno'ob káambal<n><s_sg1><poss_pl>      0.000000
+
+> (apertium) rpugh@rpugh-PROX15-AMD:~/repos/apertium-yua$ echo "in" | hfst-lookup yua-famli.fst 
+hfst-lookup: warning: It is not possible to perform fast lookups with OpenFST, std arc, tropical semiring format automata.
+Using HFST basic transducer format and performing slow lookups
+> in    <1sg_poss><pron>        0.000000
+in      <s_sg1><pron>   0.000000
+

@@ -1,0 +1,120 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Multichar_Symbols
+
+%<v%>    ! Verbo
+
+%<n%>    ! Sustantivo
+%<adj%>  ! Adjetivo
+%<pl%>   ! Plural
+%<s_pl%>   ! Sujeto Plural
+
+%<prx%>  ! Proximal 'this _'
+%<med%>  ! Medial 'that _'
+%<dst%>  ! Distal 'that _ over there'
+
+%<incomp%> ! "ongoing incomplete"
+%<past%> ! "Completed simple past"
+%<perf%> ! "Completed Present Perfect"
+%<subjun%> ! "Subjunctive"
+%<pron%>  ! "pronoun"
+%<1sg_poss%>  ! "pronoun"
+%<2sg_poss%>  ! "pronoun"
+%<3sg_poss%>  ! "pronoun"
+%<1pl_poss%>  ! "pronoun"
+%<2pl_poss%>  ! "pronoun"
+%<3pl_poss%>  ! "pronoun"
+
+%<poss_nonownership%>
+%<poss_comm%>
+%<poss_internal%>
+
+%<poss%>  ! "posesivo"
+
+
+%<hab%>
+
+%<term%>
+
+%<neg%>
+
+%<s_sg1%>
+%<s_sg2%>
+%<s_sg3%>
+%<s_pl1%>
+%<s_pl2%>
+%<s_pl3%>
+
+%<o_sg1%>
+%<o_sg2%>
+%<o_sg3%>
+%<o_pl1%>
+%<o_pl2%>
+%<o_pl3%>
+
+
+%<tv%>            !
+%<iv%>            ! 
+
+%<attr%>          ! Attributive
+%<der_l%>         ! Adjective derivation
+%<term%>          ! Terminative morpheme
+%<top%>          ! Topicalized
+%<loc%>           ! locative
+
+%{o%}             ! Either 'o' or nothing
+%{e%}             ! Either 'e' or nothing
+%{V%}             ! Copy stem vowel
+
+ʼ                ! Glottal, U+02BC
+%>                ! Morpheme boundary
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Root
+Nouns ;
+IndependentPronouns ;
+
+LEXICON SetA
+in:%<s_sg1%>%<pron%> # ;
+
+
+LEXICON IndependentPronouns
+SetA ;
+
+LEXICON IntransitiveSetB
+en:%<s_sg1%> Terminative ;
+en:%<s_sg1%> # ;
+en:%<s_sg1%> PluralPossessorSuffix ;
+
+
+LEXICON PossessiveNominalSuffixes
+il:%<poss_comm%> IntransitiveSetB ;
+PluralNounSuffix ;
+IntransitiveSetB ;
+
+LEXICON PluralNounSuffix
+o'ob:%<pl%> Terminative ;
+o'ob:%<pl%> # ;
+
+LEXICON PluralPossessorSuffix
+o'ob:%<pl%> Terminative ;
+o'ob:%<pl%> # ;
+
+
+LEXICON NounEndings
+# ;
+Terminative ;
+PluralNounSuffix ;
+IntransitiveSetB ;
+PossessiveNominalSuffixes ;
+
+LEXICON Nouns
+tsíimin:tsíimin%<n%> NounEndings ; ! "caballo"
+
+LEXICON Terminative
+e':%<term%> # ;
+# ;
+
+

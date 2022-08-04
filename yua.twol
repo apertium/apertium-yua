@@ -1,0 +1,49 @@
+Alphabet
+ 
+ A B C D E F G H I J K L M N O P Q R S T U W X Y Z
+ a b c d e f g h i j k l m n o p q r s t u w x y z
+%{V%}:a %{V%}:e %{V%}:i %{V%}:o %{V%}:u
+ %>:%> ;
+
+
+Sets
+
+Vow   = A E I O U 
+        Á É Í Ó Ú
+        À È Ì Ò Ù
+        a e i o u 
+        á é í ó ú
+        à è ì ò ù ;
+
+UnaccVow = A E I O U 
+           a e i o u ;
+
+Cns   = b c d f g h j k l m n p q r s t w x y z ;
+
+
+Rules
+
+"Remove morpheme boundary"
+%>:0 <=> _ ;
+
+"Vowel harmony"
+%{V%}:Vx <=> Vx Cns+ %>:0 _ ; where Vx in UnaccVow ;
+
+! "Vowel harmony"
+! %{V%}:o <=> o Cns %>: _ ;
+
+
+! "a vowel harmony"
+! %{V%}:a <=> a: Cns %>:0 _ ;
+
+! "e vowel harmony"
+! %{V%}:e <= e: Cns %>:0 _ ;
+
+! "i vowel harmony"
+! %{V%}:i <= i Cns %>:0 _ ;
+
+! "o vowel harmony"
+! %{V%}:o <=> o: Cns %>:0 _ ;
+
+! "u vowel harmony"
+! %{V%}:u <= u Cns %>:0 _ ;

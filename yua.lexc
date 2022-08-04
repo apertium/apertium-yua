@@ -1,0 +1,284 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Multichar_Symbols
+
+%{V%}
+
+%<v%>    ! Verbo
+
+%<n%>    ! Sustantivo
+%<adj%>  ! Adjetivo
+%<pl%>   ! Plural
+%<s_pl%>   ! Sujeto Plural
+
+%<prx%>  ! Proximal 'this _'
+%<med%>  ! Medial 'that _'
+%<dst%>  ! Distal 'that _ over there'
+
+%<incomp%> ! "ongoing incomplete"
+%<past%> ! "Completed simple past"
+%<perf%> ! "Completed Present Perfect"
+%<subjun%> ! "Subjunctive"
+%<pron%>  ! "pronoun"
+%<1sg_poss%>  ! "pronoun"
+%<2sg_poss%>  ! "pronoun"
+%<3sg_poss%>  ! "pronoun"
+%<1pl_poss%>  ! "pronoun"
+%<2pl_poss%>  ! "pronoun"
+%<3pl_poss%>  ! "pronoun"
+
+%<poss_nonownership%>
+%<poss_comm%>
+%<poss_internal%>
+
+%<poss%>  ! "posesivo"
+
+
+%<hab%>
+
+%<neg%>
+
+%<ipfv%> ! imperfectivo "Ongoing incomplete"
+%<pfv%>  ! perfectivo "Simple Past"
+%<pf%>   ! perfect "Completed Present"
+%<subj%>  ! subjunctive
+%<s_sg%> ! sujeto singular
+%<imp%>  ! imperativo
+%<s_pl%> ! sujeto plural
+
+%<s_sg1%>
+%<s_sg2%>
+%<s_sg3%>
+%<s_pl1%>
+%<s_pl2%>
+%<s_pl3%>
+
+%<o_sg1%>
+%<o_sg2%>
+%<o_sg3%>
+%<o_pl1%>
+%<o_pl2%>
+%<o_pl3%>
+
+%<female_agentive%>
+%<male_agentive%>
+
+%<tv%>            !
+%<iv%>            ! 
+
+%<attr%>          ! Attributive
+%<der_l%>         ! Adjective derivation
+%<term%>          ! Terminative morpheme
+%<top%>          ! Topicalized
+%<loc%>           ! locative
+
+%{o%}             ! Either 'o' or nothing
+%{e%}             ! Either 'e' or nothing
+%{V%}             ! Copy stem vowel
+
+ʼ                ! Glottal, U+02BC
+%>                ! Morpheme boundary
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Root
+CvcTrans ;
+
+LEXICON TransitiveSetB
+%<o_sg1%>:en%> PluralSubjSuffix ;
+%<o_pl1%>:o'on%> PluralSubjSuffix ;
+%<o_sg2%>:ech%> PluralSubjSuffix ;
+%<o_pl2%>:e'ex%> PluralSubjSuffix ;
+%<o_sg1%>:en%> PluralSubjSuffix ;
+%<o_sg3%>:0%> PluralSubjSuffix ;
+%<o_sg3%>:ih%> PluralSubjSuffix ;
+%<o_pl3%>:o'ob%> PluralSubjSuffix ;
+
+
+LEXICON PluralSubjSuffix
+%<s_pl%>:o'ob%> Terminatives ;
+%<s_pl%>:e'ex%> Terminatives ;
+Terminatives ;
+
+
+LEXICON Terminatives
+%<neg%>:i' # ;
+%<loc%>:i' # ;
+# ;
+
+
+LEXICON RegIntransVozActivaSinL
+%<ipfv%>:0%> InstransitiveSetB;
+%<pfv%>:0%> InstransitiveSetB;
+%<pf%>:aha'an%> InstransitiveSetB;
+%<subj%>:%{V%}k%> InstransitiveSetB;
+%<imp%>%<s_2sg%>:nen%> Terminatives;
+%<imp%>%<s_2pl%>:nene'ex%> Terminatives;
+
+LEXICON RegIntransVozActivaConL
+%<ipfv%>:%{V%}l%> InstransitiveSetB;
+%<pfv%>:0%> InstransitiveSetB;
+%<pf%>:aha'an%> InstransitiveSetB;
+%<subj%>:%{V%}k%> InstransitiveSetB;
+%<imp%>%<s_2sg%>:nen%> Terminatives;
+%<imp%>%<s_2pl%>:nene'ex%> Terminatives;
+
+LEXICON RegIntransDvT
+%<ipfv%>:ik%> TransitiveSetB;
+%<pfv%>:ah%> TransitiveSetB;
+%<pf%>:mah%> TransitiveSetB;
+%<subj%>:0%> TransitiveSetB;
+%<imp%>%<s_2sg%>:eh%> Terminatives;
+%<imp%>%<s_2sg%>:0%> Terminatives;
+%<imp%>%<s_2pl%>:0%> PluralSubjSuffix;
+
+LEXICON RegIntransDvTVozPasiva
+%<ipfv%>:a'al%> InstransitiveSetB;
+%<pfv%>:a'ab%> InstransitiveSetB;
+%<pf%>:a'an%> InstransitiveSetB;
+%<subj%>:a'ak%> InstransitiveSetB;
+
+! TODO: check on this....what's the plural ending?
+%<imp%>:a'ak%> Terminatives;
+
+LEXICON RegIntransDvTVozAntipasiva
+%<ipfv%>:ah%> InstransitiveSetB;
+%<pfv%>:ahnah%> InstransitiveSetB;
+%<pf%>:ahnaha'an%> InstransitiveSetB;
+%<subj%>:ahnak%> InstransitiveSetB;
+
+! TODO: check on this....what's the plural ending?
+%<imp%>:ahnak%> Terminatives;
+
+LEXICON TransVozActiva
+%<ipfv%>:ik%> TransitiveSetB;
+%<pfv%>:ah%> TransitiveSetB;
+%<pf%>:mah%> TransitiveSetB;
+%<subj%>%<s_sg%>:0%> TransitiveSetB;
+%<subj%>%<s_pl%>:eh%> TransitiveSetB;
+%<imp%>%<s_sg%>:0%> TransitiveSetB;
+%<imp%>%<s_pl%>:eh%> TransitiveSetB;
+
+LEXICON TransVozAntipasiva
+%<ipfv%>:0%> PluralSubjSuffix;
+
+! TODO: for all of the following entries, the geminate "n%>n -> n"
+%<pfv%>:nah%> PluralSubjSuffix;
+%<pf%>:naha'an%> PluralSubjSuffix;
+%<subj%>%<s_sg%>:nak%> PluralSubjSuffix;
+%<subj%>%<s_pl%>:eh%> PluralSubjSuffix;
+%<imp%>%<s_sg%>:nen%> PluralSubjSuffix;
+%<imp%>%<s_pl%>:nene'ex%> PluralSubjSuffix;
+
+LEXICON TransVozPasiva
+! TODO: vowel harmony (in twol?)
+%<ipfv%>:%{V%}l%> PluralSubjSuffix;
+%<pfv%>:a'ab%> PluralSubjSuffix;
+%<pf%>:a'an%> PluralSubjSuffix;
+%<subj%>:%{V%}k%> PluralSubjSuffix;
+%<imp%>:%{V%}k%> PluralSubjSuffix;
+
+LEXICON TransVozMedia
+%<ipfv%>:%{V%}l%> PluralSubjSuffix;
+%<pfv%>:0%> PluralSubjSuffix;
+%<pf%>:a'an%> PluralSubjSuffix;
+%<subj%>:%{V%}k%> PluralSubjSuffix;
+%<imp%>:0%> PluralSubjSuffix;
+
+
+LEXICON IntransReg
+! go
+bin%<v%>%<iv%>:bin%> RegIntransVozActivaSinL ;
+bin%<v%>%<tv%>:bis%> RegIntransDvT ;
+bin%<v%>%<iv%>%<pss%>:bins%> RegIntransDvTVozPasiva ;
+bin%<v%>%<iv%>%<aps%>:bins%> RegIntransDvTVozAntipasiva ;
+
+! arrive
+tal%<v%>%<iv%>:tal%> RegIntransVozActivaConL ;
+tal%<v%>%<tv%>:tas%> RegIntransDvT ;
+tal%<v%>%<iv%>%<pss%>:tas%> RegIntransDvTVozPasiva ;
+tal%<v%>%<iv%>%<aps%>:tas%> RegIntransDvTVozAntipasiva ;
+
+! go about (pasear)
+máan%<v%>%<iv%>:máan%> RegIntransVozActivaConL ;
+máan%<v%>%<tv%>:máans%> RegIntransDvT ;
+máan%<v%>%<iv%>%<pss%>:máans%> RegIntransDvTVozPasiva ;
+máan%<v%>%<iv%>%<aps%>:máans%> RegIntransDvTVozAntipasiva ;
+
+! sleep
+wen%<v%>%<iv%>:wen%> RegIntransVozActivaConL ;
+wen%<v%>%<tv%>:wens%> RegIntransDvT ;
+wen%<v%>%<iv%>%<pss%>:wens%> RegIntransDvTVozPasiva ;
+wen%<v%>%<iv%>%<aps%>:wens%> RegIntransDvTVozAntipasiva ;
+
+! wake up
+ah%<v%>%<iv%>:ah%> RegIntransVozActivaConL ;
+ah%<v%>%<tv%>:ahs%> RegIntransDvT ;
+ah%<v%>%<iv%>%<pss%>:ahs%> RegIntransDvTVozPasiva ;
+ah%<v%>%<iv%>%<aps%>:ahs%> RegIntransDvTVozAntipasiva ;
+
+! finish, to be done
+ts'o'ok%<v%>%<iv%>:ts'o'ok%> RegIntransVozActivaConL ;
+ts'o'ok%<v%>%<tv%>:ts'o'oks%> RegIntransDvT ;
+ts'o'ok%<v%>%<iv%>%<pss%>:ts'o'oks%> RegIntransDvTVozPasiva ;
+ts'o'ok%<v%>%<iv%>%<aps%>:ts'o'oks%> RegIntransDvTVozAntipasiva ;
+
+! reply
+núuk%<v%>%<iv%>:núuk%> RegIntransVozActivaConL ;
+núuk%<v%>%<tv%>:núuk%> RegIntransDvT ;
+núuk%<v%>%<iv%>%<pss%>:núuks%> RegIntransDvTVozPasiva ;
+núuk%<v%>%<iv%>%<aps%>:núuks%> RegIntransDvTVozAntipasiva ;
+
+! enter
+ok%<v%>%<iv%>:ok%> RegIntransVozActivaConL ;
+ok%<v%>%<tv%>:oks%> RegIntransDvT ;
+ok%<v%>%<iv%>%<pss%>:oks%> RegIntransDvTVozPasiva ;
+ok%<v%>%<iv%>%<aps%>:oks%> RegIntransDvTVozAntipasiva ;
+
+! exit
+hóok%<v%>%<iv%>:hóok%> RegIntransVozActivaConL ;
+hóok%<v%>%<tv%>:hóoks%> RegIntransDvT ;
+hóok%<v%>%<iv%>%<pss%>:hóoks%> RegIntransDvTVozPasiva ;
+hóok%<v%>%<iv%>%<aps%>:hóoks%> RegIntransDvTVozAntipasiva ;
+
+
+LEXICON CvcTrans
+
+! Open Question_ Should they lemmatize to the cvc transitive root in all voices?
+
+! paint
+bon%<v%>%<tv%>:bon%> TransVozActiva ;
+bon%<v%>%<iv%>%<aps%>:bòon%> TransVozAntipasiva ;
+bon%<v%>%<iv%>%<pss%>:bo'on%> TransVozPasiva ;
+bon%<v%>%<iv%>%<mv%>:bóon%> TransVozMedia ;
+
+! split apart
+buh%<v%>%<tv%>:buh%> TransVozActiva ;
+buh%<v%>%<iv%>%<aps%>:bùuh%> TransVozAntipasiva ;
+buh%<v%>%<iv%>%<pss%>:bu'uh%> TransVozPasiva ;
+buh%<v%>%<iv%>%<mv%>:búuh%> TransVozMedia ;
+
+! cover, clothe
+buk%<v%>%<tv%>:buk%> TransVozActiva ;
+buk%<v%>%<iv%>%<aps%>:bùuk%> TransVozAntipasiva ;
+buk%<v%>%<iv%>%<pss%>:bu'uk%> TransVozPasiva ;
+buk%<v%>%<iv%>%<mv%>:búuk%> TransVozMedia ;
+
+! sink, submerge
+bul%<v%>%<tv%>:bul TransVozActiva ;
+bul%<v%>%<iv%>%<aps%>:bùul%> TransVozAntipasiva ;
+bul%<v%>%<iv%>%<pss%>:bu'ul%> TransVozPasiva ;
+bul%<v%>%<iv%>%<mv%>:búul%> TransVozMedia ;
+
+! throw, aim
+ch'in%<v%>%<tv%>:ch'in TransVozActiva ;
+ch'in%<v%>%<iv%>%<aps%>:ch'ìin%> TransVozAntipasiva ;
+ch'in%<v%>%<iv%>%<pss%>:ch'i'in%> TransVozPasiva ;
+ch'in%<v%>%<iv%>%<mv%>:ch'íin%> TransVozMedia ;
+
+! moisten
+ch'ul%<v%>%<tv%>:ch'ul TransVozActiva ;
+ch'ul%<v%>%<iv%>%<aps%>:ch'ùul%> TransVozAntipasiva ;
+ch'ul%<v%>%<iv%>%<pss%>:ch'u'ul%> TransVozPasiva ;
+ch'ul%<v%>%<iv%>%<mv%>:ch'úul%> TransVozMedia ;

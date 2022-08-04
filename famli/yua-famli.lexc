@@ -1,0 +1,246 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Multichar_Symbols
+
+%{V%}
+
+%<v%>    ! Verbo
+
+%<n%>    ! Sustantivo
+%<adj%>  ! Adjetivo
+%<pl%>   ! Plural
+%<s_pl%>   ! Sujeto Plural
+
+%<prx%>  ! Proximal 'this _'
+%<med%>  ! Medial 'that _'
+%<dst%>  ! Distal 'that _ over there'
+
+%<incomp%> ! "ongoing incomplete"
+%<past%> ! "Completed simple past"
+%<perf%> ! "Completed Present Perfect"
+%<subjun%> ! "Subjunctive"
+%<pron%>  ! "pronoun"
+%<1sg_poss%>  ! "pronoun"
+%<2sg_poss%>  ! "pronoun"
+%<3sg_poss%>  ! "pronoun"
+%<1pl_poss%>  ! "pronoun"
+%<2pl_poss%>  ! "pronoun"
+%<3pl_poss%>  ! "pronoun"
+
+%<poss_nonownership%>
+%<poss_comm%>
+%<poss_internal%>
+
+%<poss%>  ! "posesivo"
+
+
+%<hab%>
+
+%<neg%>
+
+%<ipfv%> ! imperfectivo "Ongoing incomplete"
+%<pfv%>  ! perfectivo "Simple Past"
+%<pf%>   ! perfect "Completed Present"
+%<subj%>  ! subjunctive
+%<s_sg%> ! sujeto singular
+%<imp%>  ! imperativo
+%<s_pl%> ! sujeto plural
+
+%<s_sg1%>
+%<s_sg2%>
+%<s_sg3%>
+%<s_pl1%>
+%<s_pl2%>
+%<s_pl3%>
+
+%<o_sg1%>
+%<o_sg2%>
+%<o_sg3%>
+%<o_pl1%>
+%<o_pl2%>
+%<o_pl3%>
+
+%<female_agentive%>
+%<male_agentive%>
+
+%<tv%>            !
+%<iv%>            ! 
+
+%<attr%>          ! Attributive
+%<der_l%>         ! Adjective derivation
+%<term%>          ! Terminative morpheme
+%<top%>          ! Topicalized
+%<loc%>           ! locative
+
+%{o%}             ! Either 'o' or nothing
+%{e%}             ! Either 'e' or nothing
+%{V%}             ! Copy stem vowel
+
+ʼ                ! Glottal, U+02BC
+%>                ! Morpheme boundary
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Root
+Nouns ;
+Adjectives ;
+IndependentPronouns ;
+TransitiveVerbs ;
+Miscellaneous ;
+CvcTrans ;
+
+LEXICON SetA
+
+in:%<s_sg1%>%<pron%> # ;
+kin:%<s_sg1%>%<pron%>%<hab%> # ;
+
+a:%<s_sg2%>%<pron%> # ;
+ka:%<s_sg2%>%<pron%>%<hab%> # ;
+u:%<s_sg3%>%<pron%> # ;
+ku:%<s_sg3%>%<pron%>%<hab%> # ;
+k:%<s_pl1%>%<pron%> # ;
+a:%<s_pl2%>%<pron%> # ;
+u:%<s_pl3%>%<pron%> # ;
+
+in:%<1sg_poss%>%<pron%> # ;
+a:%<2sg_poss%>%<pron%> # ;
+u:%<3sg_poss%>%<pron%> # ;
+k:%<1pl_poss%>%<pron%> # ;
+a:%<2pl_poss%>%<pron%> # ;
+u:%<3pl_poss%>%<pron%> # ;
+
+LEXICON IndependentPronouns
+SetA ;
+
+LEXICON Pronouns
+SetA ;
+
+LEXICON AgentivePrefixes
+%<male_agentive%> ;
+%<female_agentive%> ;
+
+LEXICON IntransitiveSetB
+%<s_sg1%>:en# ;
+%<s_pl1%>:o'on # ;
+%<s_sg2%>:ech # ;
+%<s_pl2%>:e'ex # ;
+%<s_sg1%>:en # ;
+%<s_sg3%>:0 # ;
+o'ob:%<s_pl3%> # ;
+
+
+LEXICON TransitiveSetB
+en:%<o_sg1%> PluralSubjSuffix ;
+o'on:%<o_pl1%> PluralSubjSuffix ;
+ech:%<o_sg2%> PluralSubjSuffix ;
+e'ex:%<o_pl2%> PluralSubjSuffix ;
+en:%<o_sg1%> PluralSubjSuffix ;
+0:%<o_sg3%> PluralSubjSuffix ;
+ih:%<o_sg3%> PluralSubjSuffix ;
+o'ob:%<o_pl3%> PluralSubjSuffix ;
+
+
+LEXICON PossessiveNominalSuffixes
+il:%<poss_comm%> IntransitiveSetB ;
+al:%<poss_nonownership%> IntransitiveSetB ;
+el:%<poss_internal%> IntransitiveSetB ;
+PluralSuffix ;
+IntransitiveSetB ;
+
+LEXICON PluralPossessorSuffix
+o'ob:%<poss_pl%> Terminatives ;
+
+LEXICON PluralSuffix
+o'ob:%<pl%> Terminatives ;
+
+LEXICON PluralSubjSuffix
+o'ob:%<s_pl%> Terminatives ;
+e'ex:%<s_pl%> Terminatives ;
+Terminatives ;
+
+LEXICON NounEndings
+Terminatives ;
+PluralSuffix ;
+IntransitiveSetB ;
+PossessiveNominalSuffixes ;
+
+LEXICON AdjectiveEndings
+Terminatives ;
+IntransitiveSetB ;
+
+LEXICON Terminatives
+i':%<neg%> # ;
+i':%<loc%> # ;
+# ;
+
+LEXICON Nouns
+tsíimin:tsíimin%<n%> NounEndings ; ! "caballo"
+káambal:káambal%<n%> NounEndings ; ! "estudiante"
+ka'ansah:ka'ansah%<n%> NounEndings ; ! "maestro"
+kòolnáal:kòolnáal%<n%> NounEndings ; ! "agricultor(a)"
+wíinik:wíinik%<n%> NounEndings ; ! "humano"
+máak:máak%<n%> NounEndings ; ! "persona"
+míis:míis%<n%> NounEndings ; ! "gato"
+pèek:pèek%<n%> NounEndings ; ! "perro"
+hu'unalte%<n%> NounEndings ; ! "libro"
+ùulum:ùulum%<n%> NounEndings ; ! "huajolote"
+bàatsil:bàatsil%<n%> NounEndings ; ! "amigo"
+
+LEXICON Adjectives
+wi'ih:wi'ih AdjectiveEndings ; ! "hambriento"
+uk'ah:uk'ah AdjectiveEndings ; ! "con sed"
+ka'ana'an:ka'ana'an AdjectiveEndings ; ! "cansado"
+chak:chak AdjectiveEndings ; ! "rojo"
+k'an:k'an AdjectiveEndings ; ! "amarillo"
+
+LEXICON CvcTrans
+
+! Should they lemmatize to the cvc transitive root in all voices?
+bon%<v%>%<tv%>:bon TransVozActiva ;
+bòon%<v%>%<iv%>:bòon TransVozAntipasiva ;
+bo'on%<v%>%<iv%>:bo'on TransVozPasiva ;
+bóon%<v%>%<iv%>:bóon TransVozMedia ;
+
+
+LEXICON TransVozActiva
+%<ipfv%>:ik TransitiveSetB;
+%<pfv%>:ah TransitiveSetB;
+%<pf%>:mah TransitiveSetB;
+%<subj%>%<s_sg%>:0 TransitiveSetB;
+%<subj%>%<s_pl%>:eh TransitiveSetB;
+%<imp%>%<s_sg%>:0 TransitiveSetB;
+%<imp%>%<s_pl%>:eh TransitiveSetB;
+
+LEXICON TransVozAntipasiva
+%<ipfv%>:0 Obj;
+
+! TODO: for all of the following entries, the geminate "n%>n -> n"
+%<pfv%>:nah PluralSubjSuffix;
+%<pf%>:naha'an PluralSubjSuffix;
+%<subj%>%<s_sg%>:nak PluralSubjSuffix;
+%<subj%>%<s_pl%>:eh PluralSubjSuffix;
+%<imp%>%<s_sg%>:nen PluralSubjSuffix;
+%<imp%>%<s_pl%>:nene'ex PluralSubjSuffix;
+
+LEXICON TransVozPasiva
+! TODO: vowel harmony (in twol?)
+%<ipfv%>:%{V%}l PluralSubjSuffix;
+%<pfv%>:a'ab PluralSubjSuffix;
+%<pf%>:a'an PluralSubjSuffix;
+%<subj%>:%{V%}k PluralSubjSuffix;
+%<imp%>:%{V%}k PluralSubjSuffix;
+
+LEXICON TransVozMedia
+%<ipfv%>:%{V%}l PluralSubjSuffix;
+%<pfv%>:0 PluralSubjSuffix;
+%<pf%>:a'an PluralSubjSuffix;
+%<subj%>:%{V%}k PluralSubjSuffix;
+%<imp%>:0 PluralSubjSuffix;
+
+LEXICON TransitiveVerbs
+k'ahóol:k'ahóol%<tv%> TransitiveSetB ;
+
+LEXICON Miscellaneous
+ma'a:ma'a%<neg%> #;
+

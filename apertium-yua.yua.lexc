@@ -162,7 +162,7 @@ LEXICON V-IV
 !
 %<v%>%<iv%>: V-FORMS-IV ;
 
-LEXICON A 
+LEXICON Adj 
 ! Copula suffixes (set B)
 ! -tak (DIST)
 
@@ -235,7 +235,11 @@ in%<prn%>%<s_sg1%>:in # ;
 kin%<prn%>%<s_sg1%>%<hab%>:kin # ;
 
 a%<prn%>%<s_sg2%>:a # ;
+ka%<prn%>%<s_sg2%>%<hab%>:ka # ;
+
 u%<prn%>%<s_sg3%>:u # ;
+ku%<prn%>%<s_sg3%>%<hab%>:ku # ;
+
 k%<prn%>%<s_pl1%>:k # ;
 a%<prn%>%<s_pl2%>:a # ; ! (a)w...e'ex
 u%<prn%>%<s_pl3%>:u # ; ! (u)y...o'ob
@@ -330,26 +334,26 @@ naʼ:naʼ N-LOOL ; ! "mamá, mum"
 
 LEXICON Adjectives 
 
-óotsil:óotsil A ; ! "pobre, poor"
-ayikʼal:ayikʼal A ; ! "rico, rich"
-chowak:chowak A ; ! "largo, long"
-sak:sak A ; ! "blanco, white"
-bekʼech:bekʼech A ; ! "delgado, thin"
-síis:síis A ; ! "frío, cold"
+óotsil:óotsil Adj ; ! "pobre, poor"
+ayikʼal:ayikʼal Adj ; ! "rico, rich"
+chowak:chowak Adj ; ! "largo, long"
+sak:sak Adj ; ! "blanco, white"
+bekʼech:bekʼech Adj ; ! "delgado, thin"
+síis:síis Adj ; ! "frío, cold"
 
-kiʼichkelem:kiʼichkelem A ; ! "guapo"
-kiʼichpam:kiʼichpam A ; ! "guapa"
-jatsʼuts:jatsʼuts A ; ! "hermoso"
+kiʼichkelem:kiʼichkelem Adj ; ! "guapo"
+kiʼichpam:kiʼichpam Adj ; ! "guapa"
+jatsʼuts:jatsʼuts Adj ; ! "hermoso"
 
-chich:chich A ; ! "duro, hard"
-boox:boox A ; ! "negro, black"
-nojoch:nojoch A ; ! "grande, big"
-taam:taam A ; ! "profundo, deep"
-mejen:mejen A ; ! "pequeño, small"
-nuuk:nuuk A ; ! "grande, big"
+chich:chich Adj ; ! "duro, hard"
+boox:boox Adj ; ! "negro, black"
+nojoch:nojoch Adj ; ! "grande, big"
+taam:taam Adj ; ! "profundo, deep"
+mejen:mejen Adj ; ! "pequeño, small"
+nuuk:nuuk Adj ; ! "grande, big"
 
-tsʼoyaʼan:tsʼoyaʼan A ; ! "flaco, thin"
-kʼojaʼan:kʼojaʼan A ; ! "enfermo, poorly"
+tsʼoyaʼan:tsʼoyaʼan Adj ; ! "flaco, thin"
+kʼojaʼan:kʼojaʼan Adj ; ! "enfermo, poorly"
 
 LEXICON Adverbs
 
