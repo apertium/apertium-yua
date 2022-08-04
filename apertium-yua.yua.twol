@@ -1,42 +1,30 @@
 Alphabet
+ 
+ A B C D E F G H I J K L M N O P Q R S T U W X Y Z
+ a b c d e f g h i j k l m n o p q r s t u w x y z
+%{V%}:a %{V%}:e %{V%}:i %{V%}:o %{V%}:u
+ %>:%> %{wy%}:y %{wy%}:w ;
 
-m n b p t k %' z c h s x j h w l y r
 
-a e i o u 
-á é í ó ú 
+Sets
 
-%{V%}:a %{V%}:i %{V%}:o %{V%}:u %{V%}:e
-%{o%}:0 %{o%}:o 
-%{e%}:0 %{e%}:o 
+Vow   = A E I O U 
+        Á É Í Ó Ú
+        À È Ì Ò Ù
+        a e i o u 
+        á é í ó ú
+        à è ì ò ù ;
 
-%>:0 
+UnaccVow = A E I O U 
+           a e i o u ;
 
-;
+Cns   = b c d f g h j k l m n p q r s t w x y z ;
 
-Sets 
-
-Vow = a e i o u á é í ó ú ; 
-
-Cns = m n b p t k %' z c h s x j h w l y r ;
 
 Rules
 
-"Alternation in plural pronouns"
-Vx:0 <=> Vow %>: _ ;  
-                    _ o b %>: [ a | o | e ] ;
-        where Vx in ( %{o%} %{e%} )  ; 
+"Remove morpheme boundary"
+%>:0 <=> _ ;
 
-!@ p e k > {o}:0 o b > a
-
-!@ p e k >:0 {o}:o o b
-!@ n a >:0 {o}:0 o b
-
-!  25.  -Vl: Adjectives can be formed from nouns by tacking a vowel which agrees with last vowel in the noun onto the noun and ending the word with -l ( (noun)-Vl ). Examples:
-
-"Alternation in adjectivisal suffix (a)"
-%{V%}:Vx <=> :Vx Cns+ %>: _ ; 
-       where Vx in ( a e i o u )  ;
-
-
-!@ c a a n >:0 {V}:a l
-!@ p e t >:0 {V}:e l
+"Vowel harmony"
+%{V%}:Vx <=> Vx Cns+ %>:0 _ ; where Vx in UnaccVow ;

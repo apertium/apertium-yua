@@ -1,0 +1,445 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Multichar_Symbols
+
+%<v%>    ! Verb
+
+%<n%>    ! Noun
+%<pl%>   ! Plural
+
+%<prx%>  ! Proximal 'this _'
+%<med%>  ! Medial 'that _'
+%<dst%>  ! Distal 'that _ over there'
+
+%<incomp%> ! "ongoing incomplete"
+%<past%> ! "Completed simple past"
+%<perf%> ! "Completed Present Perfect"
+%<subjun%> ! "Subjunctive"
+
+%<hab%>
+
+%<neg%>
+
+%<s_sg1%>
+%<s_sg2%>
+%<s_sg3%>
+%<s_pl1%>
+%<s_pl2%>
+%<s_pl3%>
+
+%<o_sg1%>
+%<o_sg2%>
+%<o_sg3%>
+%<o_pl1%>
+%<o_pl2%>
+%<o_pl3%>
+
+
+%<tv%>            !
+%<iv%>            ! 
+
+%<attr%>          ! Attributive
+%<der_l%>         ! Adjective derivation
+%<term%>          ! Terminative morpheme
+%<top%>          ! Topicalized
+%<loc%>           ! locative
+
+%{o%}             ! Either 'o' or nothing
+%{e%}             ! Either 'e' or nothing
+%{V%}             ! Copy stem vowel
+
+ʼ                ! Glottal, U+02BC
+%>                ! Morpheme boundary
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Root
+
+Miscellaneous ;
+Determiners ;
+Pronouns ; 
+Nouns ;
+Adjectives ; 
+Adverbs ;
+Verbs ;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Dem
+
+%<prx%>:%>aʼ # ;
+%<med%>:%>oʼ # ;
+%<dst%>:%>eʼ # ;
+%<top%>:%>eʼ # ;
+%<neg%>:%>iʼ # ;
+%<loc%>:%>iʼ # ;
+             # ; 
+
+LEXICON Deriv
+
+%<der_l%>:%>%{V%}l # ; 
+%<attr%>:%>il # ;
+
+LEXICON N-LOOL ! -(o)o'b
+
+%<n%>%<pl%>:%>%{o%}ʼob Dem ; ! Plural
+%<n%>:                Dem ; ! Unmarked
+%<n%>:                Deriv ; ! Derivations
+
+!LEXICON N-NAL ! -i 
+!
+!%<n%>%<pl%>:%>i       Dem ; ! Plural
+!%<n%>:                Dem ; ! Unmarked
+!%<n%>:                Deriv ; ! Derivations
+
+!LEXICON N-AC  ! -(o)'ob, -i
+!
+!%<n%>%<pl%>:%>i       Dem ; ! Plural
+!%<n%>%<pl%>:%>%{o%}ʼob Dem ; ! Plural
+!%<n%>:                Dem ; ! Unmarked
+!%<n%>:                Deriv ; ! Derivations
+
+LEXICON N-PAAL ! -al, -alo'ob
+
+%<n%>%<pl%>:%>al        Dem ;   ! Plural
+%<n%>%<pl%>:%>aloʼob   Dem ;   ! Plural
+%<n%>:                  Dem ;   ! Unmarked
+%<n%>:                  Deriv ; ! Derivations
+
+!LEXICON N-IXIM ! singularia tantum
+!
+!%<n%>:                Dem ; ! Unmarked
+!%<n%>:                Deriv ; ! Derivations
+
+! LEXICON V-SET-TV-A ! tv=subj
+
+LEXICON V-SET-TV-B ! tv=obj
+
+%<o_sg1%>:%>en # ;
+%<o_sg2%>:%>ech # ;
+%<o_sg3%>:%> # ;
+%<o_pl1%>:%>%{o%}ʼon # ;
+%<o_pl2%>:%>%{e%}ʼex # ;
+%<o_pl3%>:%>%{o%}ʼob # ;
+
+LEXICON V-SET-IV-B ! iv=subj
+
+%<s_sg1%>:%>en # ;
+%<s_sg2%>:%>ech # ;
+%<s_sg3%>:%> # ;
+%<s_pl1%>:%>%{o%}ʼon # ;
+%<s_pl2%>:%>%{e%}ʼex # ;
+%<s_pl3%>:%>%{o%}ʼob # ;
+
+
+
+! Incompletivo: TV = -ik, IV = -Vl, PASS -aʼ- = -aʼal
+! Completivo: TV = -aj, IV = -ø, PASS -aʼ- = -aʼab
+! Subjuntivo: TV = -ø, IV = -Vk, PASS -aʼ- = -aʼak
+! 
+
+LEXICON V-FORMS-TV
+
+%<aor%>:%>ik    V-SET-TV-B ;            ! general
+
+!%<impf%>:%>mah  # ;            ! tercera
+!%<fut%>:%>      # ;            ! cuarta ! -e with verb 'hay'
+
+LEXICON V-FORMS-IV 
+
+%<aor%>:%>%{V%}l  # ;          ! general
+%<perf%>:%> V-SET-IV-B ;      ! segunda
+!%<impf%>:%>aan V-SET-IV-B ;    ! tercera
+!%<fut%>:%>%{V%}c V-SET-IV-B ;  ! cuarta
+
+LEXICON V-TV 
+
+%<v%>%<tv%>: V-FORMS-TV ;
+%<v%>%<tv%>%<pass%>:aʼab V-FORMS-IV ;
+!
+LEXICON V-IV 
+!
+%<v%>%<iv%>: V-FORMS-IV ;
+
+LEXICON Adj 
+! Copula suffixes (set B)
+! -tak (DIST)
+
+%<adj%>: # ; 
+
+LEXICON ADV 
+
+%<adv%>: # ; 
+
+LEXICON CLA
+
+%<cla%>: # ; 
+
+LEXICON MOD
+
+%+in%<prn%>%<pers%>%<s_sg1%>:in # ;
+%+u%<prn%>%<pers%>%<s_sg3%>:u # ;
+                     # ;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON Miscellaneous
+
+ma%<neg%>:ma # ;
+tiʼ%<pr%>:tiʼ # ;  ! Pronombres emfáticos
+
+k%<mod%>:k MOD ; 
+j%<mod%>:j # ; 
+t%<mod%>:t MOD ;
+
+
+túul:túul CLA ;
+kúul:kúul CLA ;
+tsʼíit:tsʼíit CLA ; 
+pʼéel:pʼéel CLA ; 
+tʼéen:tʼéen CLA ; 
+! yoshida:30
+
+LEXICON Determiners
+
+le%<det%>%<dem%>:le # ; 
+
+LEXICON Pronouns 
+
+teen%<prn%>%<pers%>:teen # ; 
+ten%<prn%>%<pers%>:ten # ; 
+teech%<prn%>%<pers%>:teech # ; 
+tech%<prn%>%<pers%>:tech # ; 
+letiʼ%<prn%>%<pers%>:letiʼ # ; 
+toʼon%<prn%>%<pers%>:toʼon # ; 
+teʼex%<prn%>%<pers%>:teʼex # ; 
+letiʼob%<prn%>%<pers%>:letiʼob # ; 
+letiʼoʼob%<prn%>%<pers%>:letiʼoʼob # ; 
+ten%<prn%>%<pers%>%<dat%>:ten # ; 
+tech%<prn%>%<pers%>%<dat%>:tech # ; 
+tiʼ%<prn%>%<pers%>%<dat%>:tiʼ # ; 
+toʼon%<prn%>%<pers%>%<dat%>:toʼon # ; 
+teʼex%<prn%>%<pers%>%<dat%>:teʼex # ; 
+tiʼob%<prn%>%<pers%>%<dat%>:tiʼob # ; 
+
+in%<prn%>%<pos%>:in # ;
+a%<prn%>%<pos%>:a # ;
+u%<prn%>%<pos%>:u # ;
+k%<prn%>%<pos%>:k # ;
+a%<prn%>%<pos%>:a # ; ! (a)w...e'ex
+u%<prn%>%<pos%>:u # ; ! (u)y...o'ob
+
+! Set A subject in ongoing incomplete
+in%<prn%>%<s_sg1%>:in # ;
+kin%<prn%>%<s_sg1%>%<hab%>:kin # ;
+
+a%<prn%>%<s_sg2%>:a # ;
+ka%<prn%>%<s_sg2%>%<hab%>:ka # ;
+
+u%<prn%>%<s_sg3%>:u # ;
+ku%<prn%>%<s_sg3%>%<hab%>:ku # ;
+
+k%<prn%>%<s_pl1%>:k # ;
+a%<prn%>%<s_pl2%>:a # ; ! (a)w...e'ex
+u%<prn%>%<s_pl3%>:u # ; ! (u)y...o'ob
+
+baʼax%<prn%>%<itg%>:baʼax # ; ! "qué"
+máax%<prn%>%<itg%>:máax # ; ! "quién"
+máakalmáak%<prn%>%<itg%>:máakalmáak # ; ! "cuál"
+tuʼux%<prn%>%<itg%>:tuʼux # ; ! "dónde"
+bix%<prn%>%<itg%>:bix # ; ! "cómo"
+bajux%<prn%>%<itg%>:bajux # ; ! "cuánto" (de precio)
+bukaʼaj%<prn%>%<itg%>:bukaʼaj # ; ! "cuánto" (de tamaño y cantidad)
+jay%<prn%>%<itg%>:jay # ; ! "cuánto" (de número)
+
+LEXICON Nouns
+
+!otoch
+áak:áak N-LOOL ; ! "tortuga, tortoise"
+máak:máak N-LOOL ; ! "persona, person"
+chʼíichʼ:chʼíichʼ N-LOOL ; ! "pájaro, bird"
+lool:lool N-LOOL ; ! "flor, flower"
+xanab:xanab N-LOOL ; ! "zapato, shoe"
+wíinik:wíinik N-LOOL ; ! "humano, human"
+peekʼ:peekʼ N-LOOL ; ! "perro, dog"
+xíiw:xíiw N-LOOL ; ! "hierba, herbs"
+tuup:tuup N-LOOL ; ! "arrete, earring"
+
+naʼ:naʼ N-LOOL ; ! "madre, mother"
+tsoʼ:tsoʼ N-LOOL ; ! "pavo, "
+cheʼ:cheʼ N-LOOL ; ! "árbol, tree"
+jaʼ:jaʼ N-LOOL ; ! "agua, water"
+
+paal:paal N-PAAL ; ! "niño, child"
+xiʼipal:xiʼipal N-PAAL ; ! "muchacho, lad"
+xiʼipal:xiʼibpal N-PAAL ; ! "muchacho, lad" ! TODO: Check
+chʼúupal:chʼúupal N-PAAL ; ! "muchacha, girl"
+
+kʼàaba:kʼàaba N-LOOL ; ! "nombre, name"
+hu'unalte:hu'unalte N-LOOL ; ! "libro, book"
+
+ùuluum:ùuluum N-LOOL ; ! "pavo, turkey"
+bàatsil:bàatsil N-LOOL ; ! "amigo, friend"
+p'áak:p'áak ; !	"tomate, tomato"
+ba'alche':ba'alche' ; ! "animal silvestre, wild animal"
+àalak':àalak' ; ! "animal domestico, domestic animal"
+mìis:mìis ;	! "cat"
+míis	broom
+tsíimin	horse
+
+kʼáax:kʼáax N-LOOL ; ! "monte, mountain"
+kʼiin:kʼiin N-LOOL ; ! "día, day"
+tuunich:tuunich N-LOOL ; ! "piedra, stone"
+miis:miis N-LOOL ; ! "gato, cat"
+
+kay:kay N-LOOL ; ! "pez, fish"
+kuum:kuum N-LOOL ; ! "olla, saucepan"
+chʼeʼen:chʼeʼen N-LOOL ; ! "pozo, well"
+abal:abal N-LOOL ; ! "ciruela, "
+
+atan:atan N-LOOL ; ! "esposa, spouse" ! TODO: in watan, u yatan
+xook:xook N-LOOL ; ! "estudio, study"
+
+kaax:kaax N-LOOL ; ! "gallina, chicken"
+kéej:kéej N-LOOL ; ! "venado"
+
+joolnaj:joolnaj N-LOOL ; ! "puerta, door"
+yuum:yuum N-LOOL ; ! "papá, dad"
+naʼ:naʼ N-LOOL ; ! "mamá, mum"
+
+!pek:pek N-PEK ; ! "perro, dog"
+!na:na N-PEK ; ! "casa, house"
+!tzimn:tzimn N-PEK ; ! "caballo, horse"
+!cħicħ:cħicħ N-PEK ; ! "pájaro"
+!be:be N-PEK ; ! "camino"
+!ku:ku N-PEK ; ! "nido" 
+!nal:nal N-NAL ; ! "maíz"
+!ixim:ixim N-IXIM ; ! ""
+!pal:pal N-PAL ; ! "niño, child"
+!cay:cay N-PEK ; ! "" 
+!ac:ac N-AC ; ! ""
+!uah:uah N-PEK ; ! "tortilla"
+!
+!caan:caan N-PEK ; ! "" ! TODO: Check pl
+!cab:cab N-PEK ; ! "" ! TODO: Check pl
+!pet:pet N-PEK ; ! "" ! TODO: Check pl
+!xib:xib N-PEK ; ! "" ! TODO: Check pl
+!boc:boc N-PEK ; ! "" ! TODO: Check pl
+!cħup:cħup N-PEK ; ! "" ! TODO: Check pl
+
+!LEXICON Proper
+!
+!Pedro:Pedro NP-ANT-M ; ! ""
+
+LEXICON Adjectives 
+
+óotsil:óotsil Adj ; ! "pobre, poor"
+ayikʼal:ayikʼal Adj ; ! "rico, rich"
+chowak:chowak Adj ; ! "largo, long"
+sak:sak Adj ; ! "blanco, white"
+bekʼech:bekʼech Adj ; ! "delgado, thin"
+síis:síis Adj ; ! "frío, cold"
+
+kiʼichkelem:kiʼichkelem Adj ; ! "guapo"
+kiʼichpam:kiʼichpam Adj ; ! "guapa"
+jatsʼuts:jatsʼuts Adj ; ! "hermoso"
+
+chich:chich Adj ; ! "duro, hard"
+boox:boox Adj ; ! "negro, black"
+nojoch:nojoch Adj ; ! "grande, big"
+taam:taam Adj ; ! "profundo, deep"
+mejen:mejen Adj ; ! "pequeño, small"
+nuuk:nuuk Adj ; ! "grande, big"
+
+tsʼoyaʼan:tsʼoyaʼan Adj ; ! "flaco, thin"
+kʼojaʼan:kʼojaʼan Adj ; ! "enfermo, poorly"
+
+LEXICON Adverbs
+
+joʼoljeak:joʼoljeak ADV ; ! "ayer, yesterday"
+kaʼach:kaʼach ADV ; ! "antes, before"
+bejlaʼeʼ:bejlaʼeʼ ADV ; ! "hoy, today"
+chaanbéel:chaanbéel ADV ; ! "lentamente, slowly"
+maʼalob:maʼalob ADV ; ! "bien, well"
+
+LEXICON Verbs
+!
+!uk:ukul V-IV ; ! ""
+!uk:uk V-TV ; ! ""
+!
+!han:han V-IV ; ! ""
+!han:hant V-TV ; ! ""
+
+jan:janal    V-IV ; ! "comer, eat"
+jan:jaant     V-TV ;! "comer, eat"
+
+tʼaan:tʼaan V-IV ; ! "hablar, speak"
+tʼaan:tʼan V-TV ; ! "hablar, speak"
+
+
+! kʼaal [antipasiva, "alguien hace la cerradura"]; kʼáal [mediopasiva, "algo se cierra por sí"]; kʼaʼal [pasiva: "algo es cerrado por alguien"]
+! utilizan juego B 
+kʼal:kʼal V-TV ; ! "cerrar, close"  
+kʼal:kʼalt V-TV ; ! "cerrar, close"  ! Note/Adv
+
+xok:xok V-TV ; ! "leer, read"
+tsʼon:tsʼon V-TV ; ! "cazar, hunt"
+
+! La voz activa de los verbos transitivos del tipo CVC también puede tomar
+! el sufijo -t, si se le incorpora un adverbio de cantidad, frecuencia, volumen,
+! etc. Parece que al incorporar estos adverbios, el verbo ya se considera como
+! un verbo antipasivo así como en los siguientes ejemplos. Pero el uso del sufijo
+! -t no es obligatorio sino opcional.
+tsʼon:tsʼont V-TV ; ! "cazar, hunt" ! Note/Adv
+
+chʼa:chʼa V-TV ; ! "tomar"
+kʼéel:kʼéel V-TV ; ! "tostar"
+méekʼ:méekʼ V-TV ; ! "abrazar"
+maʼatsʼ:maʼatsʼ V-TV ; ! "lamer"
+aʼal:aʼal V-TV ; ! "decir"
+uʼuy:uʼuy V-TV ; ! "oír"
+
+baʼateʼel:baʼateʼelt V-TV ; ! "pelear"
+boʼol:boʼot V-TV ; ! "pagar"
+buutsʼ:butsʼt  V-TV ; ! "humear"
+cheʼej:cheʼejt V-TV ; ! "reir"
+meyaj:meyajt  V-TV ; ! "trabajar"
+míis:míist V-TV ; ! "barrer"
+mukʼyaj:mukʼyajt V-TV ; ! "sufrir"
+náay:náayt V-TV ; ! "soñar"
+óokʼot:óokʼost V-TV ; ! "bailar"
+páak:páakt V-TV ; ! "chapear"
+páatsʼ:páatsʼt V-TV ; ! "sobar"
+péek:pʼekt V-TV ; ! "odiar"
+síitʼ:síitʼt V-TV ; ! "brincar"
+tuukul:tuukult  V-TV ; ! "pensar"
+tséen:tséent V-TV ; ! "criar"
+tsʼíib:tsʼíibt V-TV ; ! "escribir"
+wayakʼ:wayakʼt V-TV ; ! " soñar"
+xíinbal:xíinbat  V-TV ; ! "pasear"
+
+ajal:ajal V-IV ; ! "despertrse”
+bin:bin V-IV ; ! "ir”
+elel:elel V-IV ; ! "arder”
+éemel:éemel V-IV ; ! "bajarse”
+jóokʼol:jóokʼol V-IV ; ! "salir”
+joʼopʼol:joʼopʼol V-IV ; ! "empezar”
+kíimil:kíimil V-IV ; ! "morir”
+kóojol:kóojol V-IV ; ! "llegar”
+kʼuchul:kʼuchul V-IV ; ! "arribar”
+líikʼil:líikʼil V-IV ; ! "levantarse”
+lúubul:lúubul V-IV ; ! "caer”
+lukʼul:lukʼul V-IV ; ! "quitarse”
+máan:máan V-IV ; ! "pasar”
+naʼakal:naʼakal V-IV ; ! "subir”
+okol:okol V-IV ; ! "entrar”
+púutsʼul:púutsʼul V-IV ; ! "escaparse”
+síijil:síijil V-IV ; ! "nacer”
+tajal:tajal V-IV ; ! "sazonar”
+taal:taal V-IV ; ! "venir”
+tijil:tijil V-IV ; ! "secarse”
+úuchul:úuchul V-IV ; ! "suceder”
+uʼul:uʼul V-IV ; ! "llegar”
+wenel:wenel V-IV ; ! "dormir”
+
