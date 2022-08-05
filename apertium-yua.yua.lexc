@@ -61,6 +61,13 @@ Multichar_Symbols
 %<o_pl2%>
 %<o_pl3%>
 
+%<pron_1sg%>
+%<pron_2sg%>
+%<pron_3sg%>
+%<pron_1pl%>
+%<pron_2pl%>
+%<pron_3pl%>
+
 %<female_agentive%>
 %<male_agentive%>
 
@@ -96,14 +103,21 @@ LEXICON SetA
 
 %<s_sg2%>%<pron%>:a # ;
 %<s_sg2%>%<pron%>%<hab%>:ka # ;
-%<s_sg1%>%<pron%>%<dur%>:tan # ;
+%<s_sg2%>%<pron%>%<dur%>:tan # ;
 
 
 %<s_sg3%>%<pron%>:u # ;
 %<s_sg3%>%<pron%>%<hab%>:ku # ;
+
 %<s_pl1%>%<pron%>:k # ;
+
 %<s_pl2%>%<pron%>:a # ;
+%<s_pl2%>%<pron%>%<hab%>:ka # ;
+%<s_pl2%>%<pron%>%<dur%>:tan # ;
+
 %<s_pl3%>%<pron%>:u # ;
+
+
 %<1sg_poss%>%<pron%>:in # ;
 %<2sg_poss%>%<pron%>:a # ;
 %<3sg_poss%>%<pron%>:u # ;
@@ -112,7 +126,13 @@ LEXICON SetA
 %<3pl_poss%>%<pron%>:u # ;
 
 LEXICON PronombresIndependientes
-%<1sg_poss%>%<pron%>:téen Topicalizer ;
+%<pron_1sg%>:téen Topicalizer ;
+%<pron_2sg%>:téech Topicalizer ;
+%<pron_3sg%>:leti Topicalizer ;
+
+%<pron_1pl%>:to'on Topicalizer ;
+%<pron_2pl%>:te'ex Topicalizer ;
+%<pron_3pl%>:leti'o'ob Topicalizer ;
 
 LEXICON Topicalizer
 %<top%>:e' # ;
@@ -127,6 +147,15 @@ LEXICON TransitiveSetB
 %<o_sg3%>:0%> PluralSubjSuffix ;
 %<o_sg3%>:ih%> PluralSubjSuffix ;
 %<o_pl3%>:o'ob%> PluralSubjSuffix ;
+Reflexives ;
+
+LEXICON Reflexives
+%<refl_1sg%>:inbah%> Terminatives ;
+%<refl_2sg%>:abah%> Terminatives ;
+%<refl_3sg%>:ubah%> Terminatives ;
+%<refl_1pl%>:kbah%> Terminatives ;
+%<refl_2pl%>:abahe'ex%> Terminatives ;
+%<refl_3pl%>:ubaho'ob%> Terminatives ;
 
 LEXICON IntransitiveSetB
 %<s_sg1%>:en Terminatives ;
@@ -148,18 +177,18 @@ LEXICON Terminatives
 # ;
 
 LEXICON RegIntransVozActivaSinL
-%<ipfv%>:0%> InstransitiveSetB;
-%<pfv%>:0%> InstransitiveSetB;
-%<pf%>:aha'an%> InstransitiveSetB;
-%<subj%>:%{V%}k%> InstransitiveSetB;
+%<ipfv%>:0%> IntransitiveSetB;
+%<pfv%>:0%> IntransitiveSetB;
+%<pf%>:aha'an%> IntransitiveSetB;
+%<subj%>:%{V%}k%> IntransitiveSetB;
 %<imp%>%<s_2sg%>:nen%> Terminatives;
 %<imp%>%<s_2pl%>:nene'ex%> Terminatives;
 
 LEXICON RegIntransVozActivaConL
-%<ipfv%>:%{V%}l%> InstransitiveSetB;
-%<pfv%>:0%> InstransitiveSetB;
-%<pf%>:aha'an%> InstransitiveSetB;
-%<subj%>:%{V%}k%> InstransitiveSetB;
+%<ipfv%>:%{V%}l%> IntransitiveSetB;
+%<pfv%>:0%> IntransitiveSetB;
+%<pf%>:aha'an%> IntransitiveSetB;
+%<subj%>:%{V%}k%> IntransitiveSetB;
 %<imp%>%<s_2sg%>:nen%> Terminatives;
 %<imp%>%<s_2pl%>:nene'ex%> Terminatives;
 
@@ -173,19 +202,19 @@ LEXICON RegIntransDvT
 %<imp%>%<s_2pl%>:0%> PluralSubjSuffix;
 
 LEXICON RegIntransDvTVozPasiva
-%<ipfv%>:a'al%> InstransitiveSetB;
-%<pfv%>:a'ab%> InstransitiveSetB;
-%<pf%>:a'an%> InstransitiveSetB;
-%<subj%>:a'ak%> InstransitiveSetB;
+%<ipfv%>:a'al%> IntransitiveSetB;
+%<pfv%>:a'ab%> IntransitiveSetB;
+%<pf%>:a'an%> IntransitiveSetB;
+%<subj%>:a'ak%> IntransitiveSetB;
 
 ! TODO: check on this....what's the plural ending?
 %<imp%>:a'ak%> Terminatives;
 
 LEXICON RegIntransDvTVozAntipasiva
-%<ipfv%>:ah%> InstransitiveSetB;
-%<pfv%>:ahnah%> InstransitiveSetB;
-%<pf%>:ahnaha'an%> InstransitiveSetB;
-%<subj%>:ahnak%> InstransitiveSetB;
+%<ipfv%>:ah%> IntransitiveSetB;
+%<pfv%>:ahnah%> IntransitiveSetB;
+%<pf%>:ahnaha'an%> IntransitiveSetB;
+%<subj%>:ahnak%> IntransitiveSetB;
 
 ! TODO: check on this....what's the plural ending?
 %<imp%>:ahnak%> Terminatives;
