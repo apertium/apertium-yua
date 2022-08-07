@@ -11,7 +11,7 @@ def gen_trans(cvc_root, gloss):
 
     print(f"""
 ! {gloss}
-{cvc_root}%<v%>%<tv%>:{cvc_root} TransVozActiva ;
+{cvc_root}%<v%>%<tv%>:{cvc_root}%> TransVozActiva ;
 {cvc_root}%<v%>%<iv%>%<aps%>:{aps_root}%> TransVozAntipasiva ;
 {cvc_root}%<v%>%<iv%>%<pss%>:{pss_root}%> TransVozPasiva ;
 {cvc_root}%<v%>%<iv%>%<mv%>:{mv_root}%> TransVozMedia ;
