@@ -80,6 +80,9 @@ Multichar_Symbols
 %<top%>          ! Topicalized
 %<loc%>           ! locative
 
+%<pos%> ! positional
+
+
 %<hab%>
 %<dur%>
 %<cont%>
@@ -101,8 +104,17 @@ Multichar_Symbols
 LEXICON Root
 CvcTrans ;
 IntransReg ;
+Positionals ;
 SetA ;
 PronombresIndependientes ;
+Negative ;
+IrregularTransVerb ;
+AspectMarker ;
+Adjectives ;
+
+LEXICON AspectMarker
+ImperfectiveAspectMarker ;
+PerfectiveAspectMarker ;
 
 LEXICON ImperfectiveAspectMarker
 %<hab%>:k # ;
@@ -215,6 +227,12 @@ Terminatives ;
 LEXICON Terminatives
 %<neg%>:i' # ;
 %<loc%>:i' # ;
+
+! these are endings to the aspect markers laili and taant, respectively
+%<cont%>:e' # ; 
+%<cess%>:e' # ;
+
+%<top%>:e' # ;
 # ;
 
 LEXICON RegIntransVozActivaSinL
@@ -252,6 +270,7 @@ LEXICON RegIntransDvTVozPasiva
 %<imp%>:a'ak%> Terminatives;
 
 LEXICON RegIntransDvTVozAntipasiva
+
 %<ipfv%>:ah%> IntransitiveSetB;
 %<pfv%>:ahnah%> IntransitiveSetB;
 %<pf%>:ahnaha'an%> IntransitiveSetB;
@@ -386,6 +405,13 @@ lúub%<v%>%<tv%>:lúubs%> RegIntransDvT ;
 lúub%<v%>%<iv%>%<pss%>:lúubs%> RegIntransDvTVozPasiva ;
 lúub%<v%>%<iv%>%<aps%>:lúubs%> RegIntransDvTVozAntipasiva ;
 
+
+! comer
+han%<v%>%<iv%>:han%> RegIntransVozActivaConL ;
+han%<v%>%<tv%>:hant%> RegIntransDvT ;
+han%<v%>%<iv%>%<pss%>:hant%> RegIntransDvTVozPasiva ;
+
+
 LEXICON CvcTrans
 
 ! Open Question_ Should they lemmatize to the cvc transitive root in all voices?
@@ -445,10 +471,10 @@ hay%<v%>%<iv%>%<pss%>:ha'ay%> TransVozPasiva ;
 hay%<v%>%<iv%>%<mv%>:hàay%> TransVozMedia ;
 
 ! Grind
-huch’%<v%>%<tv%>:huch’%> TransVozActiva ;
-huch’%<v%>%<iv%>%<aps%>:húuch’%> TransVozAntipasiva ;
-huch’%<v%>%<iv%>%<pss%>:hu'uch’%> TransVozPasiva ;
-huch’%<v%>%<iv%>%<mv%>:hùuch’%> TransVozMedia ;
+huch'%<v%>%<tv%>:huch'%> TransVozActiva ;
+huch'%<v%>%<iv%>%<aps%>:húuch'%> TransVozAntipasiva ;
+huch'%<v%>%<iv%>%<pss%>:hu'uch'%> TransVozPasiva ;
+huch'%<v%>%<iv%>%<mv%>:hùuch'%> TransVozMedia ;
 
 ! sink
 hup%<v%>%<tv%>:hup%> TransVozActiva ;
@@ -457,10 +483,10 @@ hup%<v%>%<iv%>%<pss%>:hu'up%> TransVozPasiva ;
 hup%<v%>%<iv%>%<mv%>:hùup%> TransVozMedia ;
 
 ! Change
-k’ex%<v%>%<tv%>:k’ex%> TransVozActiva ;
-k’ex%<v%>%<iv%>%<aps%>:k’éex%> TransVozAntipasiva ;
-k’ex%<v%>%<iv%>%<pss%>:k’e'ex%> TransVozPasiva ;
-k’ex%<v%>%<iv%>%<mv%>:k’èex%> TransVozMedia ;
+k'ex%<v%>%<tv%>:k'ex%> TransVozActiva ;
+k'ex%<v%>%<iv%>%<aps%>:k'éex%> TransVozAntipasiva ;
+k'ex%<v%>%<iv%>%<pss%>:k'e'ex%> TransVozPasiva ;
+k'ex%<v%>%<iv%>%<mv%>:k'èex%> TransVozMedia ;
 
 ! Learn
 kan%<v%>%<tv%>:kan%> TransVozActiva ;
@@ -481,22 +507,22 @@ kon%<v%>%<iv%>%<pss%>:ko'on%> TransVozPasiva ;
 kon%<v%>%<iv%>%<mv%>:kòon%> TransVozMedia ;
 
 ! Swallow
-luk’%<v%>%<tv%>:luk’%> TransVozActiva ;
-luk’%<v%>%<iv%>%<aps%>:lúuk’%> TransVozAntipasiva ;
-luk’%<v%>%<iv%>%<pss%>:lu'uk’%> TransVozPasiva ;
-luk’%<v%>%<iv%>%<mv%>:lùuk’%> TransVozMedia ;
+luk'%<v%>%<tv%>:luk'%> TransVozActiva ;
+luk'%<v%>%<iv%>%<aps%>:lúuk'%> TransVozAntipasiva ;
+luk'%<v%>%<iv%>%<pss%>:lu'uk'%> TransVozPasiva ;
+luk'%<v%>%<iv%>%<mv%>:lùuk'%> TransVozMedia ;
 
 ! Grab
-mach’%<v%>%<tv%>:mach’%> TransVozActiva ;
-mach’%<v%>%<iv%>%<aps%>:máach’%> TransVozAntipasiva ;
-mach’%<v%>%<iv%>%<pss%>:ma'ach’%> TransVozPasiva ;
-mach’%<v%>%<iv%>%<mv%>:màach’%> TransVozMedia ;
+mach'%<v%>%<tv%>:mach'%> TransVozActiva ;
+mach'%<v%>%<iv%>%<aps%>:máach'%> TransVozAntipasiva ;
+mach'%<v%>%<iv%>%<pss%>:ma'ach'%> TransVozPasiva ;
+mach'%<v%>%<iv%>%<mv%>:màach'%> TransVozMedia ;
 
 ! Eat Fast, “stuff-face”
-mak’%<v%>%<tv%>:mak’%> TransVozActiva ;
-mak’%<v%>%<iv%>%<aps%>:máak’%> TransVozAntipasiva ;
-mak’%<v%>%<iv%>%<pss%>:ma'ak’%> TransVozPasiva ;
-mak’%<v%>%<iv%>%<mv%>:màak’%> TransVozMedia ;
+mak'%<v%>%<tv%>:mak'%> TransVozActiva ;
+mak'%<v%>%<iv%>%<aps%>:máak'%> TransVozAntipasiva ;
+mak'%<v%>%<iv%>%<pss%>:ma'ak'%> TransVozPasiva ;
+mak'%<v%>%<iv%>%<mv%>:màak'%> TransVozMedia ;
 
 ! Buy
 man%<v%>%<tv%>:man%> TransVozActiva ;
@@ -511,46 +537,46 @@ muk%<v%>%<iv%>%<pss%>:mu'uk%> TransVozPasiva ;
 muk%<v%>%<iv%>%<mv%>:mùuk%> TransVozMedia ;
 
 ! Plant
-p’ak%<v%>%<tv%>:p’ak%> TransVozActiva ;
-p’ak%<v%>%<iv%>%<aps%>:p’áak%> TransVozAntipasiva ;
-p’ak%<v%>%<iv%>%<pss%>:p’a'ak%> TransVozPasiva ;
-p’ak%<v%>%<iv%>%<mv%>:p’àak%> TransVozMedia ;
+p'ak%<v%>%<tv%>:p'ak%> TransVozActiva ;
+p'ak%<v%>%<iv%>%<aps%>:p'áak%> TransVozAntipasiva ;
+p'ak%<v%>%<iv%>%<pss%>:p'a'ak%> TransVozPasiva ;
+p'ak%<v%>%<iv%>%<mv%>:p'àak%> TransVozMedia ;
 
 ! Open Eyes
-p’il%<v%>%<tv%>:p’il%> TransVozActiva ;
-p’il%<v%>%<iv%>%<aps%>:p’íil%> TransVozAntipasiva ;
-p’il%<v%>%<iv%>%<pss%>:p’i'il%> TransVozPasiva ;
-p’il%<v%>%<iv%>%<mv%>:p’ìil%> TransVozMedia ;
+p'il%<v%>%<tv%>:p'il%> TransVozActiva ;
+p'il%<v%>%<iv%>%<aps%>:p'íil%> TransVozAntipasiva ;
+p'il%<v%>%<iv%>%<pss%>:p'i'il%> TransVozPasiva ;
+p'il%<v%>%<iv%>%<mv%>:p'ìil%> TransVozMedia ;
 
 ! Measure
-p’is%<v%>%<tv%>:p’is%> TransVozActiva ;
-p’is%<v%>%<iv%>%<aps%>:p’íis%> TransVozAntipasiva ;
-p’is%<v%>%<iv%>%<pss%>:p’i'is%> TransVozPasiva ;
-p’is%<v%>%<iv%>%<mv%>:p’ìis%> TransVozMedia ;
+p'is%<v%>%<tv%>:p'is%> TransVozActiva ;
+p'is%<v%>%<iv%>%<aps%>:p'íis%> TransVozAntipasiva ;
+p'is%<v%>%<iv%>%<pss%>:p'i'is%> TransVozPasiva ;
+p'is%<v%>%<iv%>%<mv%>:p'ìis%> TransVozMedia ;
 
 ! Wash
-p’o%<v%>%<tv%>:p’o%> TransVozActiva ;
-p’o%<v%>%<iv%>%<aps%>:p’óo%> TransVozAntipasiva ;
-p’o%<v%>%<iv%>%<pss%>:p’o'o%> TransVozPasiva ;
-p’o%<v%>%<iv%>%<mv%>:p’òo%> TransVozMedia ;
+p'o%<v%>%<tv%>:p'o%> TransVozActiva ;
+p'o%<v%>%<iv%>%<aps%>:p'óo%> TransVozAntipasiva ;
+p'o%<v%>%<iv%>%<pss%>:p'o'o%> TransVozPasiva ;
+p'o%<v%>%<iv%>%<mv%>:p'òo%> TransVozMedia ;
 
 ! Insult
-poch’%<v%>%<tv%>:poch’%> TransVozActiva ;
-poch’%<v%>%<iv%>%<aps%>:póoch’%> TransVozAntipasiva ;
-poch’%<v%>%<iv%>%<pss%>:po'och’%> TransVozPasiva ;
-poch’%<v%>%<iv%>%<mv%>:pòoch’%> TransVozMedia ;
+poch'%<v%>%<tv%>:poch'%> TransVozActiva ;
+poch'%<v%>%<iv%>%<aps%>:póoch'%> TransVozAntipasiva ;
+poch'%<v%>%<iv%>%<pss%>:po'och'%> TransVozPasiva ;
+poch'%<v%>%<iv%>%<mv%>:pòoch'%> TransVozMedia ;
 
 ! Talk, Speak
-t’an%<v%>%<tv%>:t’an%> TransVozActiva ;
-t’an%<v%>%<iv%>%<aps%>:t’áan%> TransVozAntipasiva ;
-t’an%<v%>%<iv%>%<pss%>:t’a'an%> TransVozPasiva ;
-t’an%<v%>%<iv%>%<mv%>:t’àan%> TransVozMedia ;
+t'an%<v%>%<tv%>:t'an%> TransVozActiva ;
+t'an%<v%>%<iv%>%<aps%>:t'áan%> TransVozAntipasiva ;
+t'an%<v%>%<iv%>%<pss%>:t'a'an%> TransVozPasiva ;
+t'an%<v%>%<iv%>%<mv%>:t'àan%> TransVozMedia ;
 
 ! Overflow
-t’ul%<v%>%<tv%>:t’ul%> TransVozActiva ;
-t’ul%<v%>%<iv%>%<aps%>:t’úul%> TransVozAntipasiva ;
-t’ul%<v%>%<iv%>%<pss%>:t’u'ul%> TransVozPasiva ;
-t’ul%<v%>%<iv%>%<mv%>:t’ùul%> TransVozMedia ;
+t'ul%<v%>%<tv%>:t'ul%> TransVozActiva ;
+t'ul%<v%>%<iv%>%<aps%>:t'úul%> TransVozAntipasiva ;
+t'ul%<v%>%<iv%>%<pss%>:t'u'ul%> TransVozPasiva ;
+t'ul%<v%>%<iv%>%<mv%>:t'ùul%> TransVozMedia ;
 
 ! Burn (in fire)
 tok%<v%>%<tv%>:tok%> TransVozActiva ;
@@ -565,16 +591,16 @@ top%<v%>%<iv%>%<pss%>:to'op%> TransVozPasiva ;
 top%<v%>%<iv%>%<mv%>:tòop%> TransVozMedia ;
 
 ! Cure
-ts’ak%<v%>%<tv%>:ts’ak%> TransVozActiva ;
-ts’ak%<v%>%<iv%>%<aps%>:ts’áak%> TransVozAntipasiva ;
-ts’ak%<v%>%<iv%>%<pss%>:ts’a'ak%> TransVozPasiva ;
-ts’ak%<v%>%<iv%>%<mv%>:ts’àak%> TransVozMedia ;
+ts'ak%<v%>%<tv%>:ts'ak%> TransVozActiva ;
+ts'ak%<v%>%<iv%>%<aps%>:ts'áak%> TransVozAntipasiva ;
+ts'ak%<v%>%<iv%>%<pss%>:ts'a'ak%> TransVozPasiva ;
+ts'ak%<v%>%<iv%>%<mv%>:ts'àak%> TransVozMedia ;
 
 ! Peel, Skin
-ts’il%<v%>%<tv%>:ts’il%> TransVozActiva ;
-ts’il%<v%>%<iv%>%<aps%>:ts’íil%> TransVozAntipasiva ;
-ts’il%<v%>%<iv%>%<pss%>:ts’i'il%> TransVozPasiva ;
-ts’il%<v%>%<iv%>%<mv%>:ts’ìil%> TransVozMedia ;
+ts'il%<v%>%<tv%>:ts'il%> TransVozActiva ;
+ts'il%<v%>%<iv%>%<aps%>:ts'íil%> TransVozAntipasiva ;
+ts'il%<v%>%<iv%>%<pss%>:ts'i'il%> TransVozPasiva ;
+ts'il%<v%>%<iv%>%<mv%>:ts'ìil%> TransVozMedia ;
 
 ! Fry
 tsa%<v%>%<tv%>:tsa%> TransVozActiva ;
@@ -607,10 +633,10 @@ xot%<v%>%<iv%>%<pss%>:xo'ot%> TransVozPasiva ;
 xot%<v%>%<iv%>%<mv%>:xòot%> TransVozMedia ;
 
 ! Slice
-xot’%<v%>%<tv%>:xot’%> TransVozActiva ;
-xot’%<v%>%<iv%>%<aps%>:xóot’%> TransVozAntipasiva ;
-xot’%<v%>%<iv%>%<pss%>:xo'ot’%> TransVozPasiva ;
-xot’%<v%>%<iv%>%<mv%>:xòot’%> TransVozMedia ;
+xot'%<v%>%<tv%>:xot'%> TransVozActiva ;
+xot'%<v%>%<iv%>%<aps%>:xóot'%> TransVozAntipasiva ;
+xot'%<v%>%<iv%>%<pss%>:xo'ot'%> TransVozPasiva ;
+xot'%<v%>%<iv%>%<mv%>:xòot'%> TransVozMedia ;
 
 ! Consume
 xup%<v%>%<tv%>:xup%> TransVozActiva ;
@@ -619,7 +645,7 @@ xup%<v%>%<iv%>%<pss%>:xu'up%> TransVozPasiva ;
 xup%<v%>%<iv%>%<mv%>:xùup%> TransVozMedia ;
 
 
-LEXICON IrregularTranVerb
+LEXICON IrregularTransVerb
 
 ! see
 il%<v%>%<tv%>:il%> TransVozActiva ;
@@ -640,3 +666,186 @@ u'ub%<v%>%<iv%>%<pss%>:u'ub%> IrregularTransVozPasiva ;
 a'al%<v%>%<tv%>:a'al%> TransVozActiva ;
 a'al%<v%>%<iv%>%<aps%>:a'alah%> TransVozAntipasiva ;
 a'al%<v%>%<iv%>%<pss%>:a'al%> IrregularTransVozPasiva ;
+
+
+LEXICON PositionalInflections
+%<ipfv%>:tal%> PluralSubjSuffix ;
+%<pfv%>:lah%> IntransitiveSetB ;
+%<pf%>:laha'an%> IntransitiveSetB ;
+%<subj%>:lak%> IntransitiveSetB ;
+
+LEXICON Positionals
+! pucker
+boch'%<v%>%<pos%>:boch' PositionalInflections ;
+
+! stoop, squat, crouch, cower (lower eyes)
+mot'%<v%>%<pos%>:mot' PositionalInflections ;
+
+! compress, reduce
+ts'an%<v%>%<pos%>:ts'an PositionalInflections ;
+
+! gather, crease
+much'%<v%>%<pos%>:much' PositionalInflections ;
+
+! punch, puncture, bore
+ts'op%<v%>%<pos%>:ts'op PositionalInflections ;
+
+! pile up, gather (pile up earth, bury)
+mul%<v%>%<pos%>:mul PositionalInflections ;
+
+! thrust into a hole
+ts'ot%<v%>%<pos%>:ts'ot PositionalInflections ;
+
+! lean against (limit, stop)
+nak%<v%>%<pos%>:nak PositionalInflections ;
+
+! sit cross-legged (squash)
+ts'uk%<v%>%<pos%>:ts'uk PositionalInflections ;
+
+! join, unit
+nuch%<v%>%<pos%>:nuch PositionalInflections ;
+
+! bow, grovel (bend)
+chin%<v%>%<pos%>:chin PositionalInflections ;
+
+! stare
+p'ich%<v%>%<pos%>:p'ich PositionalInflections ;
+
+! pin, fix or set in place
+ch'ik%<v%>%<pos%>:ch'ik PositionalInflections ;
+
+! jump, protrude (jump, leap)
+p'it%<v%>%<pos%>:p'it PositionalInflections ;
+
+! scatter, stretch out (spread extend)
+hay%<v%>%<pos%>:hay PositionalInflections ;
+
+! bend
+p'ok%<v%>%<pos%>:p'ok PositionalInflections ;
+
+! straddle, mount (mount)
+hek%<v%>%<pos%>:hek PositionalInflections ;
+
+! swell up (swell, inflate, develop)
+p'ol%<v%>%<pos%>:p'ol PositionalInflections ;
+
+! sink, insert (insert, encircle)
+hup%<v%>%<pos%>:hup PositionalInflections ;
+
+! lean, bend
+p'us%<v%>%<pos%>:p'us PositionalInflections ;
+
+! place between two (same) things
+kap%<v%>%<pos%>:kap PositionalInflections ;
+
+! open, open wide (open, cut open)
+xel%<v%>%<pos%>:xel PositionalInflections ;
+
+! roll up, curl up, coil up (roll, twist, wind)
+kots'%<v%>%<pos%>:kots' PositionalInflections ;
+
+! open  (open, spread/extend, try for first time; e.g., xeen a xit a wiit/go open your anus for 1st time!)
+xit%<v%>%<pos%>:xit PositionalInflections ;
+
+! roll up, twist oneself, fold oneself up (roll, twist, screw)
+kop%<v%>%<pos%>:kop PositionalInflections ;
+
+! open, come out, appear (unfold, spread, open as in hand, legs, etc.)
+xit'%<v%>%<pos%>:xit' PositionalInflections ;
+
+! lie athwart, block
+k'at%<v%>%<pos%>:k'at PositionalInflections ;
+
+! stick to, adhere (fasten, stick to, adhere)
+tak'%<v%>%<pos%>:tak' PositionalInflections ;
+
+! lean (bend, tilt)
+k'eb%<v%>%<pos%>:k'eb PositionalInflections ;
+
+! protrude (raise over one's head)
+tich'%<v%>%<pos%>:tich' PositionalInflections ;
+
+! put between two things
+lap%<v%>%<pos%>:lap PositionalInflections ;
+
+! bulge, knot (twist, sprain, dislocate)
+tuk'%<v%>%<pos%>:tuk' PositionalInflections ;
+
+! join, unit
+lot%<v%>%<pos%>:lot PositionalInflections ;
+
+! distend, stick out, lie with stomach sticking out (protrude, inflate)
+t'es%<v%>%<pos%>:t'es PositionalInflections ;
+
+! bend, arch (bend, twist)
+met%<v%>%<pos%>:met PositionalInflections ;
+
+! expose, extend, tighten (extend, tighten)
+t'in%<v%>%<pos%>:t'in PositionalInflections ;
+
+! fold hands
+moch%<v%>%<pos%>:moch PositionalInflections ;
+
+! ball up, bulge (form ball, make round)
+wol%<v%>%<pos%>:wol PositionalInflections ;
+
+! submerge (sink, immerse, dip)
+t'ub%<v%>%<pos%>:t'ub PositionalInflections ;
+
+! hang down something gelatinous (drop hand)
+t'oy%<v%>%<pos%>:t'oy PositionalInflections ;
+
+
+LEXICON AdjectivalEndings
+PluralSubjSuffix ;
+Terminatives ;
+
+LEXICON DeadjectivalVerbalEndings
+%<iv%>%<ipfv%>:tal%> PluralSubjSuffix ;
+%<iv%>%<ipfv%>:chahal%> PluralSubjSuffix ;
+%<iv%>%<pfv%>:chah%> IntransitiveSetB ;
+%<iv%>%<pf%>:chaha'an%> IntransitiveSetB ;
+%<iv%>%<pf%>:chahak%> IntransitiveSetB ;
+
+LEXICON Adjectives
+! good
+ma'alo'ob%<adj%>:ma'alo'ob%> AdjectivalEndings ;
+ma'alo'ob%<v%>:ma'alo'ob%> DeadjectivalVerbalEndings ;
+
+! sick
+koha'an%<adj%>:koha'an%> AdjectivalEndings ;
+koha'an%<v%>:koha'an%> DeadjectivalVerbalEndings ;
+
+! good
+uts%<adj%>:uts%> AdjectivalEndings ;
+uts%<v%>:uts%> DeadjectivalVerbalEndings ;
+
+! more
+màas%<adj%>:màas%> AdjectivalEndings ;
+màas%<v%>:màas%> DeadjectivalVerbalEndings ;
+
+! slow, delayed
+xàan%<adj%>:xàan%> AdjectivalEndings ;
+xàan%<v%>:xàan%> DeadjectivalVerbalEndings ;
+
+! existing
+yàan%<adj%>:yàan%> AdjectivalEndings ;
+yàan%<v%>:yàan%> DeadjectivalVerbalEndings ;
+
+! big
+nohoch%<adj%>:nohoch%> AdjectivalEndings ;
+nohoch%<v%>:nohoch%> DeadjectivalVerbalEndings ;
+
+! expensive
+ko'oh%<adj%>:ko'oh%> AdjectivalEndings ;
+ko'oh%<v%>:ko'oh%> DeadjectivalVerbalEndings ;
+
+! possible
+páah%<adj%>:páah%> AdjectivalEndings ;
+páah%<v%>:páah%> DeadjectivalVerbalEndings ;
+
+! town (not an adj...?)
+káah%<adj%>:káah%> AdjectivalEndings ;
+káah%<v%>:káah%> DeadjectivalVerbalEndings ;
+
+
