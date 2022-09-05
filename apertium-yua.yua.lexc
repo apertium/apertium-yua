@@ -4,7 +4,7 @@
 Multichar_Symbols
 
 %{V%}
-
+%{l%}
 %<v%>    ! Verbo
 
 %<n%>    ! Sustantivo
@@ -34,6 +34,8 @@ Multichar_Symbols
 
 %<poss%>  ! "posesivo"
 
+%<clfanim%>
+%<clfinan%>
 
 %<hab%>
 
@@ -82,6 +84,7 @@ Multichar_Symbols
 
 %<pos%> ! positional
 
+%<num%>
 
 %<hab%>
 %<dur%>
@@ -102,15 +105,30 @@ Multichar_Symbols
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON Root
-CvcTrans ;
-IntransReg ;
-Positionals ;
+VerbandNounInit ;
 SetA ;
 PronombresIndependientes ;
 Negative ;
-IrregularTransVerb ;
 AspectMarker ;
 Adjectives ;
+NominalClassifiers ;
+Numbers ;
+
+LEXICON VerbandNounInit
+
+! TODO: flag diacritics so that these only happen in the imperfective,
+! and w only 1st/2nd persons, y only 3rd persons
+0:w VerborPossessiveNoun ;
+0:y VerborPossessiveNoun ;
+VerborPossessiveNoun ;
+
+LEXICON VerborPossessiveNoun
+CvcTrans ;
+IntransReg ;
+IrregularTransVerb ;
+IrregularIntransVerb ;
+Positionals ;
+Noun ;
 
 LEXICON AspectMarker
 ImperfectiveAspectMarker ;
@@ -118,16 +136,15 @@ PerfectiveAspectMarker ;
 
 LEXICON ImperfectiveAspectMarker
 %<hab%>:k # ;
-%<dur%>:taan # ;
+%<hab%>%<neg%>:t # ;
+%<dur%>:táan # ;
 %<cont%>:laili' # ;
 %<cess%>:ts'o'ok # ;
 %<cess%>:taant # ; ! how to distinguish this proximate terminative?
-
 %<incep%>:ho'op # ;
 %<incep%>:kaah # ;
 %<incep%>:chuun # ;
 %<incep%>:lek # ;
-
 %<des%>:taak # ;
 
 LEXICON PerfectiveAspectMarker
@@ -144,7 +161,9 @@ LEXICON PerfectiveAspectMarker
 
 LEXICON Negative
 %<neg%>:ma'a # ;
+%<hab%>%<neg%>:ma'at # ;
 %<neg%>:ma # ;
+
 
 
 LEXICON SetA
@@ -181,14 +200,15 @@ LEXICON SetA
 LEXICON PronombresIndependientes
 %<pron_1sg%>:téen Topicalizer ;
 %<pron_2sg%>:téech Topicalizer ;
-%<pron_3sg%>:leti Topicalizer ;
+%<pron_3sg%>:leti' Topicalizer ;
 
 %<pron_1pl%>:to'on Topicalizer ;
 %<pron_2pl%>:te'ex Topicalizer ;
-%<pron_3pl%>:leti'o'ob Topicalizer ;
+%<pron_3pl%>:leti'%>o'ob Topicalizer ;
 
 LEXICON Topicalizer
 %<top%>:e' # ;
+
 Terminatives ;
 
 LEXICON TransitiveSetB
@@ -231,7 +251,6 @@ LEXICON Terminatives
 ! these are endings to the aspect markers laili and taant, respectively
 %<cont%>:e' # ; 
 %<cess%>:e' # ;
-
 %<top%>:e' # ;
 # ;
 
@@ -244,7 +263,7 @@ LEXICON RegIntransVozActivaSinL
 %<imp%>%<s_2pl%>:nene'ex%> Terminatives;
 
 LEXICON RegIntransVozActivaConL
-%<ipfv%>:%{V%}l%> IntransitiveSetB;
+%<ipfv%>:%{V%}l%> PluralSubjSuffix;
 %<pfv%>:0%> IntransitiveSetB;
 %<pf%>:aha'an%> IntransitiveSetB;
 %<subj%>:%{V%}k%> IntransitiveSetB;
@@ -320,6 +339,50 @@ LEXICON TransVozMedia
 %<imp%>:0%> IntransitiveSetB;
 
 
+LEXICON PossessiveNominalSuffixes
+il:%<poss_comm%> IntransitiveSetB ;
+al:%<poss_nonownership%> IntransitiveSetB ;
+el:%<poss_internal%> IntransitiveSetB ;
+PluralSuffix ;
+IntransitiveSetB ;
+
+LEXICON PluralSuffix
+o'ob:%<pl%> Terminatives ;
+
+LEXICON NounEndings
+Terminatives ;
+PluralSuffix ;
+IntransitiveSetB ;
+PossessiveNominalSuffixes ;
+
+LEXICON NominalClassifiers
+%<clfanim%>:tuul # ;
+%<clfinan%>:p'éel # ;
+%<clfinan%>%<num%>:hump'éel # ;
+%<clfanim%>%<num%>:huntuul # ;
+
+LEXICON Numbers
+%<num%>:hun # ;
+%<num%>:ka'a # ;
+%<num%>:ox # ;
+%<num%>:kam # ;
+%<num%>:hó # ;
+
+LEXICON Noun
+tsíimin:tsíimin%<n%> NounEndings ; ! "caballo"
+káambal:káambal%<n%> NounEndings ; ! "estudiante"
+ka'ansah:ka'ansah%<n%> NounEndings ; ! "maestro"
+kòolnáal:kòolnáal%<n%> NounEndings ; ! "agricultor(a)"
+wíinik:wíinik%<n%> NounEndings ; ! "humano"
+máak:máak%<n%> NounEndings ; ! "persona"
+míis:míis%<n%> NounEndings ; ! "gato"
+pèek:pèek%<n%> NounEndings ; ! "perro"
+hu'unalte%<n%> NounEndings ; ! "libro"
+ùulum:ùulum%<n%> NounEndings ; ! "huajolote"
+bàatsil:bàatsil%<n%> NounEndings ; ! "amigo"
+k'àaba:k'àaba%<n%> NounEndings ; ! "nombre"
+
+
 LEXICON IntransReg
 ! go
 bin%<v%>%<iv%>:bin%> RegIntransVozActivaSinL ;
@@ -368,6 +431,7 @@ ok%<v%>%<iv%>:ok%> RegIntransVozActivaConL ;
 ok%<v%>%<tv%>:oks%> RegIntransDvT ;
 ok%<v%>%<iv%>%<pss%>:oks%> RegIntransDvTVozPasiva ;
 ok%<v%>%<iv%>%<aps%>:oks%> RegIntransDvTVozAntipasiva ;
+ok%<v%>%<iv%>%<aps%>:óok%> RegIntransDvTVozAntipasiva ;
 
 ! exit
 hóok%<v%>%<iv%>:hóok%> RegIntransVozActivaConL ;
@@ -482,6 +546,7 @@ hup%<v%>%<iv%>%<aps%>:húup%> TransVozAntipasiva ;
 hup%<v%>%<iv%>%<pss%>:hu'up%> TransVozPasiva ;
 hup%<v%>%<iv%>%<mv%>:hùup%> TransVozMedia ;
 
+
 ! Change
 k'ex%<v%>%<tv%>:k'ex%> TransVozActiva ;
 k'ex%<v%>%<iv%>%<aps%>:k'éex%> TransVozAntipasiva ;
@@ -526,9 +591,9 @@ mak'%<v%>%<iv%>%<mv%>:màak'%> TransVozMedia ;
 
 ! Buy
 man%<v%>%<tv%>:man%> TransVozActiva ;
-man%<v%>%<iv%>%<aps%>:máan%> TransVozAntipasiva ;
+man%<v%>%<iv%>%<aps%>:màan%> TransVozAntipasiva ;
 man%<v%>%<iv%>%<pss%>:ma'an%> TransVozPasiva ;
-man%<v%>%<iv%>%<mv%>:màan%> TransVozMedia ;
+man%<v%>%<iv%>%<mv%>:màan%> TransVozMedia ; ! TODO check this
 
 ! Bury
 muk%<v%>%<tv%>:muk%> TransVozActiva ;
@@ -645,6 +710,11 @@ xup%<v%>%<iv%>%<pss%>:xu'up%> TransVozPasiva ;
 xup%<v%>%<iv%>%<mv%>:xùup%> TransVozMedia ;
 
 
+LEXICON IrregularIntransVerb
+xíimbal%<v%>%<iv%>:xíimbal TransVozAntipasiva ;
+xíimbal%<v%>%<tv%>:xíimba%{l%}t TransVozActiva ;
+
+
 LEXICON IrregularTransVerb
 
 ! see
@@ -666,6 +736,11 @@ u'ub%<v%>%<iv%>%<pss%>:u'ub%> IrregularTransVozPasiva ;
 a'al%<v%>%<tv%>:a'al%> TransVozActiva ;
 a'al%<v%>%<iv%>%<aps%>:a'alah%> TransVozAntipasiva ;
 a'al%<v%>%<iv%>%<pss%>:a'al%> IrregularTransVozPasiva ;
+
+! Ask
+k'áat%<v%>%<tv%>:k'áat%> TransVozActiva ;
+k'áat%<v%>%<iv%>%<aps%>:k'áat%> TransVozAntipasiva ;
+k'áat%<v%>%<iv%>%<pss%>:k'eáat%> TransVozPasiva ;
 
 
 LEXICON PositionalInflections
@@ -847,5 +922,6 @@ páah%<v%>:páah%> DeadjectivalVerbalEndings ;
 ! town (not an adj...?)
 káah%<adj%>:káah%> AdjectivalEndings ;
 káah%<v%>:káah%> DeadjectivalVerbalEndings ;
+
 
 
