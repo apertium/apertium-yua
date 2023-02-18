@@ -1,24 +1,3 @@
-bixih
-baʼaxih
-máaxih
-bix a kʼàaba
-baʼax a kʼàaba
-baʼax u kʼàaba
-bix a kʼàabaʼeʼex
-baʼax u kʼàabaʼoʼob
-baʼax in kʼàaba
-bix k kʼàaba
-u kʼahóolen
-u kʼahóolenoʼob
-u kʼahóolech
-u kʼahóolechoʼob
-in kʼahóolech
-in kʼahóoltikoʼob
-in kʼahóol. u kʼàaba
-
-#
-# tsáab kàan
-#
 kiʼichkelem yùumeʼ tu yaʼalah tiʼ tsáab kàan beyaʼ
 teʼ yóokʼol le úukʼumháʼ yàan u máan óox pʼéel chèemi
 ti kaʼa pʼéeleʼ tiʼ yàan kíimiliʼ
@@ -42,30 +21,3 @@ tsáab kàaneʼ le ken u kʼex u yòotʼeleʼ ku nohochtal u tsáab
 yùum josé diaz bolioʼeʼ tu tsʼíibtah hun pʼéel xòok yóokʼlal le kàanaʼ
 tumèen ku tùukultik letiʼeʼ
 tsáab kàanoʼ u tsʼàahmah u tùukulil u haʼabil mayaʼoʼob
-
-#
-# basic sentences
-#
-táan in màan tèen
-táan in màan
-ka hanal tèech
-laili u xòok
-
-#
-# dialogue 1
-#
-òolah, baʼax ka mèentik
-chéen mix baʼal. táan in xíimbaltik in àamigah
-bix u kʼàaba a àamigah 
-u kʼàabaʼeʼ fidelia
-in kʼahóol letiʼ
-a kʼahóol wáh?
-hàah, chéen in wòohel bix u kʼàaba
-koʼoten wayeʼ fidelia, julia u yòohel bix a kʼàaba
-bix a wòohel in kʼàaba?
-tin kʼahóoltah a wich. kin waʼalikeʼ "in kʼahóol le koʼolelaʼ"
-ta wòoheltah tèen?
-tin wòoheltah tèech
-uts in kʼahóoltikech, julia
-bey xan ten fidelia, kiʼimak in wóol in kʼahóoltikech
-
