@@ -1,0 +1,11 @@
+DELIMITERS = "." "¶" ".." "?" "!" ;
+
+LIST BOS = >>> ;
+LIST EOS = <<< ; 
+
+LIST N = n ;
+
+
+SECTION
+
+SELECT N ;

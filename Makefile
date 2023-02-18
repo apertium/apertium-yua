@@ -6,3 +6,4 @@ all:
 	hfst-fst2fst -w yua.mor.hfst -o yua.mor.hfstol
 	hfst-fst2fst -O yua.mor.hfst -o yua.automorf.hfst
 	apertium-gen-modes modes.xml
+	cg-comp apertium-yua.yua.rlx yua.rlx.bin
