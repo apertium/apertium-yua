@@ -1,8 +1,22 @@
-<modes>  <mode name="yua-morph" install="yes">
+<modes>  
+  <mode name="yua-morph" install="yes">
     <pipeline>
       <program name="hfst-proc -w">
         <file name="yua.automorf.hfst"/>
       </program>
     </pipeline>
   </mode>
+  <mode name="yua-disam" install="yes">
+    <pipeline>
+      <program name="sed &quot;s/['’]/ʼ/g&quot;"/>
+      <program name="hfst-proc -w">
+        <file name="yua.automorf.hfst"/>
+      </program>
+      <program name="cg-conv -a -l -B"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="yua.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 </modes>
