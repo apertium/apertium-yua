@@ -4,8 +4,20 @@ LIST BOS = >>> ;
 LIST EOS = <<< ; 
 
 LIST N = n ;
+LIST V = v ;
 
+LIST SSg1 = s_sg1 ;
+LIST SSg2 = s_sg2 ;
+LIST SSg3 = s_sg3 ;
+
+LIST Px1Sg = 1sg_poss ; 
+LIST Px2Sg = 2sg_poss ; 
+LIST Px3Sg = 3sg_poss ; 
+
+SET Poss = Px1Sg | Px2Sg | Px3Sg ;
+
+SET Agr = SSg1 | SSg2 | SSg3 ;
 
 SECTION
 
-SELECT N ;
+REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
