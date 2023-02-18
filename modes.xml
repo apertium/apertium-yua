@@ -1,0 +1,8 @@
+<modes>  <mode name="yua-morph" install="yes">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="yua.automorf.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+</modes>
