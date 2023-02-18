@@ -137,75 +137,75 @@ ImperfectiveAspectMarker ;
 PerfectiveAspectMarker ;
 
 LEXICON ImperfectiveAspectMarker
-%<hab%>:k # ;
-%<hab%>%<neg%>:t # ;
-%<dur%>:táan # ;
-%<cont%>:lailiʼ # ;
-%<cess%>:tsʼoʼok # ;
-%<cess%>:taant # ; ! how to distinguish this proximate terminative?
-%<incep%>:hoʼop # ;
-%<incep%>:kaah # ;
-%<incep%>:chuun # ;
-%<incep%>:lek # ;
-%<des%>:taak # ;
+k%<hab%>:k # ;
+k%<hab%>%<neg%>:t # ;
+táan%<dur%>:táan # ;
+lailiʼ%<cont%>:lailiʼ # ;
+tsʼoʼok%<cess%>:tsʼoʼok # ;
+taant%<cess%>:taant # ; ! how to distinguish this proximate terminative?
+hoʼop%<incep%>:hoʼop # ;
+kaah%<incep%>:kaah # ;
+chuun%<incep%>:chuun # ;
+lek%<incep%>:lek # ;
+taak%<des%>:taak # ;
 
 LEXICON PerfectiveAspectMarker
-%<pfv%>%<tv%>:t # ;
+t%<pfv%>%<tv%>:t # ;
 
-%<s_sg1%>%<pron%>%<pfv%>%<tv%>:tin # ;
-%<s_sg2%>%<pron%>%<pfv%>%<tv%>:ta # ;
+táan%<pfv%>%+in%<s_sg1%>%<pron%>:tin # ;
+táan%<pfv%>%+a%<s_sg2%>%<pron%>:ta # ;
 
 ! TODO: is this accurate? verify t + u
-%<s_sg3%>%<pron%>%<pfv%>%<tv%>:tu # ; 
+táan%<pfv%>%+u%<s_sg3%>%<pron%>:tu # ; 
 
-%<pfv%>%<iv%>:h # ;
+h%<pfv%>%<iv%>:h # ;
 
 
 LEXICON Negative
-%<neg%>:maʼa # ;
-%<hab%>%<neg%>:maʼat # ;
-%<neg%>:ma # ;
+maʼa%<neg%>:maʼa # ;
+maʼat%<hab%>%<neg%>:maʼat # ;
+ma%<neg%>:ma # ;
 
 
 
 LEXICON SetA
-%<s_sg1%>%<pron%>:in # ;
-%<s_sg1%>%<pron%>%<hab%>:kin # ;
-%<s_sg1%>%<pron%>%<dur%>:tin # ;
+in%<s_sg1%>%<pron%>:in # ;
+k%<hab%>%+in%<s_sg1%>%<pron%>:kin # ;
+táan%<dur%>%+in%<s_sg1%>%<pron%>:tin # ;
 
-%<s_sg2%>%<pron%>:a # ;
-%<s_sg2%>%<pron%>%<hab%>:ka # ;
-%<s_sg2%>%<pron%>%<dur%>:tan # ;
-
-
-%<s_sg3%>%<pron%>:u # ;
-%<s_sg3%>%<pron%>%<hab%>:ku # ;
-
-%<s_pl1%>%<pron%>:k # ;
-
-%<s_pl2%>%<pron%>:a # ;
-%<s_pl2%>%<pron%>%<hab%>:ka # ;
-%<s_pl2%>%<pron%>%<dur%>:tan # ;
-%<s_pl2%>%<pron%>%<pfv%>:ta # ;
-
-%<s_pl3%>%<pron%>:u # ;
+a%<s_sg2%>%<pron%>:a # ;
+k%<hab%>%+a%<s_sg2%>%<pron%>:ka # ;
+táan%<dur%>%+%<s_sg2%>%<pron%>:tan # ;
 
 
-%<1sg_poss%>%<pron%>:in # ;
-%<2sg_poss%>%<pron%>:a # ;
-%<3sg_poss%>%<pron%>:u # ;
-%<1pl_poss%>%<pron%>:k # ;
-%<2pl_poss%>%<pron%>:a # ;
-%<3pl_poss%>%<pron%>:u # ;
+u%<s_sg3%>%<pron%>:u # ;
+k%<hab%>%+u%<s_sg3%>%<pron%>:ku # ;
+
+k%<s_pl1%>%<pron%>:k # ;
+
+a%<s_pl2%>%<pron%>:a # ;
+k%<hab%>%+a%<s_pl2%>%<pron%>:ka # ;
+táan%<dur%>%+%<s_pl2%>%<pron%>:tan # ;
+t%<pfv%>%+a%<s_pl2%>%<pron%>>:ta # ;
+
+u%<s_pl3%>%<pron%>:u # ;
+
+
+in%<1sg_poss%>%<pron%>:in # ;
+a%<2sg_poss%>%<pron%>:a # ;
+u%<3sg_poss%>%<pron%>:u # ;
+k%<1pl_poss%>%<pron%>:k # ;
+a%<2pl_poss%>%<pron%>:a # ;
+u%<3pl_poss%>%<pron%>:u # ;
 
 LEXICON PronombresIndependientes
-%<pron_1sg%>:téen Topicalizer ;
-%<pron_2sg%>:téech Topicalizer ;
-%<pron_3sg%>:letiʼ Topicalizer ;
+téen%<pron_1sg%>:téen Topicalizer ;
+téech%<pron_2sg%>:téech Topicalizer ;
+letiʼ%<pron_3sg%>:letiʼ Topicalizer ;
 
-%<pron_1pl%>:toʼon Topicalizer ;
-%<pron_2pl%>:teʼex Topicalizer ;
-%<pron_3pl%>:letiʼ%>oʼob Topicalizer ;
+toʼon%<pron_1pl%>:toʼon Topicalizer ;
+teʼex%<pron_2pl%>:teʼex Topicalizer ;
+letiʼ%<pron_3pl%>:letiʼ%>oʼob Topicalizer ;
 
 LEXICON Topicalizer
 %<top%>:eʼ # ;
