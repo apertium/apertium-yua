@@ -9,6 +9,8 @@ Multichar_Symbols
 
 %<n%>    ! Sustantivo
 %<adj%>  ! Adjetivo
+%<aux%>  ! auxiliar
+%<adp%>  ! Adposición
 %<pl%>   ! Plural
 %<s_pl%>   ! Sujeto Plural
 
@@ -28,6 +30,7 @@ Multichar_Symbols
 %<2pl_poss%>  ! "pronoun"
 %<3pl_poss%>  ! "pronoun"
 
+%<2p_pl%>
 %<poss_nonownership%>
 %<poss_comm%>
 %<poss_internal%>
@@ -41,7 +44,7 @@ Multichar_Symbols
 %<hab%>
 
 %<neg%>
-
+%<adv%>
 %<ipfv%> ! imperfectivo "Ongoing incomplete"
 %<pfv%>  ! perfectivo "Simple Past"
 %<pf%>   ! perfect "Completed Present"
@@ -93,7 +96,9 @@ Multichar_Symbols
 %<cess%>
 %<incep%>
 %<des%>
+%<oblig%>  ! obligative mood
 
+%<propn%> ! Proper Noun
 
 %{o%}             ! Either ʼoʼ or nothing
 %{e%}             ! Either ʼeʼ or nothing
@@ -110,11 +115,13 @@ VerbandNounInit ;
 SetA ;
 PronombresIndependientes ;
 Negative ;
-AspectMarker ;
+AspectMoodMarker ;
 Adjectives ;
+Adverb ;
 NominalClassifiers ;
 Numbers ;
 Interrogativos ;
+Adposition ;
 
 LEXICON VerbandNounInit
 
@@ -131,41 +138,53 @@ IrregularTransVerb ;
 IrregularIntransVerb ;
 Positionals ;
 Noun ;
+ProperNoun ;
 
-LEXICON AspectMarker
-ImperfectiveAspectMarker ;
-PerfectiveAspectMarker ;
+LEXICON AspectMoodMarker
+ImperfectiveAspectMoodMarker ;
+SubjunctiveAspectMoodMarker ;
+PerfectiveAspectMoodMarker ;
 
-LEXICON ImperfectiveAspectMarker
-k%<hab%>:k # ;
-k%<hab%>%<neg%>:t # ;
-táan%<dur%>:táan # ;
-lailiʼ%<cont%>:lailiʼ # ;
-tsʼoʼok%<cess%>:tsʼoʼok # ;
-taant%<cess%>:taant # ; ! how to distinguish this proximate terminative?
-hoʼop%<incep%>:hoʼop # ;
-kaah%<incep%>:kaah # ;
-chuun%<incep%>:chuun # ;
-lek%<incep%>:lek # ;
-taak%<des%>:taak # ;
+LEXICON ImperfectiveAspectMoodMarker
+k%<aux%>%<hab%>:k # ;
+k%<aux%>%<hab%>%<neg%>:t # ;
+táan%<aux%>%<dur%>:táan # ;
+lailiʼ%<aux%>%<cont%>:lailiʼ # ;
+tsʼoʼok%<aux%>%<cess%>:tsʼoʼok # ;
+taant%<aux%>%<cess%>:taant # ; ! how to distinguish this proximate terminative?
+hoʼop%<aux%>%<incep%>:hoʼop # ;
+kaah%<aux%>%<incep%>:kaah # ;
+chuun%<aux%>%<incep%>:chuun # ;
+lek%<aux%>%<incep%>:lek # ;
+taak%<aux%>%<des%>:taak # ;
+kʼabéet%<aux%>%<oblig%>:kʼabéet # ;
+kʼaʼnaʼan%<aux%>%<oblig%>:kʼaʼanaʼan # ;
+yàan%<aux%>%<oblig%>:yàan # ; ! in book this is described as "compulsive" but idk what mood that is.
+                       ! also how to distinguish that this is used for faux future?
+paʼatik%<aux%>%<fut%>:paʼatik # ;
 
-LEXICON PerfectiveAspectMarker
+heʼel%<aux%>%<fut%>:heʼel # ;  ! takes ...-e' at phrase boundary
+heʼel%<aux%>%<fut%>:heʼ # ;  ! takes ...-e' at phrase boundary
+
+LEXICON SubjunctiveAspectMoodMarker
+kaʼah%<aux%>:kaʼah # ;
+òolak%<aux%>:òolak # ;
+pʼelak%<aux%>:pʼelak # ;
+
+LEXICON PerfectiveAspectMoodMarker
 t%<pfv%>%<tv%>:t # ;
-
-táan%<pfv%>%+in%<s_sg1%>%<pron%>:tin # ;
-táan%<pfv%>%+a%<s_sg2%>%<pron%>:ta # ;
+táan%<aux%>%<pfv%>%+in%<s_sg1%>%<pron%>:tin # ;
+táan%<aux%>%<pfv%>%+a%<s_sg2%>%<pron%>:ta # ;
 
 ! TODO: is this accurate? verify t + u
-táan%<pfv%>%+u%<s_sg3%>%<pron%>:tu # ; 
-
-h%<pfv%>%<iv%>:h # ;
+táan%<aux%>%<pfv%>%+u%<s_sg3%>%<pron%>:tu # ; 
+h%<aux%>%<pfv%>%<iv%>:h # ;
 
 
 LEXICON Negative
 maʼa%<neg%>:maʼa # ;
 maʼat%<hab%>%<neg%>:maʼat # ;
 ma%<neg%>:ma # ;
-
 
 
 LEXICON SetA
@@ -199,8 +218,14 @@ a%<2pl_poss%>%<pron%>:a # ;
 u%<3pl_poss%>%<pron%>:u # ;
 
 LEXICON PronombresIndependientes
-téen%<pron_1sg%>:téen Topicalizer ;
-téech%<pron_2sg%>:téech Topicalizer ;
+ten%<pron_1sg%>:téen Topicalizer ;
+ten%<pron_1sg%>:tèen Topicalizer ;
+ten%<pron_1sg%>:ten Topicalizer ;
+
+tech%<pron_2sg%>:téech Topicalizer ;
+tech%<pron_2sg%>:tèech Topicalizer ;
+tech%<pron_2sg%>:tech Topicalizer ;
+
 letiʼ%<pron_3sg%>:letiʼ Topicalizer ;
 
 toʼon%<pron_1pl%>:toʼon Topicalizer ;
@@ -245,16 +270,20 @@ LEXICON PluralSubjSuffix
 %<s_pl%>:eʼex%> Terminatives ;
 Terminatives ;
 
+LEXICON DeicticTerminatives
+%<prx%>:aʼ # ;
+%<dist%>:oʼ # ;
+# ;
+
 LEXICON Terminatives
 %<neg%>:iʼ # ;
 %<loc%>:iʼ # ;
-
-! these are endings to the aspect markers laili and taant, respectively
-%<cont%>:eʼ # ; 
-%<cess%>:eʼ # ;
 %<top%>:eʼ # ;
 
-
+! these are endings to the aspect markers laili and taant
+%<cont%>:eʼ # ; ! Laili' 
+%<cess%>:eʼ # ; ! taant 
+DeicticTerminatives ;
 # ;
 
 LEXICON RegIntransVozActivaSinL
@@ -351,6 +380,7 @@ IntransitiveSetB ;
 
 LEXICON PluralSuffix
 %<pl%>:oʼob Terminatives ;
+%<2p_pl%>:eʼex Terminatives ;
 
 LEXICON NounEndings
 Terminatives ;
@@ -371,13 +401,30 @@ LEXICON Numbers
 %<num%>:kam # ;
 %<num%>:hó # ;
 
+LEXICON Adposition
+tak%<adp%>:tak # ; ! hasta
+
 LEXICON TerminacionesInterrogativas
 0:ih # ;
 # ;
 
 LEXICON Interrogativos
-%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ;
-%<adv%>%<itg%>:bix TerminacionesInterrogativas ;
+baʼax%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ;
+bix%<adv%>%<itg%>:bix TerminacionesInterrogativas ;
+
+LEXICON AdverbialEndings
+0:%> Terminatives ;
+# ;
+
+LEXICON Adverb
+xan%<adv%>:xan AdverbialEndings ; ! also/too
+sáansamal%<adv%>:sáansamal AdverbialEndings; ! everyday
+sáamal%<adv%>:sáamal AdverbialEndings; ! tomorrow
+bey%<adv%>:bey DeicticTerminatives ; ! like so
+beyòoraʼa%<adv%>:beyòoraʼa AdverbialEndings; ! now
+behòoraʼa%<adv%>:behòoraʼa AdverbialEndings; ! now
+
+
 
 LEXICON Noun
 tsíimin%<n%>:tsíimin NounEndings ; ! "caballo"
@@ -393,7 +440,19 @@ huʼunalte%<n%>:huʼunalte NounEndings ; ! "libro"
 bàatsil%<n%>:bàatsil NounEndings ; ! "amigo"
 kʼàaba%<n%>:kʼàaba NounEndings ; ! "nombre"
 ich%<n%>:ich NounEndings ; ! "ojo"
+òon%<n%>:òon NounEndings ; ! "aguacate"
+nah%<n%>:nah NounEndings ; ! "casa"
+xòok%<n%>:xòok NounEndings ; ! "lesson, studying"
+chùumuk%<n%>:chùumuk NounEndings ; ! "middle/center"
+kìisbùutsʼ%<n%>:kìisbùutsʼ NounEndings ; ! "car"
 
+
+màaya%<prop%>:màaya NounEndings ; ! maya
+
+
+LEXICON ProperNoun
+cancún%<propn%>:cancún NounEndings; ! Cancún
+isma%<propn%>:isma NounEndings; ! Isma (name)
 
 LEXICON IntransReg
 ! go
@@ -403,10 +462,10 @@ bin%<v%>%<iv%>%<pss%>:bins%> RegIntransDvTVozPasiva ;
 bin%<v%>%<iv%>%<aps%>:bins%> RegIntransDvTVozAntipasiva ;
 
 ! arrive
-tal%<v%>%<iv%>:tal%> RegIntransVozActivaConL ;
-tal%<v%>%<tv%>:tas%> RegIntransDvT ;
-tal%<v%>%<iv%>%<pss%>:tas%> RegIntransDvTVozPasiva ;
-tal%<v%>%<iv%>%<aps%>:tas%> RegIntransDvTVozAntipasiva ;
+tàal%<v%>%<iv%>:tàal%> RegIntransVozActivaConL ;
+tàal%<v%>%<tv%>:tàas%> RegIntransDvT ;
+tàal%<v%>%<iv%>%<pss%>:tàas%> RegIntransDvTVozPasiva ;
+tàal%<v%>%<iv%>%<aps%>:tàas%> RegIntransDvTVozAntipasiva ;
 
 ! go about (pasear)
 máan%<v%>%<iv%>:máan%> RegIntransVozActivaConL ;
@@ -414,11 +473,29 @@ máan%<v%>%<tv%>:máans%> RegIntransDvT ;
 máan%<v%>%<iv%>%<pss%>:máans%> RegIntransDvTVozPasiva ;
 máan%<v%>%<iv%>%<aps%>:máans%> RegIntransDvTVozAntipasiva ;
 
+! work
+meyah%<v%>%<iv%>:meyah%> RegIntransVozActivaConL ;
+meyah%<v%>%<tv%>:meyaht%> RegIntransDvT ;
+meyah%<v%>%<iv%>%<pss%>:meyaht%> RegIntransDvTVozPasiva ;
+meyah%<v%>%<iv%>%<aps%>:meyaht%> RegIntransDvTVozAntipasiva ;
+
 ! sleep
 wen%<v%>%<iv%>:wen%> RegIntransVozActivaConL ;
 wen%<v%>%<tv%>:wens%> RegIntransDvT ;
 wen%<v%>%<iv%>%<pss%>:wens%> RegIntransDvTVozPasiva ;
 wen%<v%>%<iv%>%<aps%>:wens%> RegIntransDvTVozAntipasiva ;
+
+! enter
+ok%<v%>%<iv%>:ok%> RegIntransVozActivaConL ;
+ok%<v%>%<tv%>:oks%> RegIntransDvT ;
+ok%<v%>%<iv%>%<pss%>:oks%> RegIntransDvTVozPasiva ;
+ok%<v%>%<iv%>%<aps%>:oks%> RegIntransDvTVozAntipasiva ;
+
+! enter/rob
+òok%<v%>%<iv%>:òok%> RegIntransVozActivaConL ;
+òok%<v%>%<tv%>:òoks%> RegIntransDvT ;
+òok%<v%>%<iv%>%<pss%>:òoks%> RegIntransDvTVozPasiva ;
+òok%<v%>%<iv%>%<aps%>:òoks%> RegIntransDvTVozAntipasiva ;
 
 ! wake up
 ah%<v%>%<iv%>:%{wy%}ah%> RegIntransVozActivaConL ;
@@ -480,7 +557,6 @@ lúub%<v%>%<iv%>:lúub%> RegIntransVozActivaConL ;
 lúub%<v%>%<tv%>:lúubs%> RegIntransDvT ;
 lúub%<v%>%<iv%>%<pss%>:lúubs%> RegIntransDvTVozPasiva ;
 lúub%<v%>%<iv%>%<aps%>:lúubs%> RegIntransDvTVozAntipasiva ;
-
 
 ! comer
 han%<v%>%<iv%>:han%> RegIntransVozActivaConL ;
@@ -731,9 +807,11 @@ LEXICON IrregularTransVerb
 
 ! to know (conocer)
 k'ahóol%<v%>%<tv%>:k'ahóol%> TransitiveSetB ;
+k'ahóol%<v%>%<tv%>:k'ahóolt%> RegIntransDvT ;
 
 ! to know (saber)
 oheel%<v%>%<tv%>:oheel%> TransitiveSetB ;
+oheel%<v%>%<tv%>:oheelt%> RegIntransDvT ;
 
 ! see
 il%<v%>%<tv%>:il%> TransVozActiva ;
@@ -940,6 +1018,13 @@ páah%<v%>:páah%> DeadjectivalVerbalEndings ;
 ! town (not an adj...?)
 káah%<adj%>:káah%> AdjectivalEndings ;
 káah%<v%>:káah%> DeadjectivalVerbalEndings ;
+
+! necessary 
+kʼabéet%<adj%>:kʼabéet%> AdjectivalEndings ;
+kʼabéet%<v%>:kʼabéet%> DeadjectivalVerbalEndings ;
+
+! necessary
+kʼaʼnaʼan%<adj%>:kʼaʼanaʼan AdjectivalEndings ;
 
 
 

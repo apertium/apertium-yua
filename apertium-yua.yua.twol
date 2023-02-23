@@ -1,6 +1,6 @@
 Alphabet
  
- A B C D E F G H I J K L M N O P Q R S T U W X Y Z
+ ʼ A B C D E F G H I J K L M N O P Q R S T U W X Y Z
  a b c d e f g h i j k l m n o p q r s t u w x y z
 %{V%}:a %{V%}:e %{V%}:i %{V%}:o %{V%}:u
  %>:%> %{wy%}:y %{wy%}:w %{wy%}:0 
@@ -29,3 +29,10 @@ Rules
 
 "Vowel harmony"
 %{V%}:Vx <=> Vx Cns+ %>:0 _ ; where Vx in UnaccVow ;
+
+"Insert glottal between adjacent vowels of different morphemes" !not working
+0:ʼ <=> Vow %>:0 _ Vow ;
+
+"Reduce geminates across morpheme boundary" !note: should this be in spellrelax?
+k:0 <=> k %>:0 _ ;
+

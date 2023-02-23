@@ -8,7 +8,7 @@
   </mode>
   <mode name="yua-disam" install="yes">
     <pipeline>
-      <program name="sed &quot;s/['’]/ʼ/g&quot;"/>
+	    <!-- <program name="sed &quot;s/['’]/ʼ/g&quot;"/> -->
       <program name="hfst-proc -w">
         <file name="yua.automorf.hfst"/>
       </program>
