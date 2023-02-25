@@ -73,6 +73,7 @@ Multichar_Symbols
 %<pron_1pl%>
 %<pron_2pl%>
 %<pron_3pl%>
+%<intj%>
 
 %<female_agentive%>
 %<male_agentive%>
@@ -122,6 +123,8 @@ NominalClassifiers ;
 Numbers ;
 Interrogativos ;
 Adposition ;
+Interjections ;
+Determiner ;
 
 LEXICON VerbandNounInit
 
@@ -180,37 +183,47 @@ táan%<aux%>%<pfv%>%+a%<s_sg2%>%<pron%>:ta # ;
 táan%<aux%>%<pfv%>%+u%<s_sg3%>%<pron%>:tu # ; 
 h%<aux%>%<pfv%>%<iv%>:h # ;
 
-
 LEXICON Negative
 maʼa%<neg%>:maʼa # ;
 maʼat%<hab%>%<neg%>:maʼat # ;
 ma%<neg%>:ma # ;
 
+LEXICON Determiner
+le%<det%>:le # ;
+heʼel%<det%>:heʼel DeicticTerminatives ;
 
 LEXICON SetA
 in%<s_sg1%>%<pron%>:in # ;
-k%<hab%>%+in%<s_sg1%>%<pron%>:kin # ;
+k%<hab%>%+in%<s_sg1%>%<pron%>:k%>in # ;
 táan%<dur%>%+in%<s_sg1%>%<pron%>:tin # ;
+tiʼi%<loc%>%+in%<s_sg1%>%<pron%>:t%>in # ;
+t%<pfv%>%+in%<s_sg1%>%<pron%>:t%>in # ;
+tiʼi%<loc%>%+in%<1sg_poss%>%<pron%>:t%>in # ;
+in%<1sg_poss%>%<pron%>:in # ;
 
+! todo: add t+SETA contractions with possessive analysis
 a%<s_sg2%>%<pron%>:a # ;
-k%<hab%>%+a%<s_sg2%>%<pron%>:ka # ;
+k%<hab%>%+a%<s_sg2%>%<pron%>:k%>a # ;
 táan%<dur%>%+%<s_sg2%>%<pron%>:tan # ;
-
+t%<pfv%>%+a%<s_sg2%>%<pron%>:t%>a # ;
+tiʼi%<loc%>%+a%<s_sg2%>%<pron%>:t%>a # ;
 
 u%<s_sg3%>%<pron%>:u # ;
-k%<hab%>%+u%<s_sg3%>%<pron%>:ku # ;
+k%<hab%>%+u%<s_sg3%>%<pron%>:k%>u # ;
 
 k%<s_pl1%>%<pron%>:k # ;
 
 a%<s_pl2%>%<pron%>:a # ;
-k%<hab%>%+a%<s_pl2%>%<pron%>:ka # ;
+k%<hab%>%+a%<s_pl2%>%<pron%>:k%>a # ;
 táan%<dur%>%+%<s_pl2%>%<pron%>:tan # ;
-t%<pfv%>%+a%<s_pl2%>%<pron%>:ta # ;
+t%<pfv%>%+a%<s_pl2%>%<pron%>:t%>a # ;
+tiʼi%<loc%>%+a%<s_pl2%>%<pron%>:t%>a # ;
 
 u%<s_pl3%>%<pron%>:u # ;
+tiʼi%<loc%>%+u%<s_sg3%>%<pron%>:t%>u # ;
+tiʼi%<loc%>%+u%<s_pl3%>%<pron%>:t%>u # ;
 
 
-in%<1sg_poss%>%<pron%>:in # ;
 a%<2sg_poss%>%<pron%>:a # ;
 u%<3sg_poss%>%<pron%>:u # ;
 k%<1pl_poss%>%<pron%>:k # ;
@@ -271,8 +284,8 @@ LEXICON PluralSubjSuffix
 Terminatives ;
 
 LEXICON DeicticTerminatives
-%<prx%>:aʼ # ;
-%<dist%>:oʼ # ;
+%<prx%>:%>aʼ # ;
+%<dst%>:%>oʼ # ;
 # ;
 
 LEXICON Terminatives
@@ -389,10 +402,10 @@ IntransitiveSetB ;
 PossessiveNominalSuffixes ;
 
 LEXICON NominalClassifiers
-%<clfanim%>:tuul # ;
-%<clfinan%>:pʼéel # ;
-%<clfinan%>%<num%>:humpʼéel # ;
-%<clfanim%>%<num%>:huntuul # ;
+tuul%<clfanim%>:tuul # ;
+pʼéel%<clfinan%>:pʼéel # ;
+hun%<clfinan%>%+pʼéel%<num%>:humpʼéel # ;
+hun%<clfanim%>%+tuul%<num%>:huntuul # ;
 
 LEXICON Numbers
 %<num%>:hun # ;
@@ -421,8 +434,13 @@ xan%<adv%>:xan AdverbialEndings ; ! also/too
 sáansamal%<adv%>:sáansamal AdverbialEndings; ! everyday
 sáamal%<adv%>:sáamal AdverbialEndings; ! tomorrow
 bey%<adv%>:bey DeicticTerminatives ; ! like so
+chen%<adv%>:chen # ; ! "just"
+
 beyòoraʼa%<adv%>:beyòoraʼa AdverbialEndings; ! now
+beyòoraʼa%<adv%>:beyòoraʼ AdverbialEndings; ! now
 behòoraʼa%<adv%>:behòoraʼa AdverbialEndings; ! now
+
+túun%<adv%>:túun AdverbialEndings; ! then/so ...maybe an intj instead of adv
 
 
 
@@ -445,6 +463,8 @@ nah%<n%>:nah NounEndings ; ! "casa"
 xòok%<n%>:xòok NounEndings ; ! "lesson, studying"
 chùumuk%<n%>:chùumuk NounEndings ; ! "middle/center"
 kìisbùutsʼ%<n%>:kìisbùutsʼ NounEndings ; ! "car"
+kʼíiwik%<n%>:kʼíiwik NounEndings ; ! "town center"
+kʼíin%<n%>:kʼíin NounEndings ;
 
 
 màaya%<prop%>:màaya NounEndings ; ! maya
@@ -453,116 +473,144 @@ màaya%<prop%>:màaya NounEndings ; ! maya
 LEXICON ProperNoun
 cancún%<propn%>:cancún NounEndings; ! Cancún
 isma%<propn%>:isma NounEndings; ! Isma (name)
+dios%<propn%>:dios NounEndings; ! Isma (name)
+dios%<propn%>:dyòos NounEndings; ! Isma (name)
+tony%<propn%>:Tony NounEndings; ! Isma (name)
+
 
 LEXICON IntransReg
 ! go
 bin%<v%>%<iv%>:bin%> RegIntransVozActivaSinL ;
-bin%<v%>%<tv%>:bis%> RegIntransDvT ;
-bin%<v%>%<iv%>%<pss%>:bins%> RegIntransDvTVozPasiva ;
-bin%<v%>%<iv%>%<aps%>:bins%> RegIntransDvTVozAntipasiva ;
+bin%<v%>%<tv%>:bin%>s%> RegIntransDvT ;
+bin%<v%>%<tv%>:bi%>s%> RegIntransDvT ;
+bin%<v%>%<iv%>%<pss%>:bin%>s%> RegIntransDvTVozPasiva ;
+bin%<v%>%<iv%>%<aps%>:bin%>s%> RegIntransDvTVozAntipasiva ;
+
+! wait
+páakʼ%<v%>%<iv%>:páakʼ%> RegIntransVozActivaSinL ;
+páakʼ%<v%>%<tv%>:páakʼ%>t%> RegIntransDvT ;
+páakʼ%<v%>%<iv%>%<pss%>:páakʼ%>t%> RegIntransDvTVozPasiva ;
+páakʼ%<v%>%<iv%>%<aps%>:páakʼ%>t%> RegIntransDvTVozAntipasiva ;
+
+páakʼ%<v%>%<tv%>:paʼa%>t%> RegIntransDvT ;
+páakʼ%<v%>%<tv%>:paʼa%>t%> RegIntransDvTVozPasiva ;
+páakʼ%<v%>%<tv%>:paʼa%>t%> RegIntransDvTVozAntipasiva ;
+
 
 ! arrive
 tàal%<v%>%<iv%>:tàal%> RegIntransVozActivaConL ;
-tàal%<v%>%<tv%>:tàas%> RegIntransDvT ;
-tàal%<v%>%<iv%>%<pss%>:tàas%> RegIntransDvTVozPasiva ;
-tàal%<v%>%<iv%>%<aps%>:tàas%> RegIntransDvTVozAntipasiva ;
+tàal%<v%>%<tv%>:tàa%>s%> RegIntransDvT ;
+tàal%<v%>%<iv%>%<pss%>:tàa%>s%> RegIntransDvTVozPasiva ;
+tàal%<v%>%<iv%>%<aps%>:tàa%>s%> RegIntransDvTVozAntipasiva ;
 
 ! go about (pasear)
 máan%<v%>%<iv%>:máan%> RegIntransVozActivaConL ;
-máan%<v%>%<tv%>:máans%> RegIntransDvT ;
-máan%<v%>%<iv%>%<pss%>:máans%> RegIntransDvTVozPasiva ;
-máan%<v%>%<iv%>%<aps%>:máans%> RegIntransDvTVozAntipasiva ;
+máan%<v%>%<tv%>:máan%>s%> RegIntransDvT ;
+máan%<v%>%<iv%>%<pss%>:máan%>s%> RegIntransDvTVozPasiva ;
+máan%<v%>%<iv%>%<aps%>:máan%>s%> RegIntransDvTVozAntipasiva ;
 
 ! work
 meyah%<v%>%<iv%>:meyah%> RegIntransVozActivaConL ;
-meyah%<v%>%<tv%>:meyaht%> RegIntransDvT ;
-meyah%<v%>%<iv%>%<pss%>:meyaht%> RegIntransDvTVozPasiva ;
-meyah%<v%>%<iv%>%<aps%>:meyaht%> RegIntransDvTVozAntipasiva ;
+meyah%<v%>%<tv%>:meyah%>t%> RegIntransDvT ;
+meyah%<v%>%<iv%>%<pss%>:meyah%>t%> RegIntransDvTVozPasiva ;
+meyah%<v%>%<iv%>%<aps%>:meyah%>t%> RegIntransDvTVozAntipasiva ;
 
 ! sleep
 wen%<v%>%<iv%>:wen%> RegIntransVozActivaConL ;
-wen%<v%>%<tv%>:wens%> RegIntransDvT ;
-wen%<v%>%<iv%>%<pss%>:wens%> RegIntransDvTVozPasiva ;
-wen%<v%>%<iv%>%<aps%>:wens%> RegIntransDvTVozAntipasiva ;
+wen%<v%>%<tv%>:wen%>s%> RegIntransDvT ;
+wen%<v%>%<iv%>%<pss%>:wen%>s%> RegIntransDvTVozPasiva ;
+wen%<v%>%<iv%>%<aps%>:wen%>s%> RegIntransDvTVozAntipasiva ;
 
 ! enter
 ok%<v%>%<iv%>:ok%> RegIntransVozActivaConL ;
-ok%<v%>%<tv%>:oks%> RegIntransDvT ;
-ok%<v%>%<iv%>%<pss%>:oks%> RegIntransDvTVozPasiva ;
-ok%<v%>%<iv%>%<aps%>:oks%> RegIntransDvTVozAntipasiva ;
+ok%<v%>%<tv%>:ok%>s%> RegIntransDvT ;
+ok%<v%>%<iv%>%<pss%>:ok%>s%> RegIntransDvTVozPasiva ;
+ok%<v%>%<iv%>%<aps%>:ok%>s%> RegIntransDvTVozAntipasiva ;
 
 ! enter/rob
 òok%<v%>%<iv%>:òok%> RegIntransVozActivaConL ;
-òok%<v%>%<tv%>:òoks%> RegIntransDvT ;
-òok%<v%>%<iv%>%<pss%>:òoks%> RegIntransDvTVozPasiva ;
-òok%<v%>%<iv%>%<aps%>:òoks%> RegIntransDvTVozAntipasiva ;
+òok%<v%>%<tv%>:òok%>s%> RegIntransDvT ;
+òok%<v%>%<iv%>%<pss%>:òok%>s%> RegIntransDvTVozPasiva ;
+òok%<v%>%<iv%>%<aps%>:òok%>s%> RegIntransDvTVozAntipasiva ;
 
 ! wake up
 ah%<v%>%<iv%>:%{wy%}ah%> RegIntransVozActivaConL ;
-ah%<v%>%<tv%>:%{wy%}ahs%> RegIntransDvT ;
-ah%<v%>%<iv%>%<pss%>:%{wy%}ahs%> RegIntransDvTVozPasiva ;
-ah%<v%>%<iv%>%<aps%>:%{wy%}ahs%> RegIntransDvTVozAntipasiva ;
+ah%<v%>%<tv%>:%{wy%}ah%>s%> RegIntransDvT ;
+ah%<v%>%<iv%>%<pss%>:%{wy%}ah%>s%> RegIntransDvTVozPasiva ;
+ah%<v%>%<iv%>%<aps%>:%{wy%}ah%>s%> RegIntransDvTVozAntipasiva ;
 
 ! finish, to be done
 tsʼoʼok%<v%>%<iv%>:tsʼoʼok%> RegIntransVozActivaConL ;
-tsʼoʼok%<v%>%<tv%>:tsʼoʼoks%> RegIntransDvT ;
-tsʼoʼok%<v%>%<iv%>%<pss%>:tsʼoʼoks%> RegIntransDvTVozPasiva ;
-tsʼoʼok%<v%>%<iv%>%<aps%>:tsʼoʼoks%> RegIntransDvTVozAntipasiva ;
+tsʼoʼok%<v%>%<tv%>:tsʼoʼok%>s%> RegIntransDvT ;
+tsʼoʼok%<v%>%<iv%>%<pss%>:tsʼoʼok%>s%> RegIntransDvTVozPasiva ;
+tsʼoʼok%<v%>%<iv%>%<aps%>:tsʼoʼok%>s%> RegIntransDvTVozAntipasiva ;
 
 ! reply
 núuk%<v%>%<iv%>:núuk%> RegIntransVozActivaConL ;
 núuk%<v%>%<tv%>:núuk%> RegIntransDvT ;
-núuk%<v%>%<iv%>%<pss%>:núuks%> RegIntransDvTVozPasiva ;
-núuk%<v%>%<iv%>%<aps%>:núuks%> RegIntransDvTVozAntipasiva ;
+núuk%<v%>%<iv%>%<pss%>:núuk%>s%> RegIntransDvTVozPasiva ;
+núuk%<v%>%<iv%>%<aps%>:núuk%>s%> RegIntransDvTVozAntipasiva ;
 
 ! enter
 ok%<v%>%<iv%>:ok%> RegIntransVozActivaConL ;
-ok%<v%>%<tv%>:oks%> RegIntransDvT ;
-ok%<v%>%<iv%>%<pss%>:oks%> RegIntransDvTVozPasiva ;
-ok%<v%>%<iv%>%<aps%>:oks%> RegIntransDvTVozAntipasiva ;
+ok%<v%>%<tv%>:ok%>s%> RegIntransDvT ;
+ok%<v%>%<iv%>%<pss%>:ok%>s%> RegIntransDvTVozPasiva ;
+ok%<v%>%<iv%>%<aps%>:ok%>s%> RegIntransDvTVozAntipasiva ;
 ok%<v%>%<iv%>%<aps%>:óok%> RegIntransDvTVozAntipasiva ;
 
 ! exit
 hóok%<v%>%<iv%>:hóok%> RegIntransVozActivaConL ;
-hóok%<v%>%<tv%>:hóoks%> RegIntransDvT ;
-hóok%<v%>%<iv%>%<pss%>:hóoks%> RegIntransDvTVozPasiva ;
-hóok%<v%>%<iv%>%<aps%>:hóoks%> RegIntransDvTVozAntipasiva ;
+hóok%<v%>%<tv%>:hóok%>s%> RegIntransDvT ;
+hóok%<v%>%<iv%>%<pss%>:hóok%>s%> RegIntransDvTVozPasiva ;
+hóok%<v%>%<iv%>%<aps%>:hóok%>s%> RegIntransDvTVozAntipasiva ;
+
+! chat
+tsikbal%<v%>%<iv%>:tsikbal%> TransVozAntipasiva ;
+tsikbal%<v%>%<tv%>:tsikbal%>t%> RegIntransDvT ;
+tsikbal%<v%>%<iv%>%<pss%>:tsikbal%>t%> RegIntransDvTVozPasiva ;
+
 
 ! swim
 báab%<v%>%<iv%>:báab%> RegIntransVozActivaConL ;
-báab%<v%>%<tv%>:báabs%> RegIntransDvT ;
-báab%<v%>%<iv%>%<pss%>:báabs%> RegIntransDvTVozPasiva ;
-báab%<v%>%<iv%>%<aps%>:báabs%> RegIntransDvTVozAntipasiva ;
+báab%<v%>%<tv%>:báab%>s%> RegIntransDvT ;
+báab%<v%>%<iv%>%<pss%>:báab%>s%> RegIntransDvTVozPasiva ;
+báab%<v%>%<iv%>%<aps%>:báab%>s%> RegIntransDvTVozAntipasiva ;
 
 ! swim
 ichkíil%<v%>%<iv%>:ichkíil%> RegIntransVozActivaSinL ;
-ichkíil%<v%>%<tv%>:ichkíilt%> RegIntransDvT ;
-ichkíil%<v%>%<iv%>%<pss%>:ichkíilt%> RegIntransDvTVozPasiva ;
-ichkíil%<v%>%<iv%>%<aps%>:ichkíilt%> RegIntransDvTVozAntipasiva ;
+ichkíil%<v%>%<tv%>:ichkíil%>t%> RegIntransDvT ;
+ichkíil%<v%>%<iv%>%<pss%>:ichkíil%>t%> RegIntransDvTVozPasiva ;
+ichkíil%<v%>%<iv%>%<aps%>:ichkíil%>t%> RegIntransDvTVozAntipasiva ;
 
 ! raise up/ascend
 líik%<v%>%<iv%>:líik%> RegIntransVozActivaConL ;
-líik%<v%>%<tv%>:líiks%> RegIntransDvT ;
-líik%<v%>%<iv%>%<pss%>:líiks%> RegIntransDvTVozPasiva ;
-líik%<v%>%<iv%>%<aps%>:líiks%> RegIntransDvTVozAntipasiva ;
+líik%<v%>%<tv%>:líik%>s%> RegIntransDvT ;
+líik%<v%>%<iv%>%<pss%>:líik%>s%> RegIntransDvTVozPasiva ;
+líik%<v%>%<iv%>%<aps%>:líik%>s%> RegIntransDvTVozAntipasiva ;
 
 ! lower/descend
 éem%<v%>%<iv%>:éem%> RegIntransVozActivaConL ;
-éem%<v%>%<tv%>:éems%> RegIntransDvT ;
-éem%<v%>%<iv%>%<pss%>:éems%> RegIntransDvTVozPasiva ;
-éem%<v%>%<iv%>%<aps%>:éems%> RegIntransDvTVozAntipasiva ;
+éem%<v%>%<tv%>:éem%>s%> RegIntransDvT ;
+éem%<v%>%<iv%>%<pss%>:éem%>s%> RegIntransDvTVozPasiva ;
+éem%<v%>%<iv%>%<aps%>:éem%>s%> RegIntransDvTVozAntipasiva ;
 
 ! fall
 lúub%<v%>%<iv%>:lúub%> RegIntransVozActivaConL ;
 lúub%<v%>%<tv%>:lúubs%> RegIntransDvT ;
-lúub%<v%>%<iv%>%<pss%>:lúubs%> RegIntransDvTVozPasiva ;
-lúub%<v%>%<iv%>%<aps%>:lúubs%> RegIntransDvTVozAntipasiva ;
+lúub%<v%>%<iv%>%<pss%>:lúub%>s%> RegIntransDvTVozPasiva ;
+lúub%<v%>%<iv%>%<aps%>:lúub%>s%> RegIntransDvTVozAntipasiva ;
 
 ! comer
 han%<v%>%<iv%>:han%> RegIntransVozActivaConL ;
-han%<v%>%<tv%>:hant%> RegIntransDvT ;
-han%<v%>%<iv%>%<pss%>:hant%> RegIntransDvTVozPasiva ;
+han%<v%>%<tv%>:han%>t%> RegIntransDvT ;
+han%<v%>%<iv%>%<pss%>:han%>t%> RegIntransDvTVozPasiva ;
 
+! pagar
+boʼol%<v%>%<iv%>:boʼol%> RegIntransVozActivaConL ;
+boʼol%<v%>%<tv%>:boʼol%>t%> RegIntransDvT ;
+boʼol%<v%>%<tv%>:boʼo%>t%> RegIntransDvT ;
+boʼol%<v%>%<iv%>%<pss%>:boʼol%>t%> RegIntransDvTVozPasiva ;
+boʼol%<v%>%<iv%>%<pss%>:boʼo%>t%> RegIntransDvTVozPasiva ;
 
 LEXICON CvcTrans
 
@@ -591,6 +639,11 @@ bul%<v%>%<tv%>:bul%> TransVozActiva ;
 bul%<v%>%<iv%>%<aps%>:bùul%> TransVozAntipasiva ;
 bul%<v%>%<iv%>%<pss%>:buʼul%> TransVozPasiva ;
 bul%<v%>%<iv%>%<mv%>:búul%> TransVozMedia ;
+
+! grab
+chʼa%<v%>%<tv%>:chʼa%> TransVozActiva ;
+chʼa%<v%>%<iv%>%<aps%>:chʼaʼ%> TransVozAntipasiva ;
+chʼa%<v%>%<iv%>%<pss%>:chʼaʼab%> TransVozPasiva ;
 
 ! throw, aim
 chʼin%<v%>%<tv%>:chʼin%> TransVozActiva ;
@@ -760,6 +813,12 @@ tsa%<v%>%<tv%>:tsa%> TransVozActiva ;
 tsa%<v%>%<iv%>%<aps%>:tsáa%> TransVozAntipasiva ;
 tsa%<v%>%<iv%>%<pss%>:tsaʼa%> TransVozPasiva ;
 tsa%<v%>%<iv%>%<mv%>:tsàa%> TransVozMedia ;
+
+! Revere/chat
+tsik%<v%>%<tv%>:tsik%> TransVozActiva ;
+tsik%<v%>%<iv%>%<aps%>:tsíik%> TransVozAntipasiva ;
+tsik%<v%>%<iv%>%<aps%>:tsiʼik%> RegIntransVozActivaConL ;
+tsik%<v%>%<iv%>%<pss%>:tsiʼik%> TransVozPasiva ;
 
 ! Urinate
 wix%<v%>%<tv%>:wix%> TransVozActiva ;
@@ -978,10 +1037,14 @@ LEXICON DeadjectivalVerbalEndings
 %<iv%>%<pf%>:chahaʼan%> IntransitiveSetB ;
 %<iv%>%<pf%>:chahak%> IntransitiveSetB ;
 
+LEXICON Interjections
+haah%<intj%>:haah # ;
+
+
 LEXICON Adjectives
 ! good
-maʼaloʼob%<adj%>:maʼaloʼob%> AdjectivalEndings ;
-maʼaloʼob%<v%>:maʼaloʼob%> DeadjectivalVerbalEndings ;
+maʼalob%<adj%>:maʼalob%> AdjectivalEndings ;
+maʼalob%<v%>:maʼalob%> DeadjectivalVerbalEndings ;
 
 ! sick
 kohaʼan%<adj%>:kohaʼan%> AdjectivalEndings ;
