@@ -312,8 +312,8 @@ LEXICON RegIntransVozActivaConL
 %<pfv%>:0%> IntransitiveSetB;
 %<pf%>:ahaʼan%> IntransitiveSetB;
 %<subj%>:%{V%}k%> IntransitiveSetB;
-%<imp%>%<s_2sg%>:nen%> Terminatives;
-%<imp%>%<s_2pl%>:neneʼex%> Terminatives;
+%<imp%>%<s_2sg%>:en%> Terminatives;
+%<imp%>%<s_2pl%>:eneʼex%> Terminatives;
 
 LEXICON RegIntransDvT
 %<ipfv%>:ik%> TransitiveSetB;
@@ -422,8 +422,11 @@ LEXICON TerminacionesInterrogativas
 # ;
 
 LEXICON Interrogativos
-baʼax%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ;
-bix%<adv%>%<itg%>:bix TerminacionesInterrogativas ;
+baʼax%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ; !qué
+bix%<adv%>%<itg%>:bix TerminacionesInterrogativas ; ! cómo
+tuʼux%<adv%>%<itg%>:tuʼux TerminacionesInterrogativas ; ! dónde
+máax%<pron%>%<itg%>:màax TerminacionesInterrogativas ; ! quién
+
 
 LEXICON AdverbialEndings
 0:%> Terminatives ;
@@ -459,12 +462,14 @@ bàatsil%<n%>:bàatsil NounEndings ; ! "amigo"
 kʼàaba%<n%>:kʼàaba NounEndings ; ! "nombre"
 ich%<n%>:ich NounEndings ; ! "ojo"
 òon%<n%>:òon NounEndings ; ! "aguacate"
+óol%<n%>:óol NounEndings ; ! "corazón"
 nah%<n%>:nah NounEndings ; ! "casa"
 xòok%<n%>:xòok NounEndings ; ! "lesson, studying"
 chùumuk%<n%>:chùumuk NounEndings ; ! "middle/center"
 kìisbùutsʼ%<n%>:kìisbùutsʼ NounEndings ; ! "car"
 kʼíiwik%<n%>:kʼíiwik NounEndings ; ! "town center"
-kʼíin%<n%>:kʼíin NounEndings ;
+kʼíin%<n%>:kʼíin NounEndings ; 
+éet%<n%>:éet NounEndings ; ! compañero...se antepone a otra palabra (ej. in wèet meyah "mi compañero de trabajo")
 
 
 màaya%<prop%>:màaya NounEndings ; ! maya
@@ -473,9 +478,13 @@ màaya%<prop%>:màaya NounEndings ; ! maya
 LEXICON ProperNoun
 cancún%<propn%>:cancún NounEndings; ! Cancún
 isma%<propn%>:isma NounEndings; ! Isma (name)
-dios%<propn%>:dios NounEndings; ! Isma (name)
-dios%<propn%>:dyòos NounEndings; ! Isma (name)
-tony%<propn%>:Tony NounEndings; ! Isma (name)
+dios%<propn%>:dios NounEndings; ! dios 
+dios%<propn%>:dyòos NounEndings; ! dios
+tony%<propn%>:Tony NounEndings; ! tony (name)
+doña%<propn%>:doña NounEndings; ! doña
+jacinta%<propn%>:jacinta NounEndings; ! jacinta (name)
+goyo%<propn%>:goyo NounEndings; ! jacinta (name)
+
 
 
 LEXICON IntransReg
@@ -858,19 +867,21 @@ xup%<v%>%<iv%>%<mv%>:xùup%> TransVozMedia ;
 
 
 LEXICON IrregularIntransVerb
-xíimbal%<v%>%<iv%>:xíimbal TransVozAntipasiva ;
-xíimbal%<v%>%<tv%>:xíimba%{l%}t TransVozActiva ;
+xíimbal%<v%>%<iv%>:xíimbal%> TransVozAntipasiva ; !caminar
+xíimbal%<v%>%<tv%>:xíimba%{l%}%>t%> TransVozActiva ; !visitar
+
+yàan%<v%>%<iv%>:yàan%> IntransitiveSetB ; ! existir
 
 
 LEXICON IrregularTransVerb
 
 ! to know (conocer)
-k'ahóol%<v%>%<tv%>:k'ahóol%> TransitiveSetB ;
-k'ahóol%<v%>%<tv%>:k'ahóolt%> RegIntransDvT ;
+kʼahóol%<v%>%<tv%>:kʼahóol%> TransitiveSetB ;
+kʼahóol%<v%>%<tv%>:kʼahóo%{l%}%>t%> RegIntransDvT ;
 
 ! to know (saber)
 oheel%<v%>%<tv%>:oheel%> TransitiveSetB ;
-oheel%<v%>%<tv%>:oheelt%> RegIntransDvT ;
+oheel%<v%>%<tv%>:ohee%{l%}%>t%> RegIntransDvT ;
 
 ! see
 il%<v%>%<tv%>:il%> TransVozActiva ;
@@ -903,6 +914,7 @@ LEXICON PositionalInflections
 %<pfv%>:lah%> IntransitiveSetB ;
 %<pf%>:lahaʼan%> IntransitiveSetB ;
 %<subj%>:lak%> IntransitiveSetB ;
+%<imp%>:en%> IntransitiveSetB ;
 
 LEXICON Positionals
 ! pucker
@@ -1010,6 +1022,9 @@ tʼes%<v%>%<pos%>:tʼes PositionalInflections ;
 ! bend, arch (bend, twist)
 met%<v%>%<pos%>:met PositionalInflections ;
 
+! sit
+kul%<v%>%<pos%>:kul PositionalInflections ;
+
 ! expose, extend, tighten (extend, tighten)
 tʼin%<v%>%<pos%>:tʼin PositionalInflections ;
 
@@ -1045,6 +1060,11 @@ LEXICON Adjectives
 ! good
 maʼalob%<adj%>:maʼalob%> AdjectivalEndings ;
 maʼalob%<v%>:maʼalob%> DeadjectivalVerbalEndings ;
+
+
+! feliz
+kiʼimak%<adj%>:kiʼimak%> AdjectivalEndings ;
+
 
 ! sick
 kohaʼan%<adj%>:kohaʼan%> AdjectivalEndings ;
