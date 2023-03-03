@@ -4,7 +4,7 @@ Alphabet
  a b c d e f g h i j k l m n o p q r s t u w x y z
 %{V%}:a %{V%}:e %{V%}:i %{V%}:o %{V%}:u
  %>:%> %{wy%}:y %{wy%}:w %{wy%}:0 
- %{l%}:l %{l%}:0;
+ %{l%}:l %{l%}:0 %{h%}:h %{h%}:0 ;
 
 
 Sets
@@ -33,6 +33,8 @@ Rules
 "Insert glottal between adjacent vowels of different morphemes" !not working
 0:ʼ <=> Vow %>:0 _ Vow ;
 
-"Reduce geminates across morpheme boundary" !note: should this be in spellrelax?
+"Reduce homomorphic k-geminates across morpheme boundary" !note: should this be in spellrelax?
 k:0 <=> k %>:0 _ ;
 
+"Reduce homomorphic t-geminates across morpheme boundary" !note: should this be in spellrelax?
+t:0 <=> t %>:0 _ ;
