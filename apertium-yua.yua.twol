@@ -28,7 +28,7 @@ Rules
 %>:0 <=> _ ;
 
 "Vowel harmony"
-%{V%}:Vx <=> Vx Cns+ %>:0 _ ; where Vx in UnaccVow ;
+%{V%}:Vx <=> Vx [Cns | %>:0]+ %>:0 _ ; where Vx in UnaccVow ;
 
 "Insert glottal between adjacent vowels of different morphemes" !not working
 0:ʼ <=> Vow %>:0 _ Vow ;
@@ -38,3 +38,4 @@ k:0 <=> k %>:0 _ ;
 
 "Reduce homomorphic t-geminates across morpheme boundary" !note: should this be in spellrelax?
 t:0 <=> t %>:0 _ ;
+
