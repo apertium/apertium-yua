@@ -13,6 +13,8 @@ Multichar_Symbols
 %<adj%>  ! Adjetivo
 %<aux%>  ! auxiliar
 %<adp%>  ! Adposición
+%<det%>  ! Determiner
+%<sconj%>! subordinating conjunction
 %<pl%>   ! Plural
 %<s_pl%>   ! Sujeto Plural
 
@@ -35,6 +37,8 @@ Multichar_Symbols
 %<3pl_poss%>  ! "pronoun"
 
 %<2p_pl%>
+%<s_2sg%>
+%<s_2pl%>
 %<poss_nonownership%>
 %<poss_comm%>
 %<poss_internal%>
@@ -46,7 +50,8 @@ Multichar_Symbols
 %<clfinan%>
 
 %<hab%>
-
+%<conj%>
+%<pss%>
 %<neg%>
 %<adv%>
 %<ipfv%> ! imperfectivo "Ongoing incomplete"
@@ -161,6 +166,8 @@ PerfectiveAspectMoodMarker ;
 LEXICON ImperfectiveAspectMoodMarker
 k%<aux%>%<hab%>:k # ;
 k%<aux%>%<hab%>%<neg%>:t # ;
+
+
 táan%<aux%>%<dur%>:táan # ;
 taan%<aux%>%<dur%>:taan # ;
 lailiʼ%<aux%>%<cont%>:lailiʼ # ;
@@ -182,8 +189,7 @@ kʼabéet%<aux%>%<oblig%>:kʼabéet # ;
 kʼabéet%<aux%>%<oblig%>:kʼabeet # ;
 
 kʼaʼnaʼan%<aux%>%<oblig%>:kʼaʼanaʼan # ;
-yàan%<aux%>%<oblig%>:yàan # ; ! in book this is described as "compulsive" but idk what mood that is.
-                       ! also how to distinguish that this is used for faux future?
+yàan%<aux%>%<oblig%>:yàan # ;
 paʼatik%<aux%>%<fut%>:paʼatik # ;
 
 heʼel%<aux%>%<fut%>:heʼel # ;  ! takes ...-e' at phrase boundary
@@ -257,6 +263,10 @@ u%<3sg_poss%>%<pron%>:u # ;
 k%<1pl_poss%>%<pron%>:k # ;
 a%<2pl_poss%>%<pron%>:a # ;
 u%<3pl_poss%>%<pron%>:u # ;
+
+t%<aux%>%<hab%>%<neg%>+in%<s_sg1%>%<pron%>:tin # ;
+t%<aux%>%<hab%>%<neg%>+a%<s_sg2%>%<pron%>:ta # ;
+t%<aux%>%<hab%>%<neg%>+u%<s_sg3%>%<pron%>:tu # ;
 
 LEXICON PronombresIndependientes
 ten%<pron_1sg%>:téen Topicalizer ;
@@ -437,13 +447,13 @@ PossessiveNominalSuffixes ;
 # ;
 
 LEXICON NominalClassifiers
-tuul%<clfanim%>:tuul PluralSubjSuffix ;
-tuul%<clfanim%>:túul PluralSubjSuffix ;
+túul%<clfanim%>:tuul PluralSubjSuffix ;
+túul%<clfanim%>:túul PluralSubjSuffix ;
 
 pʼéel%<clfinan%>:pʼéel PluralSubjSuffix ;
 hun%<clfinan%>%+pʼéel%<num%>:humpʼéel # ;
 hun%<clfinan%>%+pʼéel%<num%>:hunpʼéel # ;
-hun%<clfanim%>%+tuul%<num%>:huntuul # ;
+hun%<clfanim%>%+túul%<num%>:huntúul # ;
 
 LEXICON Numbers
 hun%<num%>:hun # ;
@@ -457,6 +467,7 @@ tak%<adp%>:tak # ; ! hasta
 tiʼi%<adp%>:tiʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 tiʼi%<adp%>:tʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 teʼe%<adp%>:teʼ PluralSuffix ; ! to _ (introduces indirect obj)
+tumèen%<adp%>:tumèen # ; ! por
 
 LEXICON TerminacionesInterrogativas
 0:%>ih # ;
@@ -512,15 +523,15 @@ behòoraʼa%<adv%>:behòoraʼa AdverbialEndings; ! now
 behòoraʼa%<adv%>:behòoraʼ AdverbialEndings; ! now
 behòoraʼa%<adv%>:behòorah AdverbialEndings; ! now
 
-túun%<adv%>:túun AdverbialEndings; ! then/so ...maybe an intj instead of adv
-
+túun%<adv%>:túun AdverbialEndings; ! entonces
+wa%<adv%>:wa # ;
 
 LEXICON Conjunction
 kux%<conj%>:kux # ; ! y...
 yeetel%<conj%>:yeetel Terminatives ;
 yeetel%<sconj%>:yeetel Terminatives ;
 ka%<sconj%>:ka # ;
-
+wa%<sconj%>:wa # ;
 
 LEXICON Noun
 tsíimin%<n%>:tsíimin NounEndings ; ! "caballo"
@@ -581,6 +592,9 @@ beh%<n%>:beh NounEndings ; ! road, way
 beh%<n%>:béeh NounEndings ; ! road, way
 bèel%<n%>:bèel NounEndings ; ! road, occupation
 bèel%<n%>:bel NounEndings ; ! road, variation
+awat%<n%>:awat NounEndings ; ! grito
+tʼèel%<n%>:tʼèel NounEndings ; ! gallo
+
 SpanishNouns ;
 
 LEXICON SpanishNouns
@@ -621,6 +635,10 @@ carmen%<propn%>:carmen NounEndings ; ! carmen
 julia%<propn%>:julia NounEndings ; ! julia
 fidelia%<propn%>:fidelia NounEndings ; ! fidelia
 
+chʼochʼ%<n%>:chʼochʼ NounEndings ; ! cigarra
+chʼochʼlin%<n%>:chʼochʼlin NounEndings ; ! cigarra
+
+síinik%<n%>:síinik NounEndings ; ! hormiga
 
 LEXICON IntransReg
 ! go
@@ -760,7 +778,7 @@ hóokʼ%<v%>%<iv%>%<aps%>:hóokʼ%>s RegIntransDvTVozAntipasiva ;
 ! chat
 tsikbal%<v%>%<iv%>:tsikbal TransVozAntipasiva ;
 tsikbal%<v%>%<tv%>:tsikba%{l%}%>t RegIntransDvT ;
-tsikbal%<v%>%<iv%>%<pss%>:tsikba%{l%}%>t RegIntransDvTVozPasiva ;
+tsikbal%<v%>%<iv%>%<pss%>:tsikba%{l%}%>t TransVozPasiva ;
 
 
 ! swim
@@ -785,7 +803,7 @@ líik%<v%>%<iv%>%<aps%>:líik%>s RegIntransDvTVozAntipasiva ;
 éem%<v%>%<iv%>:éem RegIntransVozActivaConL ;
 éem%<v%>%<tv%>:éem%>s RegIntransDvT ;
 éem%<v%>%<iv%>%<pss%>:éem%>s RegIntransDvTVozPasiva ;
-éem%<v%>%<iv%>%<aps%>:éem%>s RegIntransDvTVozAntipasiva ;
+éem%<v%>%<iv%>%<aps%>:éem%>s TransVozPasiva ;
 
 ! fall
 lúub%<v%>%<iv%>:lúub RegIntransVozActivaConL ;
@@ -796,7 +814,8 @@ lúub%<v%>%<iv%>%<aps%>:lúub%>s RegIntransDvTVozAntipasiva ;
 ! comer
 han%<v%>%<iv%>:han RegIntransVozActivaConL ;
 han%<v%>%<tv%>:han%>t RegIntransDvT ;
-han%<v%>%<iv%>%<pss%>:han%>t RegIntransDvTVozPasiva ;
+han%<v%>%<iv%>%<aps%>:han%>t RegIntransDvTVozAntipasiva ;
+han%<v%>%<iv%>%<pss%>:han%>t TransVozPasiva ;
 
 ! pagar
 boʼol%<v%>%<iv%>:boʼol RegIntransVozActivaConL ;
