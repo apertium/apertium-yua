@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hfstspeller dtdversion="1.0" hfstversion="3">
+  <info>
+    <locale>yua</locale>
+    <!-- TODO: locale may need to be changed to 2-letter ISO 639-1 code -->
+    <title>Apertium morphological analyser-based speller (Yucateco)</title>
+    <description>
+      A spellchecker for Yucateco.
+    </description>
+    <version vcsrev="GT_REVISION">47e898dd4c47ce4f0f65c52eb5ab5466329269ed</version>
+    <date>DATE</date>
+    <producer>Apertium contributors</producer>
+    <contact email="robert.pugh408@gmail.com"
+        website="http://apertium.org"/>
+  </info>
+  <acceptor type="general" id="acceptor.default.hfst">
+    <title>Apertium dictionary (Yucateco)</title>
+    <description>
+        Apertium dictionary for Yucateco compiled for HFST.
+    </description>
+  </acceptor>
+  <errmodel id="errmodel.default.hfst">
+    <title>Levenshtein edit distance transducer</title>
+    <description>
+        Correction model for keyboard misstrokes, at most 2 per word.
+    </description>
+        <type type="default"/>
+        <model>errmodel.default.hfst</model>
+    </errmodel>
+</hfstspeller>

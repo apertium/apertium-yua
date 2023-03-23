@@ -117,7 +117,8 @@ Multichar_Symbols
 %{wy%}          ! start to vowel-initial verb stems either y- or w- depending on person of subject.
 
 ʼ               ! Glottal, U+02BC
-%>              ! Morpheme boundary
+%>              ! Morpheme boundary 
+0
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -204,6 +205,11 @@ LEXICON SubjunctiveAspectMoodMarker
 kaʼah%<aux%>:kaʼah # ; ! might have/would have/could have
 òolak%<aux%>:òolak # ; ! almost
 pʼelak%<aux%>:pʼelak # ; ! as soon as
+
+bíin%<aux%>:bíin # ;
+úuch%<aux%>:úuch # ;
+sáan%<aux%>:sáan # ;
+
 
 LEXICON PerfectiveAspectMoodMarker
 t%<pfv%>%<tv%>:t # ;
@@ -319,8 +325,8 @@ LEXICON IntransitiveSetB
 %<s_pl3%>:%>oʼob Terminatives ;
 
 LEXICON PluralSubjSuffix
-%<s_pl%>:%>oʼob Terminatives ;
-%<s_pl%>:%>eʼex Terminatives ;
+%<s_pl3%>:%>oʼob Terminatives ;
+%<s_pl2%>:%>eʼex Terminatives ;
 Terminatives ;
 
 LEXICON DeicticTerminatives
@@ -369,7 +375,7 @@ LEXICON RegIntransDvT
 
 LEXICON RegIntransDvTVozPasiva
 %<ipfv%>:%>%{V%}l PluralSubjSuffix;
-%<pfv%>: IntransitiveSetB;
+%<pfv%>:0 IntransitiveSetB;
 %<pf%>:%>aʼan IntransitiveSetB;
 %<subj%>:%>ak IntransitiveSetB;
 
@@ -532,6 +538,7 @@ yeetel%<conj%>:yeetel Terminatives ;
 yeetel%<sconj%>:yeetel Terminatives ;
 ka%<sconj%>:ka # ;
 wa%<sconj%>:wa # ;
+utiaʼal%<sconj%>:utiaʼal # ;
 
 LEXICON Noun
 tsíimin%<n%>:tsíimin NounEndings ; ! "caballo"
@@ -595,11 +602,17 @@ bèel%<n%>:bel NounEndings ; ! road, variation
 awat%<n%>:awat NounEndings ; ! grito
 tʼèel%<n%>:tʼèel NounEndings ; ! gallo
 
+! TODO: maybe just haah?
+hàahil%<n%>:hàahil NounEndings ; ! verdad
+
 SpanishNouns ;
 
 LEXICON SpanishNouns
 cuchara%<n%>:cuchara NounEndings ; ! cuchara
 vecina%<n%>:vecina NounEndings ; ! cuchara
+òorah%<n%>:òorah NounEndings ; ! hora
+polvio%<n%>:polvio NounEndings ; ! maquillaje
+ìingles%<n%>:ìingles NounEndings ; ! inglés
 
 
 LEXICON ProperNoun
@@ -672,8 +685,8 @@ heʼel%<v%>%<iv%>%<aps%>:heʼe%{l%}%>s RegIntransDvTVozAntipasiva ;
 
 ! salir
 hóok%<v%>%<iv%>:hóok RegIntransVozActivaConL ;
-hóok%<v%>%<tv%>:heʼe%{l%}%>s RegIntransDvT ;
-hóok%<v%>%<iv%>%<pss%>:hóok%>s RegIntransDvTVozPasiva ;
+hóok%<v%>%<tv%>:hóok%>s RegIntransDvT ;
+hóok%<v%>%<iv%>%<pss%>:hóok%>s IrregularTransVozPasiva ;
 hóok%<v%>%<iv%>%<aps%>:hóok%>s RegIntransDvTVozAntipasiva ;
 
 ! comenzar
@@ -798,6 +811,12 @@ líik%<v%>%<iv%>:líik RegIntransVozActivaConL ;
 líik%<v%>%<tv%>:líik%>s RegIntransDvT ;
 líik%<v%>%<iv%>%<pss%>:líik%>s RegIntransDvTVozPasiva ;
 líik%<v%>%<iv%>%<aps%>:líik%>s RegIntransDvTVozAntipasiva ;
+
+! raise
+naʼak%<v%>%<iv%>:naʼak RegIntransVozActivaConL ;
+naʼak%<v%>%<tv%>:naʼak%>s RegIntransDvT ;
+naʼak%<v%>%<iv%>%<pss%>:naʼak%>s RegIntransDvTVozPasiva ;
+naʼak%<v%>%<iv%>%<aps%>:naʼak%>s RegIntransDvTVozAntipasiva ;
 
 ! lower/descend
 éem%<v%>%<iv%>:éem RegIntransVozActivaConL ;
@@ -999,6 +1018,13 @@ pʼat%<v%>%<iv%>%<aps%>:pʼàat TransVozAntipasiva ;
 pʼat%<v%>%<iv%>%<pss%>:pʼaʼat TransVozPasiva ;
 pʼat%<v%>%<iv%>%<mv%>:pʼáat TransVozMedia ;
 
+! chip
+pʼeh%<v%>%<tv%>:pʼeh TransVozActiva ;
+pʼeh%<v%>%<iv%>%<aps%>:pʼèeh TransVozAntipasiva ;
+pʼeh%<v%>%<iv%>%<pss%>:pʼeʼeh TransVozPasiva ;
+pʼeh%<v%>%<iv%>%<mv%>:pʼéeh TransVozMedia ;
+
+
 ! Open Eyes
 pʼil%<v%>%<tv%>:pʼil TransVozActiva ;
 pʼil%<v%>%<iv%>%<aps%>:pʼìil TransVozAntipasiva ;
@@ -1022,6 +1048,12 @@ pochʼ%<v%>%<tv%>:pochʼ TransVozActiva ;
 pochʼ%<v%>%<iv%>%<aps%>:pòochʼ TransVozAntipasiva ;
 pochʼ%<v%>%<iv%>%<pss%>:poʼochʼ TransVozPasiva ;
 pochʼ%<v%>%<iv%>%<mv%>:póochʼ TransVozMedia ;
+
+! soak
+sul%<v%>%<tv%>:sul TransVozActiva ;
+sul%<v%>%<iv%>%<aps%>:sùul TransVozAntipasiva ;
+sul%<v%>%<iv%>%<pss%>:suʼul TransVozPasiva ;
+sul%<v%>%<iv%>%<mv%>:súul TransVozMedia ;
 
 ! Girar, voltear
 sut%<v%>%<tv%>:sut TransVozActiva ;

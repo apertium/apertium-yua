@@ -1,0 +1,10 @@
+{
+    "analysis": {
+        "input": "analysis-input.txt",
+        "mode": "yua-disam"
+    },
+    "generation": {
+        "input": "generation-input.txt",
+        "mode": "yua-gener"
+    }
+}
