@@ -4,7 +4,8 @@ Alphabet
  a b c d e f g h i j k l m n o p q r s t u w x y z
 %{V%}:a %{V%}:e %{V%}:i %{V%}:o %{V%}:u
  %>:%> %{wy%}:y %{wy%}:w %{wy%}:0 
- %{l%}:l %{l%}:0 %{h%}:h %{h%}:0 ;
+ %{l%}:l %{l%}:0 %{h%}:h %{h%}:0 
+%{k%}:k %{k%}:0 ;
 
 
 Sets
@@ -28,7 +29,7 @@ Rules
 %>:0 <=> _ ;
 
 "Vowel harmony"
-%{V%}:Vx <=> Vx [Cns | %>:0]+ %>:0 _ ; where Vx in UnaccVow ;
+%{V%}:Vx <=> Vx [Cns | %>:0 | ʼ]+ %>:0 _ ; where Vx in UnaccVow ;
 
 "Insert glottal between adjacent vowels of different morphemes" !not working
 0:ʼ <=> Vow %>:0 _ Vow ;

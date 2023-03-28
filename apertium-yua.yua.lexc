@@ -46,6 +46,8 @@ Multichar_Symbols
 %<poss%>  ! "posesivo"
 %<itg%>
 
+%<adp%>
+
 %<clfanim%>
 %<clfinan%>
 
@@ -108,6 +110,7 @@ Multichar_Symbols
 %<incep%>
 %<des%>
 %<oblig%>  ! obligative mood
+%<subj%> ! subjunctive
 
 %<propn%> ! Proper Noun
 
@@ -115,7 +118,7 @@ Multichar_Symbols
 %{e%}           ! Either ʼeʼ or nothing
 %{V%}           ! Copy stem vowel
 %{wy%}          ! start to vowel-initial verb stems either y- or w- depending on person of subject.
-
+%{k%}
 ʼ               ! Glottal, U+02BC
 %>              ! Morpheme boundary 
 0
@@ -202,13 +205,13 @@ koʼox%<aux%>%<imp%>%<s_pl%>:koʼox%>eʼex #;
 kaʼach%<aux%>:kaʼach #;
 
 LEXICON SubjunctiveAspectMoodMarker
-kaʼah%<aux%>:kaʼah # ; ! might have/would have/could have
-òolak%<aux%>:òolak # ; ! almost
-pʼelak%<aux%>:pʼelak # ; ! as soon as
+kaʼah%<aux%>%<subj%>:kaʼah # ; ! might have/would have/could have
+òolak%<aux%>%<subj%>:òolak # ; ! almost
+pʼelak%<aux%>%<subj%>:pʼelak # ; ! as soon as
 
-bíin%<aux%>:bíin # ;
-úuch%<aux%>:úuch # ;
-sáan%<aux%>:sáan # ;
+bíin%<aux%>%<subj%>:bíin # ;
+úuch%<aux%>%<subj%>:úuch # ;
+sáan%<aux%>%<subj%>:sáan # ;
 
 
 LEXICON PerfectiveAspectMoodMarker
@@ -228,8 +231,11 @@ LEXICON Determiner
 le%<det%>:le # ;
 heʼel%<det%>:heʼel Terminatives ;
 heʼel%<det%>:heʼ #;
+
 teʼel%<det%>:teʼel Terminatives;
 teʼel%<det%>:teʼ #;
+
+huhun%<det%>:huhun # ; ! cada uno de...
 
 LEXICON SetA
 in%<s_sg1%>%<pron%>:in # ;
@@ -291,10 +297,15 @@ letiʼ%<pron_3pl%>:letiʼ%>oʼob Topicalizer ;
 
 minaʼan%<neg%>%<pron%>:minaʼan Topicalizer ; ! nada, no hay nada
 
+le%<pron_3sg%>:lel DeicticTerminatives ;
+le%<pron_3pl%>:lel%>oʼob DeicticTerminatives ;
+
+
 LEXICON Topicalizer
 %<top%>:%>eʼ # ;
 
 Terminatives ;
+
 
 LEXICON TransitiveSetB
 %<o_sg1%>:%>en PluralSubjSuffix ;
@@ -333,6 +344,14 @@ LEXICON DeicticTerminatives
 %<prx%>:%>aʼ # ;
 %<dst%>:%>oʼ # ;
 # ;
+
+
+!LEXICON AspectualTerminatives
+!! these are endings to the aspect markers laili and taant
+!%<cont%>:%>eʼ # ; ! Laili'
+!%<cess%>:%>eʼ # ; ! taant
+!%<fut%>:%>eʼ # ; ! he'el
+
 
 LEXICON Terminatives
 %<neg%>:%>iʼ # ;
@@ -395,7 +414,7 @@ LEXICON RegIntransDvTVozAntipasiva
 LEXICON TransVozActiva
 %<ipfv%>:%>ik TransitiveSetB;
 %<pfv%>:%>ah TransitiveSetB;
-%<pf%>:%>mah TransitiveSetB;
+%<pf%>:%>m%>ah TransitiveSetB;
 %<subj%>:0 TransitiveSetB;
 %<subj%>:%>eh TransitiveSetB;
 %<imp%>:0 TransitiveSetB;
@@ -474,6 +493,7 @@ tiʼi%<adp%>:tiʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 tiʼi%<adp%>:tʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 teʼe%<adp%>:teʼ PluralSuffix ; ! to _ (introduces indirect obj)
 tumèen%<adp%>:tumèen # ; ! por
+yòokʼsal%<adp%>:yòokʼsal # ; ! para
 
 LEXICON TerminacionesInterrogativas
 0:%>ih # ;
@@ -485,6 +505,7 @@ baʼax%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ; !qué
 baʼax%<pron%>%<itg%>:baʼan TerminacionesInterrogativas ; !qué
 baʼax%<pron%>%<itg%>:baax TerminacionesInterrogativas ; !qué
 baʼax%<pron%>%<itg%>:baan TerminacionesInterrogativas ; !qué
+baʼax%<pron%>%<itg%>:báan TerminacionesInterrogativas ; !qué
 
 bix%<adv%>%<itg%>:bix TerminacionesInterrogativas ; ! cómo
 tuʼux%<adv%>%<itg%>:tuʼux TerminacionesInterrogativas ; ! dónde
@@ -534,11 +555,16 @@ wa%<adv%>:wa # ;
 
 LEXICON Conjunction
 kux%<conj%>:kux # ; ! y...
+
 yeetel%<conj%>:yeetel Terminatives ;
-yeetel%<sconj%>:yeetel Terminatives ;
+yeetel%<conj%>:yetel Terminatives ;
+
 ka%<sconj%>:ka # ;
 wa%<sconj%>:wa # ;
-utiaʼal%<sconj%>:utiaʼal # ;
+
+utiʼal%<sconj%>:utiʼal # ;
+
+tuméen%<sconj%>:tuméen # ;
 
 LEXICON Noun
 tsíimin%<n%>:tsíimin NounEndings ; ! "caballo"
@@ -605,6 +631,9 @@ tʼèel%<n%>:tʼèel NounEndings ; ! gallo
 ! TODO: maybe just haah?
 hàahil%<n%>:hàahil NounEndings ; ! verdad
 
+yoʼoch%<n%>:yoʼoch NounEndings ; ! "tortilla/comida"
+
+pùut%<n%>:pùut NounEndings ; ! "papaya"
 SpanishNouns ;
 
 LEXICON SpanishNouns
@@ -613,7 +642,7 @@ vecina%<n%>:vecina NounEndings ; ! cuchara
 òorah%<n%>:òorah NounEndings ; ! hora
 polvio%<n%>:polvio NounEndings ; ! maquillaje
 ìingles%<n%>:ìingles NounEndings ; ! inglés
-
+dyaas%<n%>:dyaas # ; ! días
 
 LEXICON ProperNoun
 cancún%<propn%>:cancún NounEndings; ! Cancún
@@ -626,6 +655,7 @@ chicago%<propn%>:chicago NounEndings; ! chicago
 pisté%<propn%>:pisté NounEndings ; ! pisté
 pisté%<propn%>:pʼisteʼ NounEndings ; ! piste
 pisté%<propn%>:pʼisté NounEndings ; ! piste
+tikul%<propn%>:tikul NounEndings ; ! tical
 
 dios%<propn%>:dios NounEndings; ! dios 
 dios%<propn%>:dyòos NounEndings; ! dios
@@ -635,10 +665,11 @@ doña%<propn%>:doña NounEndings; ! doña
 jacinta%<propn%>:jacinta NounEndings; ! jacinta (name)
 goyo%<propn%>:goyo NounEndings; ! jacinta (name)
 màaya%<propn%>:màaya NounEndings ; ! maya
-felipe%<propn%>:felipe NounEndings ; ! sarah
-
+felipe%<propn%>:felipe NounEndings ; ! felipe
 sarah%<propn%>:sarah NounEndings ; ! sarah
 laura%<propn%>:laura NounEndings ; ! laura
+martina%<propn%>:martina NounEndings ; ! martina
+
 
 xpil%<propn%>:xpil NounEndings ; ! xpil. TODO support x- as prefix
 
@@ -653,7 +684,14 @@ chʼochʼlin%<n%>:chʼochʼlin NounEndings ; ! cigarra
 
 síinik%<n%>:síinik NounEndings ; ! hormiga
 
+íicham%<n%>:íicham NounEndings ; ! esposo
+íicham%<n%>:icham NounEndings ; ! esposo
+
 LEXICON IntransReg
+
+áawat%<v%>%<iv%>:áawat TransVozAntipasiva ;
+áawat%<v%>%<iv%>:áawat RegIntransDvT ;
+
 ! go
 bin%<v%>%<iv%>:bin RegIntransVozActivaSinL ;
 bin%<v%>%<tv%>:bin%>s RegIntransDvT ;
@@ -684,10 +722,16 @@ heʼel%<v%>%<iv%>%<pss%>:heʼe%{l%}%>s RegIntransDvTVozPasiva ;
 heʼel%<v%>%<iv%>%<aps%>:heʼe%{l%}%>s RegIntransDvTVozAntipasiva ;
 
 ! salir
-hóok%<v%>%<iv%>:hóok RegIntransVozActivaConL ;
-hóok%<v%>%<tv%>:hóok%>s RegIntransDvT ;
-hóok%<v%>%<iv%>%<pss%>:hóok%>s IrregularTransVozPasiva ;
-hóok%<v%>%<iv%>%<aps%>:hóok%>s RegIntransDvTVozAntipasiva ;
+hóokʼ%<v%>%<iv%>:hóokʼ RegIntransVozActivaConL ;
+hóokʼ%<v%>%<tv%>:hóokʼ%>s RegIntransDvT ;
+hóokʼ%<v%>%<iv%>%<pss%>:hóokʼ%>s IrregularTransVozPasiva ;
+hóokʼ%<v%>%<iv%>%<aps%>:hóokʼ%>s RegIntransDvTVozAntipasiva ;
+
+! salir (alternativo)s
+hóokʼ%<v%>%<iv%>:hóok RegIntransVozActivaConL ;
+hóokʼ%<v%>%<tv%>:hóok%>s RegIntransDvT ;
+hóokʼ%<v%>%<iv%>%<pss%>:hóok%>s RegIntransDvTVozPasiva ;
+hóokʼ%<v%>%<iv%>%<aps%>:hóok%>s RegIntransDvTVozAntipasiva ;
 
 ! comenzar
 hoʼop%<v%>%<iv%>:hoʼop RegIntransVozActivaConL ;
@@ -782,11 +826,6 @@ ok%<v%>%<iv%>%<pss%>:ok%>s RegIntransDvTVozPasiva ;
 ok%<v%>%<iv%>%<aps%>:ok%>s RegIntransDvTVozAntipasiva ;
 ok%<v%>%<iv%>%<aps%>:óok RegIntransDvTVozAntipasiva ;
 
-! exit
-hóokʼ%<v%>%<iv%>:hóokʼ RegIntransVozActivaConL ;
-hóokʼ%<v%>%<tv%>:hóokʼ%>s RegIntransDvT ;
-hóokʼ%<v%>%<iv%>%<pss%>:hóokʼ%>s RegIntransDvTVozPasiva ;
-hóokʼ%<v%>%<iv%>%<aps%>:hóokʼ%>s RegIntransDvTVozAntipasiva ;
 
 ! chat
 tsikbal%<v%>%<iv%>:tsikbal TransVozAntipasiva ;
@@ -858,6 +897,19 @@ naʼat%<v%>%<tv%>:naʼat RegIntransDvT ;
 naʼat%<v%>%<tv%>:naʼat RegIntransDvT ;
 naʼat%<v%>%<iv%>%<pss%>:naʼat RegIntransDvTVozPasiva ;
 
+! poder
+páat%<v%>%<iv%>:páat DeadjectivalVerbalEndings ;
+páat%<v%>%<iv%>:páaht DeadjectivalVerbalEndings ;
+páat%<v%>%<iv%>:páat Paatal ;
+páat%<v%>%<iv%>:páaht Paatal ;
+
+
+! mover
+péek%<v%>%<iv%>:péek RegIntransVozActivaConL ;
+péek%<v%>%<tv%>:péek%>s RegIntransDvT ;
+péek%<v%>%<iv%>%<pss%>:péek%>s RegIntransDvTVozPasiva ;
+péek%<v%>%<iv%>%<aps%>:péek%>s RegIntransDvTVozAntipasiva ;
+
 LEXICON CvcTrans
 
 ! Open Question_ Should they lemmatize to the cvc transitive root in all voices?
@@ -894,6 +946,11 @@ bul%<v%>%<iv%>%<mv%>:búul TransVozMedia ;
 ! grab
 chʼa%<v%>%<tv%>:chʼa TransVozActiva ;
 chʼa%<v%>%<iv%>%<aps%>:chʼaʼ TransVozAntipasiva ;
+chʼa%<v%>%<iv%>%<aps%>:chʼàaʼ TransVozAntipasiva ;
+chʼa%<v%>%<iv%>%<pss%>:chʼaʼab TransVozPasiva ;
+
+chʼa%<v%>%<tv%>:chʼá TransVozActiva ;
+chʼa%<v%>%<iv%>%<aps%>:chʼáʼ TransVozAntipasiva ;
 chʼa%<v%>%<iv%>%<pss%>:chʼaʼab TransVozPasiva ;
 
 ! throw, aim
@@ -953,7 +1010,11 @@ kʼex%<v%>%<iv%>%<mv%>:kʼéex TransVozMedia ;
 ! sujetar
 hakʼ%<v%>%<tv%>:hakʼ TransVozActiva ;
 hakʼ%<v%>%<iv%>%<pss%>:haʼakʼ RegIntransDvTVozPasiva ;
+hakʼ%<v%>%<tv%>:ha%{k%}ʼ%>s TransVozActiva ;
 
+hakʼ%<v%>%<tv%>:hak TransVozActiva ;
+hakʼ%<v%>%<iv%>%<pss%>:haʼak RegIntransDvTVozPasiva ;
+hakʼ%<v%>%<tv%>:ha%{k%}%>s TransVozActiva ;
 
 ! Learn
 kan%<v%>%<tv%>:kan TransVozActiva ;
@@ -963,6 +1024,11 @@ kan%<v%>%<iv%>%<pss%>:kaʼan TransVozPasiva ;
 ! Encontrar, localizar
 kax%<v%>%<tv%>:kax%>t TransVozActiva ;
 kax%<v%>%<iv%>%<pss%>:kax%>t RegIntransDvTVozPasiva ;
+
+! Sing
+kʼay%<v%>%<tv%>:kʼay TransVozActiva ;
+kʼay%<v%>%<iv%>%<aps%>:kʼàay TransVozAntipasiva ;
+kʼay%<v%>%<iv%>%<pss%>:kʼaʼay TransVozPasiva ;
 
 ! Pull
 kol%<v%>%<tv%>:kol TransVozActiva ;
@@ -1101,6 +1167,10 @@ tsʼaʼ%<v%>%<tv%>:tsʼaʼ TransVozActiva ;
 tsʼaʼ%<v%>%<iv%>%<aps%>:tsʼàaʼ TransVozAntipasiva ;
 tsʼaʼ%<v%>%<iv%>%<pss%>:tsʼaʼaʼ TransVozPasiva ;
 
+! alternative spelling of the above?
+tsʼaʼ%<v%>%<tv%>:tsʼah TransVozActiva ;
+tsʼaʼ%<v%>%<iv%>%<aps%>:tsʼàah TransVozAntipasiva ;
+tsʼaʼ%<v%>%<iv%>%<pss%>:tsʼaʼah TransVozPasiva ;
 
 ! Peel, Skin
 tsol%<v%>%<tv%>:tsol TransVozActiva ;
@@ -1124,6 +1194,13 @@ tsik%<v%>%<tv%>:tsik TransVozActiva ;
 tsik%<v%>%<iv%>%<aps%>:tsìik TransVozAntipasiva ;
 tsik%<v%>%<iv%>%<aps%>:tsiʼik RegIntransVozActivaConL ;
 tsik%<v%>%<iv%>%<pss%>:tsiʼik TransVozPasiva ;
+
+! engañar
+tus%<v%>%<tv%>:tus TransVozActiva ;
+tus%<v%>%<iv%>%<aps%>:tùus TransVozAntipasiva ;
+tus%<v%>%<iv%>%<pss%>:tuʼus TransVozPasiva ;
+tus%<v%>%<iv%>%<mv%>:túus TransVozMedia ;
+
 
 ! Urinate
 wix%<v%>%<tv%>:wix TransVozActiva ;
@@ -1167,6 +1244,7 @@ xíimbal%<v%>%<iv%>:xíimbal TransVozAntipasiva ; !caminar
 xíimbal%<v%>%<tv%>:xíimba%{l%}%>t TransVozActiva ; !visitar
 
 yàan%<v%>%<iv%>:yàan IntransitiveSetB ; ! existir
+yàan%<v%>%<iv%>:yaan IntransitiveSetB ; ! existir
 
 
 LEXICON IrregularTransVerb
@@ -1362,6 +1440,12 @@ LEXICON DeadjectivalVerbalEndings
 %<iv%>%<pf%>:%>chah%>aʼan IntransitiveSetB ;
 %<iv%>%<pf%>:%>chah%>ak IntransitiveSetB ;
 
+LEXICON Paatal
+%<iv%>%<ipfv%>:%>t%>al PluralSubjSuffix ;
+%<iv%>%<pfv%>:%>tah IntransitiveSetB ;
+%<iv%>%<pf%>:%>tah%>aʼan IntransitiveSetB ;
+%<iv%>%<pf%>:%>t%>ak IntransitiveSetB ;
+
 LEXICON Interjections
 haah%<intj%>:haah # ;
 haah%<intj%>:hàah # ;
@@ -1438,3 +1522,8 @@ kʼaʼam%<v%>:kʼaʼam DeadjectivalVerbalEndings ;
 kiʼichpam%<adj%>:kiʼichpam AdjectivalEndings ;
 kiʼichpam%<v%>:kiʼichpam DeadjectivalVerbalEndings ;
 
+! ripe
+takni%<adj%>:takni # ; ! fixme: find in dict, figure out derivations.
+
+! little
+chichan%<adj%>:chichan AdjectivalEndings ;

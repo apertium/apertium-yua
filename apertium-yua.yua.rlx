@@ -6,6 +6,9 @@ LIST EOS = <<< ;
 LIST N = n ;
 LIST V = v ;
 
+LIST Subj = subj ;
+LIST Perf = pfv ;
+
 LIST SSg1 = s_sg1 ;
 LIST SSg2 = s_sg2 ;
 LIST SSg3 = s_sg3 ;
@@ -21,3 +24,5 @@ SET Agr = SSg1 | SSg2 | SSg3 ;
 SECTION
 
 REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
+
+SELECT Perf IF (-1/* Perf) ;
