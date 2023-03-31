@@ -5,6 +5,7 @@ LIST EOS = <<< ;
 
 LIST N = n ;
 LIST V = v ;
+LIST PRO = pron ;
 
 LIST Subj = subj ;
 LIST Perf = pfv ;
@@ -13,16 +14,44 @@ LIST SSg1 = s_sg1 ;
 LIST SSg2 = s_sg2 ;
 LIST SSg3 = s_sg3 ;
 
+LIST OSg1 = o_sg1 ;
+LIST OSg2 = o_sg2 ;
+LIST OSg3 = o_sg3 ;
+
+LIST SPl1 = s_pl1 ;
+LIST SPl2 = s_pl2 ;
+LIST SPl3 = s_pl3 ;
+
+LIST OPl1 = o_pl1 ;
+LIST OPl2 = o_pl2 ;
+LIST OPl3 = o_pl3 ;
+
 LIST Px1Sg = 1sg_poss ; 
 LIST Px2Sg = 2sg_poss ; 
 LIST Px3Sg = 3sg_poss ; 
+LIST Px1Pl = 1pl_poss ; 
+LIST Px2Pl = 2pl_poss ; 
+LIST Px3Pl = 3pl_poss ; 
 
-SET Poss = Px1Sg | Px2Sg | Px3Sg ;
 
-SET Agr = SSg1 | SSg2 | SSg3 ;
+LIST Cess = cess ;
+LIST Cont = cont ;
+LIST Fut = fut ;
+
+SET TerminativeAspects = Cess | Cont | Fut ;
+
+SET Poss = Px1Sg | Px2Sg | Px3Sg | Px1Pl | Px2Pl | Px3Pl ;
+
+SET SingSubjAgr = SSg1 | SSg2 | SSg3 ;
+
+SET Agr = SSg1 | SSg2 | SSg3 | SPl1 | SPl2 | SPl3 ;
 
 SECTION
 
 REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
 
 SELECT Perf IF (-1/* Perf) ;
+
+SELECT (PRON SPl2) IF (1 (V SPl2)) ;
+
+SELECT (TerminativeAspects) IF (*-1 TerminativeAspects) ;
