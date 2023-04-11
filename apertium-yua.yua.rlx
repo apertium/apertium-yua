@@ -38,6 +38,9 @@ LIST Cess = cess ;
 LIST Cont = cont ;
 LIST Fut = fut ;
 
+LIST Aux = aux ;
+LIST Sconj = sconj ;
+
 SET TerminativeAspects = Cess | Cont | Fut ;
 
 SET Poss = Px1Sg | Px2Sg | Px3Sg | Px1Pl | Px2Pl | Px3Pl ;
@@ -52,6 +55,6 @@ REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
 
 SELECT Perf IF (-1/* Perf) ;
 
-SELECT (PRON SPl2) IF (1 (V SPl2)) ;
+REMOVE PRO + SSg2 IF (1 (V SPl2)) ;
 
-SELECT (TerminativeAspects) IF (*-1 TerminativeAspects) ;
+REMOVE TerminativeAspects IF (NOT *-1 TerminativeAspects) ;

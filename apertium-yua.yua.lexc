@@ -118,6 +118,7 @@ Multichar_Symbols
 %<propn%> ! Proper Noun
 
 %{o%}           ! Either ʼoʼ or nothing
+%{u%}           ! Either 'u' or nothing
 %{e%}           ! Either ʼeʼ or nothing
 %{V%}           ! Copy stem vowel
 %{wy%}          ! start to vowel-initial verb stems either y- or w- depending on person of subject.
@@ -173,6 +174,8 @@ PerfectiveAspectMoodMarker ;
 
 LEXICON ImperfectiveAspectMoodMarker
 k%<aux%>%<hab%>:k # ;
+k%<aux%>%<hab%>:k SetA ; ! Dir/LR
+
 k%<aux%>%<hab%>%<neg%>:t # ;
 
 
@@ -189,12 +192,11 @@ kaah%<aux%>%<incep%>:kaah # ;
 chuun%<aux%>%<incep%>:chuun # ;
 lek%<aux%>%<incep%>:lek # ;
 
-taak%<aux%>%<des%>:taak # ;
+!taak%<aux%>%<des%>:taak # ;
 tàak%<aux%>%<des%>:tàak # ;
-táak%<aux%>%<des%>:táak # ;
 
 kʼabéet%<aux%>%<oblig%>:kʼabéet # ;
-kʼabéet%<aux%>%<oblig%>:kʼabeet # ;
+!kʼabéet%<aux%>%<oblig%>:kʼabeet # ;
 
 kʼaʼnaʼan%<aux%>%<oblig%>:kʼaʼanaʼan # ;
 yàan%<aux%>%<oblig%>:yàan # ;
@@ -487,7 +489,7 @@ túul%<clfanim%>:tuul PluralSubjSuffix ;
 túul%<clfanim%>:túul PluralSubjSuffix ;
 
 pʼéel%<clfinan%>:pʼéel PluralSubjSuffix ;
-hun%<clfinan%>%+pʼéel%<num%>:humpʼéel # ;
+hun%<clfinan%>%+pʼéel%<num%>:humpʼéel # ; ! Dir/LR
 hun%<clfinan%>%+pʼéel%<num%>:hunpʼéel # ;
 hun%<clfanim%>%+túul%<num%>:huntúul # ;
 
@@ -539,6 +541,8 @@ bey%<adv%>:bey DeicticTerminatives ; ! like so
 chen%<adv%>:chen # ; ! "just"
 chen%<adv%>:chéen # ; ! "just"
 chan%<adv%>:chan # ; ! "poquito"
+
+alkabil%<adv%>:alkabil # ; ! "running(ly)"
 
 haylibeʼ%<adv%>:haylibeʼ # ; ! "therefore, thus"
 
@@ -778,6 +782,11 @@ hoʼop%<v%>%<tv%>:hoʼop%>s RegIntransDvT ;
 hoʼop%<v%>%<iv%>%<aps%>:hoʼop%>s RegIntransDvTVozAntipasiva ;
 hoʼop%<v%>%<tv%>:hoʼop%>be%>s RegIntransDvT ;
 hoʼop%<v%>%<iv%>%<aps%>:hoʼop%>be%>s RegIntransDvTVozAntipasiva ;
+
+! reach
+kʼuch%<v%>%<iv%>:kʼuch RegIntransVozActivaConL ;
+kʼuch%<v%>%<iv%>:kʼuch%>pah RegIntransDvTVozPasiva ;
+kʼuch%<v%>%<tv%>:kʼuch%>s TransVozActiva ;
 
 
 ! descansar
@@ -1516,6 +1525,9 @@ ay%<intj%>:ay # ;
 LEXICON Adjectives
 pochon%<adj%>%<barb%>:pochon AdjectivalEndings ;
 pochón%<adj%>%<barb%>:pochón AdjectivalEndings ;
+
+takʼan%<adj%>:takʼan AdjectivalEndings ;
+takʼan%<v%>:takʼan DeadjectivalVerbalEndings ;
 
 
 ! good
