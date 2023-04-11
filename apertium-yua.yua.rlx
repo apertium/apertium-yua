@@ -55,6 +55,6 @@ REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
 
 SELECT Perf IF (-1/* Perf) ;
 
-REMOVE PRO + SSg2 IF (1 (V SPl2)) ;
+REMOVE PRO + SSg2 IF (1 V + SPl2) ;
 
 REMOVE TerminativeAspects IF (NOT *-1 TerminativeAspects) ;
