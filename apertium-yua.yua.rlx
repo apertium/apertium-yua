@@ -49,12 +49,18 @@ SET SingSubjAgr = SSg1 | SSg2 | SSg3 ;
 
 SET Agr = SSg1 | SSg2 | SSg3 | SPl1 | SPl2 | SPl3 ;
 
+SET VN = V | N ;
+SET 2Sg = SSg2 | Px2Sg ;
+SET 2Pl = SPl2 | Px2Pl ;
+
 SECTION
 
 REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
 
 SELECT Perf IF (-1/* Perf) ;
 
-REMOVE PRO + SSg2 IF (1 (V SPl2)) ;
+REMOVE PRO + 2Sg IF (1 VN + SPl2) ;
+
+REMOVE PRO + 2Pl IF (1 VN - SPl2) ;
 
 REMOVE TerminativeAspects IF (NOT *-1 TerminativeAspects) ;
