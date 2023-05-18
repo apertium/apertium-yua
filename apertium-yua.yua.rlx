@@ -62,5 +62,6 @@ SELECT Perf IF (-1/* Perf) ;
 REMOVE PRO + 2Sg IF (1 VN + SPl2) ;
 
 REMOVE PRO + 2Pl IF (1 VN - SPl2) ;
+REMOVE PRO + SSg2 IF (1 V + SPl2) ;
 
 REMOVE TerminativeAspects IF (NOT *-1 TerminativeAspects) ;

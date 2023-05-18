@@ -3,9 +3,9 @@
   <info>
     <locale>yua</locale>
     <!-- TODO: locale may need to be changed to 2-letter ISO 639-1 code -->
-    <title>Apertium morphological analyser-based speller (Yucateco)</title>
+    <title>Apertium morphological analyser-based speller (Maya)</title>
     <description>
-      A spellchecker for Yucateco.
+      A spellchecker for Maya.
     </description>
     <version vcsrev="GT_REVISION">47e898dd4c47ce4f0f65c52eb5ab5466329269ed</version>
     <date>DATE</date>
@@ -14,9 +14,9 @@
         website="http://apertium.org"/>
   </info>
   <acceptor type="general" id="acceptor.default.hfst">
-    <title>Apertium dictionary (Yucateco)</title>
+    <title>Apertium dictionary (Maya)</title>
     <description>
-        Apertium dictionary for Yucateco compiled for HFST.
+        Apertium dictionary for Maya compiled for HFST.
     </description>
   </acceptor>
   <errmodel id="errmodel.default.hfst">
