@@ -187,7 +187,9 @@ k%<aux%>%<hab%>%<neg%>:t # ;
 
 
 táan%<aux%>%<dur%>:táan # ;
-taan%<aux%>%<dur%>:taan # ; ! Dir/LR
+táan%<aux%>%<dur%>:taan # ; ! Dir/LR
+táan%<aux%>%<dur%>:tan # ;  ! Dir/LR
+
 lailiʼ%<aux%>%<cont%>:lailiʼ # ;
 
 tsʼoʼok%<aux%>%<cess%>:tsʼoʼok # ;
@@ -527,6 +529,9 @@ teʼe%<adp%>:teʼ PluralSuffix ; ! to _ (introduces indirect obj)
 tumèen%<adp%>:tumèen # ; ! por
 yòokʼsal%<adp%>:yòokʼsal # ; ! para
 
+yáanal%<adp%>:yáanal # ; ! below (this might not be the right tag...it is usually "u yáanal", should this be a noun?
+
+
 LEXICON TerminacionesInterrogativas
 0:%>ih # ;
 Terminatives ;
@@ -595,6 +600,9 @@ behòoraʼa%<adv%>:beyhòorah AdverbialEndings; ! now
 túun%<adv%>:túun AdverbialEndings; ! entonces
 wa%<adv%>:wa # ;
 
+mas%<adv%>%<barb%>:mas # ;
+
+
 ma’atan%<adv%>:ma’atan AdverbialEndings ; ! never
 
 LEXICON Conjunction
@@ -602,6 +610,8 @@ kux%<conj%>:kux # ; ! y...
 
 yèetel%<conj%>:yèetel Terminatives ;
 yèetel%<conj%>:yetel Terminatives ; ! Dir/LR
+
+pero%<conj%>%<barb%>:pero Terminatives ; ! Dir/LR
 
 kah%<sconj%>:kah # ;
 kah%<sconj%>:ka # ; ! Dir/LR 
@@ -684,6 +694,14 @@ bakʼ%<n%>:bakʼ NounEndings ; ! meat
 xéek%<n%>:xéek NounEndings ; ! old woman, owl
 yùum%<n%>:yùum NounEndings ; ! father, God
 pàal%<n%>:pàal NounEndings ; ! child, boy
+sìikil%<n%>:sìikil NounEndings ; ! pepitas
+sìikil%<n%>:sikil NounEndings ; ! pepitas     Dir/LR
+màam%<n%>:màam NounEndings ; ! mother
+màam%<n%>:mam NounEndings ; ! mother          Dir/LR
+urich%<n%>:urich NounEndings ; ! snail        Dir/LR
+suʼuk%<n%>:suʼuk NounEndings ; ! grass        Dir/LR
+
+
 
 
 ! TODO: maybe just haah?
@@ -693,13 +711,13 @@ pùut%<n%>:pùut NounEndings ; ! "papaya"
 SpanishNouns ;
 
 LEXICON SpanishNouns
-cuchara%<n%>:cuchara NounEndings ; ! cuchara
-vecina%<n%>:vecina NounEndings ; ! cuchara
-òorah%<n%>:òorah NounEndings ; ! hora
-polvio%<n%>:polvio NounEndings ; ! maquillaje
-ìingles%<n%>:ìingles NounEndings ; ! inglés
-dyaas%<n%>:dyaas # ; ! días
-cinco%<n%>:cinco # ; ! cinco
+cuchara%<n%>%<barb%>:cuchara NounEndings ; ! cuchara
+vecina%<n%>%<barb%>:vecina NounEndings ; ! cuchara
+òorah%<n%>%<barb%>:òorah NounEndings ; ! hora
+polvio%<n%>%<barb%>:polvio NounEndings ; ! maquillaje
+ìingles%<n%>%<barb%>:ìingles NounEndings ; ! inglés
+dyaas%<n%>%<barb%>:dyaas # ; ! días
+cinco%<n%>%<barb%>:cinco # ; ! cinco
 
 LEXICON ProperNoun
 cancún%<propn%>:cancún NounEndings; ! Cancún
@@ -808,11 +826,11 @@ hóokʼ%<v%>%<iv%>%<pss%>:hóok%>s RegIntransDvTVozPasiva ;
 hóokʼ%<v%>%<iv%>%<aps%>:hóok%>s RegIntransDvTVozAntipasiva ;
 
 ! comenzar
-hoʼop%<v%>%<iv%>:hoʼop RegIntransVozActivaConL ;
-hoʼop%<v%>%<tv%>:hoʼop%>s RegIntransDvT ;
-hoʼop%<v%>%<iv%>%<aps%>:hoʼop%>s RegIntransDvTVozAntipasiva ;
-hoʼop%<v%>%<tv%>:hoʼop%>be%>s RegIntransDvT ;
-hoʼop%<v%>%<iv%>%<aps%>:hoʼop%>be%>s RegIntransDvTVozAntipasiva ;
+hoʼopʼ%<v%>%<iv%>:hoʼopʼ RegIntransVozActivaConL ;
+hoʼopʼ%<v%>%<tv%>:hoʼopʼ%>s RegIntransDvT ;
+hoʼopʼ%<v%>%<iv%>%<aps%>:hoʼopʼ%>s RegIntransDvTVozAntipasiva ;
+hoʼopʼ%<v%>%<tv%>:hoʼopʼ%>be%>s RegIntransDvT ;
+hoʼopʼ%<v%>%<iv%>%<aps%>:hoʼopʼ%>be%>s RegIntransDvTVozAntipasiva ;
 
 ! reach
 kʼuch%<v%>%<iv%>:kʼuch RegIntransVozActivaConL ;
@@ -901,7 +919,7 @@ tùukul%<v%>%<tv%>:tùukul%>t RegIntransDvT ;
 ! escribir
 tsʼíib%<v%>%<iv%>:tsʼíib RegIntransVozActivaConL ;
 tsʼíib%<v%>%<tv%>:tsʼíib%>t RegIntransDvT ;
-tsʼíib%<v%>%<iv%>%<pss%>:tsʼíib%>t RegIntransDvTVozPasiva ;
+tsʼíib%<v%>%<iv%>%<pss%>:tsʼíib%>t IrregularTransVozPasiva ;
 tsʼíib%<v%>%<iv%>%<aps%>:tsʼíib%>t RegIntransDvTVozAntipasiva ;
 
 ! enter
@@ -979,6 +997,11 @@ núuk%<v%>%<iv%>%<pss%>:núuk%>t RegIntransDvTVozPasiva ;
 xéek%<v%>%<iv%>:xéek RegIntransVozActivaConL ;
 xéek%<v%>%<tv%>:xéek%>t RegIntransDvT ;
 xéek%<v%>%<iv%>%<pss%>:xéek%>t RegIntransDvTVozPasiva ;
+
+! velar
+belar%<v%>%<iv%>:belar RegIntransVozActivaSinL ;
+belar%<v%>%<tv%>:belar%>t RegIntransDvT ;
+belar%<v%>%<iv%>%<pss%>:belar%>t RegIntransDvTVozPasiva ;
 
 ! entender
 naʼat%<v%>%<iv%>:naʼat RegIntransVozActivaConL ;
