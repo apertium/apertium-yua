@@ -1,4 +1,4 @@
-DELIMITERS = "." "¶" ".." "?" "!" ;
+DELIMITERS = "." "¶" ".." "?" "!" "\n" ;
 
 LIST BOS = >>> ;
 LIST EOS = <<< ; 
