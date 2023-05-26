@@ -754,6 +754,9 @@ sarah%<propn%>:sarah NounEndings ; ! sarah
 laura%<propn%>:laura NounEndings ; ! laura
 martina%<propn%>:martina NounEndings ; ! martina
 espita%<propn%>:espita NounEndings ; ! name
+alejandra%<propn%>:alejandra NounEndings ; ! name
+bolles%<propn%>:bolles NounEndings ; ! name
+
 
 xpil%<propn%>:xpil NounEndings ; ! xpil. TODO support x- as prefix
 
@@ -926,7 +929,7 @@ tùukul%<v%>%<iv%>%<pss%>:tùukl IrregularTransVozPasiva ;
 tùukul%<v%>%<tv%>:tùukul%>t RegIntransDvT ;
 
 
-! escribir
+! write
 tsʼíib%<v%>%<iv%>:tsʼíib RegIntransVozActivaConL ;
 tsʼíib%<v%>%<tv%>:tsʼíib%>t RegIntransDvT ;
 tsʼíib%<v%>%<iv%>%<pss%>:tsʼíib%>t IrregularTransVozPasiva ;
