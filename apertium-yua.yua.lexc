@@ -23,7 +23,7 @@ Multichar_Symbols
 %<aux%>  ! auxiliar
 %<adp%>  ! Adposición
 %<det%>  ! Determiner
-%<sconj%>! subordinating conjunction
+%<cnjsub%>! subordinating conjunction
 %<pl%>   ! Plural
 %<s_pl%>   ! Sujeto Plural
 %<barb%>
@@ -36,7 +36,7 @@ Multichar_Symbols
 %<past%> ! "Completed simple past"
 %<perf%> ! "Completed Present Perfect"
 %<subjun%> ! "Subjunctive"
-%<pron%>  ! "pronoun"
+%<prn%>  ! "pronoun"
 %<aps%>   ! antipasivo
 %<mv%>    ! middle voice
 %<1sg_poss%>  ! "pronoun"
@@ -69,7 +69,7 @@ Multichar_Symbols
 %<clfinan%>
 
 %<hab%>
-%<conj%>
+%<cnjcoo%>
 %<pss%>
 %<neg%>
 %<adv%>
@@ -239,9 +239,9 @@ sáan%<aux%>%<subj%>:sáan # ;
 
 LEXICON PerfectiveAspectMoodMarker
 t%<pfv%>%<tv%>:t # ;
-t%<aux%>%<pfv%>%<tv%>%+in%<s_sg1%>%<pron%>:tin # ;
-t%<aux%>%<pfv%>%<tv%>%+a%<s_sg2%>%<pron%>:ta # ;
-t%<aux%>%<pfv%>%<tv%>%+u%<s_sg3%>%<pron%>:tu # ; 
+t%<aux%>%<pfv%>%<tv%>%+in%<s_sg1%>%<prn%>:tin # ;
+t%<aux%>%<pfv%>%<tv%>%+a%<s_sg2%>%<prn%>:ta # ;
+t%<aux%>%<pfv%>%<tv%>%+u%<s_sg3%>%<prn%>:tu # ; 
 h%<aux%>%<pfv%>%<iv%>:h # ;
 
 LEXICON Negative
@@ -260,52 +260,54 @@ teʼel%<det%>:teʼ #;
 
 huhun%<det%>:huhun # ; ! cada uno de...
 
+yáabkach%<det%>:yáabkach # ; ! "muchos"
+
 LEXICON SetA
-in%<s_sg1%>%<pron%>:in # ;
-k%<hab%>%+in%<s_sg1%>%<pron%>:k%>in # ;
-k%<hab%>%<neg%>+in%<s_sg1%>%<pron%>:k%>in # ;
-táan%<dur%>%+in%<s_sg1%>%<pron%>:tin # ;
-tiʼi%<adp%>%+in%<s_sg1%>%<pron%>:t%>in # ;
-t%<pfv%>%+in%<s_sg1%>%<pron%>:t%>in # ;
-tiʼi%<adp%>%+in%<1sg_poss%>%<pron%>:t%>in # ;
-in%<1sg_poss%>%<pron%>:in # ;
+in%<s_sg1%>%<prn%>:in # ;
+k%<hab%>%+in%<s_sg1%>%<prn%>:k%>in # ;
+k%<hab%>%<neg%>+in%<s_sg1%>%<prn%>:k%>in # ;
+táan%<dur%>%+in%<s_sg1%>%<prn%>:tin # ;
+tiʼi%<adp%>%+in%<s_sg1%>%<prn%>:t%>in # ;
+t%<pfv%>%+in%<s_sg1%>%<prn%>:t%>in # ;
+tiʼi%<adp%>%+in%<1sg_poss%>%<prn%>:t%>in # ;
+in%<1sg_poss%>%<prn%>:in # ;
 
 ! todo: add t+SETA contractions with possessive analysis
-a%<s_sg2%>%<pron%>:a # ;
-k%<hab%>%+a%<s_sg2%>%<pron%>:k%>a # ;
-táan%<dur%>%+%<s_sg2%>%<pron%>:tan # ;
-t%<pfv%>%+a%<s_sg2%>%<pron%>:t%>a # ;
-tiʼi%<adp%>%+a%<s_sg2%>%<pron%>:t%>a # ;
+a%<s_sg2%>%<prn%>:a # ;
+k%<hab%>%+a%<s_sg2%>%<prn%>:k%>a # ;
+táan%<dur%>%+%<s_sg2%>%<prn%>:tan # ;
+t%<pfv%>%+a%<s_sg2%>%<prn%>:t%>a # ;
+tiʼi%<adp%>%+a%<s_sg2%>%<prn%>:t%>a # ;
 
-u%<s_sg3%>%<pron%>:u # ;
-k%<hab%>%+u%<s_sg3%>%<pron%>:k%>u # ;
+u%<s_sg3%>%<prn%>:u # ;
+k%<hab%>%+u%<s_sg3%>%<prn%>:k%>u # ;
 
-k%<s_pl1%>%<pron%>:k # ;
+k%<s_pl1%>%<prn%>:k # ;
 
-a%<s_pl2%>%<pron%>:a # ;
-k%<hab%>%+a%<s_pl2%>%<pron%>:k%>a # ;
-táan%<dur%>%+%<s_pl2%>%<pron%>:tan # ;
-t%<pfv%>%+a%<s_pl2%>%<pron%>:t%>a # ;
-tiʼi%<adp%>%+a%<s_pl2%>%<pron%>:t%>a # ;
+a%<s_pl2%>%<prn%>:a # ;
+k%<hab%>%+a%<s_pl2%>%<prn%>:k%>a # ;
+táan%<dur%>%+%<s_pl2%>%<prn%>:tan # ;
+t%<pfv%>%+a%<s_pl2%>%<prn%>:t%>a # ;
+tiʼi%<adp%>%+a%<s_pl2%>%<prn%>:t%>a # ;
 
-u%<s_pl3%>%<pron%>:u # ;
-tiʼi%<adp%>%+u%<s_sg3%>%<pron%>:t%>u # ;
-tiʼi%<adp%>%+u%<s_pl3%>%<pron%>:t%>u # ;
+u%<s_pl3%>%<prn%>:u # ;
+tiʼi%<adp%>%+u%<s_sg3%>%<prn%>:t%>u # ;
+tiʼi%<adp%>%+u%<s_pl3%>%<prn%>:t%>u # ;
 
-maʼ%<neg%>%+u%<s_sg3%>%<pron%>:m%>u # ;
-maʼ%<neg%>%+u%<s_pl3%>%<pron%>:m%>u # ;
+maʼ%<neg%>%+u%<s_sg3%>%<prn%>:m%>u # ;
+maʼ%<neg%>%+u%<s_pl3%>%<prn%>:m%>u # ;
 
 
 
-a%<2sg_poss%>%<pron%>:a # ;
-u%<3sg_poss%>%<pron%>:u # ;
-k%<1pl_poss%>%<pron%>:k # ;
-a%<2pl_poss%>%<pron%>:a # ;
-u%<3pl_poss%>%<pron%>:u # ;
+a%<2sg_poss%>%<prn%>:a # ;
+u%<3sg_poss%>%<prn%>:u # ;
+k%<1pl_poss%>%<prn%>:k # ;
+a%<2pl_poss%>%<prn%>:a # ;
+u%<3pl_poss%>%<prn%>:u # ;
 
-t%<aux%>%<hab%>%<neg%>+in%<s_sg1%>%<pron%>:tin # ;
-t%<aux%>%<hab%>%<neg%>+a%<s_sg2%>%<pron%>:ta # ;
-t%<aux%>%<hab%>%<neg%>+u%<s_sg3%>%<pron%>:tu # ;
+t%<aux%>%<hab%>%<neg%>+in%<s_sg1%>%<prn%>:tin # ;
+t%<aux%>%<hab%>%<neg%>+a%<s_sg2%>%<prn%>:ta # ;
+t%<aux%>%<hab%>%<neg%>+u%<s_sg3%>%<prn%>:tu # ;
 
 LEXICON PronombresIndependientes
 
@@ -324,7 +326,7 @@ toʼon%<pron_1pl%>:toʼon Topicalizer ;
 teʼex%<pron_2pl%>:teʼex Topicalizer ;
 letiʼ%<pron_3pl%>:letiʼ%>oʼob Topicalizer ;
 
-minaʼan%<neg%>%<pron%>:minaʼan Topicalizer ; ! nada, no hay nada
+minaʼan%<neg%>%<prn%>:minaʼan Topicalizer ; ! nada, no hay nada
 
 le%<pron_3sg%>:lel DeicticTerminatives ;
 le%<pron_3pl%>:lel%>oʼob DeicticTerminatives ;
@@ -534,8 +536,11 @@ tak%<adp%>:tak # ; ! hasta
 tiʼi%<adp%>:tiʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 tiʼi%<adp%>:tʼ PluralSuffix ; ! to _ (introduces indirect obj or location)
 teʼe%<adp%>:teʼ PluralSuffix ; ! to _ (introduces indirect obj)
-tumèen%<adp%>:tumèen # ; ! por
+tumen%<adp%>:tumen # ; ! por
 yòokʼsal%<adp%>:yòokʼsal # ; ! para
+
+yóokʼol%<adp%>:yóokʼol # ; ! arriba (de)
+yáan%<adp%>:yáan # ; ! "abajo de"
 
 yáanal%<adp%>:yáanal # ; ! below (this might not be the right tag...it is usually "u yáanal", should this be a noun?
 
@@ -549,16 +554,16 @@ LEXICON Interrogativos
 wáah%<part%>%<itg%>:wáah #; ! yes/no question particle
 
 
-baʼax%<pron%>%<itg%>:baʼax TerminacionesInterrogativas ; !qué
-baʼax%<pron%>%<itg%>:baʼan TerminacionesInterrogativas ; !qué Dir/LR
-baʼax%<pron%>%<itg%>:baax TerminacionesInterrogativas ; !qué Dir/LR
-baʼax%<pron%>%<itg%>:baan TerminacionesInterrogativas ; !qué Dir/LR
-baʼax%<pron%>%<itg%>:báan TerminacionesInterrogativas ; !qué Dir/LR
+baʼax%<prn%>%<itg%>:baʼax TerminacionesInterrogativas ; !qué
+baʼax%<prn%>%<itg%>:baʼan TerminacionesInterrogativas ; !qué Dir/LR
+baʼax%<prn%>%<itg%>:baax TerminacionesInterrogativas ; !qué Dir/LR
+baʼax%<prn%>%<itg%>:baan TerminacionesInterrogativas ; !qué Dir/LR
+baʼax%<prn%>%<itg%>:báan TerminacionesInterrogativas ; !qué Dir/LR
 
 bix%<adv%>%<itg%>:bix TerminacionesInterrogativas ; ! cómo
 tuʼux%<adv%>%<itg%>:tuʼux TerminacionesInterrogativas ; ! dónde
-máax%<pron%>%<itg%>:máax TerminacionesInterrogativas ; ! quién
-máakalmáak%<pron%>%<itg%>:máakalmáak TerminacionesInterrogativas ; ! quién
+máax%<prn%>%<itg%>:máax TerminacionesInterrogativas ; ! quién
+máakalmáak%<prn%>%<itg%>:máakalmáak TerminacionesInterrogativas ; ! quién
 ba’axten%<adv%>%<itg%>:ba’axten TerminacionesInterrogativas ; ! por qué
 ba’axten%<adv%>%<itg%>:ba’anten TerminacionesInterrogativas ; ! por qué Dir/LR
 
@@ -576,7 +581,7 @@ bey%<adv%>:bey DeicticTerminatives ; ! like so
 chen%<adv%>:chen # ; ! "just"
 chen%<adv%>:chéen # ; ! "just"
 chan%<adv%>:chan # ; ! "poquito"
-
+sen%<adv%>:sen # ; ! "very"
 alkabil%<adv%>:alkabil # ; ! "running(ly)"
 
 haylibeʼ%<adv%>:haylibeʼ # ; ! "therefore, thus"
@@ -616,23 +621,31 @@ ma’atan%<adv%>:ma’atan AdverbialEndings ; ! never
 ma’atech%<adv%>:ma’atech AdverbialEndings ; ! never
 
 LEXICON Conjunction
-kux%<conj%>:kux # ; ! y...
+kux%<cnjcoo%>:kux # ; ! y...
 
-yèetel%<conj%>:yèetel Terminatives ;
-yèetel%<conj%>:yetel Terminatives ; ! Dir/LR
+yèetel%<cnjcoo%>:yèetel Terminatives ;
+yèetel%<cnjcoo%>:yetel Terminatives ; ! Dir/LR
 
-pero%<conj%>%<barb%>:pero Terminatives ; ! Dir/LR
+pero%<cnjcoo%>%<barb%>:pero Terminatives ; ! Dir/LR
 
-kah%<sconj%>:kah # ;
-kah%<sconj%>:ka # ; ! Dir/LR 
+kah%<cnjsub%>:kah # ;
+kah%<cnjsub%>:ka # ; ! Dir/LR 
 
-wa%<sconj%>:wa # ;
+wa%<cnjsub%>:wa # ;
 
-utiʼal%<sconj%>:utiʼal # ; ! fixme: add this as ti'al with a pron like intial
-
-tuméen%<sconj%>:tuméen # ;
+utiʼal%<cnjsub%>:utiʼal # ; ! Dir/LR fixme: add this as ti'al with a pron like intial
+utyaʼal%<cnjsub%>:utyaʼal # ;
+tuméen%<cnjsub%>:tuméen # ;
 
 LEXICON Noun
+sáastal%<n%>:sáastal NounEndings ; ! "dawn"
+òoch%<n%>:òoch NounEndings ; ! "fox/weasel"
+hàah%<n%>:hàah NounEndings ; ! "truth"
+chʼíichʼ%<n%>:chʼíichʼ NounEndings ; ! "bird"
+pàach%<n%>:pàach NounEndings ; ! "back, behind"
+úukum%<n%>:úukum NounEndings ; ! "dove"
+tóos%<n%>:tóos NounEndings ; ! drizzle
+keʼel%<n%>:keʼel NounEndings ; ! "frío"
 tsíimin%<n%>:tsíimin NounEndings ; ! "caballo"
 káambal%<n%>:káambal NounEndings ; ! "estudiante"
 kaʼansah%<n%>:kaʼansah NounEndings ; ! "maestro"
@@ -649,14 +662,15 @@ ich%<n%>:ich NounEndings ; ! "ojo"
 òon%<n%>:òon NounEndings ; ! "aguacate"
 haʼ%<n%>:haʼ NounEndings ; ! agua
 chùun%<n%>:chùun NounEndings ; ! "origen, tronco"
+pʼùus%<n%>:pʼùus NounEndings ; ! "hunchback / joroba/jorobado"
 óol%<n%>:óol NounEndings ; ! "corazón"
 ool%<n%>:ool NounEndings ; ! "corazón"
-
+tùunich%<n%>:tùunich NounEndings ; ! "piedra"
 kuʼuk%<n%>:kuʼuk NounEndings ; ! "squirrel"
-
+múul%<n%>:múul NounEndings ; ! "pile, mound"
 iknal%<n%>:iknal NounEndings ; ! someone's "place" (at/with a person)
 áakʼab%<n%>:áakʼab NounEndings ; ! night
-
+mùukʼ%<n%>:mùukʼ NounEndings ; ! "fuerza"
 nah%<n%>:nah NounEndings ; ! "casa"
 xòok%<n%>:xòok NounEndings ; ! "lesson, studying"
 chùumuk%<n%>:chùumuk NounEndings ; ! "middle/center"
@@ -683,14 +697,16 @@ tʼaan%<n%>:tʼaan NounEndings ; ! palabra
 pʼíit%<n%>:pʼíit NounEndings ; ! un poco
 xkùuruch%<n%>:xkùuruch NounEndings ; ! cucaracha
 otoch%<n%>:otoch NounEndings ; ! hogar
-áakʼab%<n%>:áakʼab NounEndings ; ! noche
+kʼab%<n%>:kʼab NounEndings ; ! mano
+ìikʼ%<n%>:ìikʼ NounEndings ; ! viento
+cheʼ%<n%>:cheʼ NounEndings ; ! leña, madera
 buʼul%<n%>:buʼul NounEndings ; ! frijoles
-
+yàal%<n%>:yàal NounEndings ; ! hijo/hija
 ixiʼim%<n%>:ixiʼim NounEndings ; ! maiz
 ixiʼim%<n%>:ixim NounEndings ; ! maiz
-
+tʼàan%<n%>:tʼàan NounEndings ; ! "palabra, lengua"
 holnah%<n%>:holnah NounEndings ; ! ventana/puerta
-
+mosòon%<n%>:mosòon NounEndings ; ! remolino
 íicham%<n%>:íicham NounEndings ; ! esposo
 chʼoʼ%<n%>:chʼoʼ NounEndings ; ! ratón
 beh%<n%>:beh NounEndings ; ! road, way
@@ -710,7 +726,6 @@ màam%<n%>:màam NounEndings ; ! mother
 màam%<n%>:mam NounEndings ; ! mother          Dir/LR
 urich%<n%>:urich NounEndings ; ! snail        Dir/LR
 suʼuk%<n%>:suʼuk NounEndings ; ! grass        Dir/LR
-
 
 
 
@@ -756,7 +771,9 @@ martina%<propn%>:martina NounEndings ; ! martina
 espita%<propn%>:espita NounEndings ; ! name
 alejandra%<propn%>:alejandra NounEndings ; ! name
 bolles%<propn%>:bolles NounEndings ; ! name
-
+teodosio%<propn%>:teodosio NounEndings ; ! name
+tujin%<propn%>:tujin NounEndings ; ! name
+khan%<propn%>:khan NounEndings ; ! name
 
 xpil%<propn%>:xpil NounEndings ; ! xpil. TODO support x- as prefix
 
@@ -785,12 +802,23 @@ LEXICON IntransReg
 áawat%<v%>%<iv%>:áawat TransVozAntipasiva ;
 áawat%<v%>%<iv%>:áawat RegIntransDvT ;
 
+! rain
+kʼáax%<v%>%<iv%>:kʼáax RegIntransVozActivaConL;
+
 ! go
 bin%<v%>%<iv%>:bin RegIntransVozActivaSinL ;
 bin%<v%>%<tv%>:bin%>s RegIntransDvT ;
 bin%<v%>%<tv%>:bi%>s RegIntransDvT ;
 bin%<v%>%<iv%>%<pss%>:bin%>s RegIntransDvTVozPasiva ;
 bin%<v%>%<iv%>%<aps%>:bin%>s RegIntransDvTVozAntipasiva ;
+
+bin%<v%>%<iv%>%<imp%>:xèen RegIntransVozActivaSinL ;
+
+
+! dance óokʼot
+óokʼot%<v%>%<iv%>:óokʼot RegIntransVozActivaSinL ;
+óokʼot%<v%>%<tv%>:óokʼot%>t RegIntransDvT ;
+óokʼot%<v%>%<iv%>%<pss%>:óokʼot%>t IrregularTransVozPasiva ;
 
 ! descend
 éem%<v%>%<iv%>:éem RegIntransVozActivaConL ;
@@ -805,10 +833,10 @@ míis%<v%>%<iv%>%<pss%>:míis%>t RegIntransDvTVozPasiva ;
 míis%<v%>%<iv%>%<aps%>:míis DeadjectivalVerbalEndings ;
 
 ! die
-kìim%<v%>%<iv%>:kìim RegIntransVozActivaConL ;
-kìim%<v%>%<tv%>:kìim%>s RegIntransDvT ;
-kìim%<v%>%<iv%>%<pss%>:kìim%>s IrregularTransVozPasiva ;
-kìim%<v%>%<iv%>%<aps%>:kìim%>s RegIntransDvTVozAntipasiva ;
+kíim%<v%>%<iv%>:kíim RegIntransVozActivaConL ;
+kíim%<v%>%<tv%>:kíim%>s RegIntransDvT ;
+kíim%<v%>%<iv%>%<pss%>:kíim%>s IrregularTransVozPasiva ;
+kíim%<v%>%<iv%>%<aps%>:kíim%>s RegIntransDvTVozAntipasiva ;
 
 ! wait
 páakʼ%<v%>%<iv%>:páakʼ RegIntransVozActivaSinL ;
@@ -962,10 +990,15 @@ ichkíil%<v%>%<iv%>%<pss%>:ichkíil%>t RegIntransDvTVozPasiva ;
 ichkíil%<v%>%<iv%>%<aps%>:ichkíil%>t RegIntransDvTVozAntipasiva ;
 
 ! raise up/ascend
-líik%<v%>%<iv%>:líik RegIntransVozActivaConL ;
-líik%<v%>%<tv%>:líik%>s RegIntransDvT ;
-líik%<v%>%<iv%>%<pss%>:líik%>s RegIntransDvTVozPasiva ;
-líik%<v%>%<iv%>%<aps%>:líik%>s RegIntransDvTVozAntipasiva ;
+líik%<v%>%<iv%>:líik RegIntransVozActivaConL ; ! Dir/LR
+líik%<v%>%<tv%>:líik%>s RegIntransDvT ; ! Dir/LR
+líik%<v%>%<iv%>%<pss%>:líik%>s RegIntransDvTVozPasiva ; ! Dir/LR
+líik%<v%>%<iv%>%<aps%>:líik%>s RegIntransDvTVozAntipasiva ; ! Dir/LR
+
+líikʼ%<v%>%<iv%>:líikʼ RegIntransVozActivaConL ;
+líikʼ%<v%>%<tv%>:líikʼ%>s RegIntransDvT ;
+líikʼ%<v%>%<iv%>%<pss%>:líikʼ%>s RegIntransDvTVozPasiva ;
+líikʼ%<v%>%<iv%>%<aps%>:líikʼ%>s RegIntransDvTVozAntipasiva ;
 
 ! raise
 naʼak%<v%>%<iv%>:naʼak RegIntransVozActivaConL ;
@@ -1169,6 +1202,12 @@ lukʼ%<v%>%<iv%>%<aps%>:lùukʼ TransVozAntipasiva ;
 lukʼ%<v%>%<iv%>%<pss%>:luʼukʼ TransVozPasiva ;
 lukʼ%<v%>%<iv%>%<mv%>:lúukʼ TransVozMedia ;
 
+! Hit 
+lah%<v%>%<tv%>:lah TransVozActiva ;
+lah%<v%>%<iv%>%<aps%>:làah TransVozAntipasiva ;
+lah%<v%>%<iv%>%<pss%>:laʼah TransVozPasiva ;
+lah%<v%>%<iv%>%<mv%>:láah TransVozMedia ;
+
 ! Grab
 machʼ%<v%>%<tv%>:machʼ TransVozActiva ;
 machʼ%<v%>%<iv%>%<aps%>:màachʼ TransVozAntipasiva ;
@@ -1239,6 +1278,24 @@ pochʼ%<v%>%<tv%>:pochʼ TransVozActiva ;
 pochʼ%<v%>%<iv%>%<aps%>:pòochʼ TransVozAntipasiva ;
 pochʼ%<v%>%<iv%>%<pss%>:poʼochʼ TransVozPasiva ;
 pochʼ%<v%>%<iv%>%<mv%>:póochʼ TransVozMedia ;
+
+! presionar
+petsʼ%<v%>%<tv%>:petsʼ TransVozActiva ;
+petsʼ%<v%>%<iv%>%<aps%>:pèetsʼ TransVozAntipasiva ;
+petsʼ%<v%>%<iv%>%<pss%>:peʼetsʼ TransVozPasiva ;
+petsʼ%<v%>%<iv%>%<mv%>:péetsʼ TransVozMedia ;
+
+! Beat, flail
+puchʼ%<v%>%<tv%>:puchʼ TransVozActiva ;
+puchʼ%<v%>%<iv%>%<aps%>:pùuchʼ TransVozAntipasiva ;
+puchʼ%<v%>%<iv%>%<pss%>:puʼuchʼ TransVozPasiva ;
+puchʼ%<v%>%<iv%>%<mv%>:púuchʼ TransVozMedia ;
+
+! to beat by dropping/throwing multiple times (multiple objects)
+weʼeweʼekpuchʼ%<v%>%<tv%>:weʼeweʼekpuchʼ TransVozActiva ;
+weʼeweʼekpuchʼ%<v%>%<iv%>%<aps%>:weʼeweʼekpùuchʼ TransVozAntipasiva ;
+weʼeweʼekpuchʼ%<v%>%<iv%>%<pss%>:weʼeweʼekpuʼuchʼ TransVozPasiva ;
+weʼeweʼekpuchʼ%<v%>%<iv%>%<mv%>:weʼeweʼekpúuchʼ TransVozMedia ;
 
 ! soak
 sul%<v%>%<tv%>:sul TransVozActiva ;
@@ -1351,6 +1408,12 @@ xot%<v%>%<iv%>%<aps%>:xòot TransVozAntipasiva ;
 xot%<v%>%<iv%>%<pss%>:xoʼot TransVozPasiva ;
 xot%<v%>%<iv%>%<mv%>:xóot TransVozMedia ;
 
+! throw
+pul%<v%>%<tv%>:pul TransVozActiva ;
+pul%<v%>%<iv%>%<aps%>:pùul TransVozAntipasiva ;
+pul%<v%>%<iv%>%<pss%>:puʼul TransVozPasiva ;
+pul%<v%>%<iv%>%<mv%>:púul TransVozMedia ;
+
 ! Slice
 xotʼ%<v%>%<tv%>:xotʼ TransVozActiva ;
 xotʼ%<v%>%<iv%>%<aps%>:xòotʼ TransVozAntipasiva ;
@@ -1374,6 +1437,9 @@ yàan%<v%>%<iv%>:yaan IntransitiveSetB ; ! existir
 
 LEXICON IrregularTransVerb
 
+púut%<v%>%<tv%>:púut TransVozActiva ;
+púut%<v%>%<tv%>:púut TransVozAntipasiva ;
+púut%<v%>%<tv%>:púut IrregularTransVozPasiva ;
 ! to know (conocer)
 kʼahóol%<v%>%<tv%>:kʼahóol TransitiveSetB ;
 kʼahóol%<v%>%<tv%>:kʼahóo%{l%}%>t RegIntransDvT ;
@@ -1414,6 +1480,11 @@ aʼal%<v%>%<iv%>%<pss%>:aʼal IrregularTransVozPasiva ;
 kʼáat%<v%>%<tv%>:kʼáat TransVozActiva ;
 kʼáat%<v%>%<iv%>%<aps%>:kʼáat TransVozAntipasiva ;
 kʼáat%<v%>%<iv%>%<pss%>:kʼeáat TransVozPasiva ;
+
+! Lend
+páay%<v%>%<tv%>:páay TransVozActiva ;
+páay%<v%>%<iv%>%<aps%>:páay TransVozAntipasiva ;
+páay%<v%>%<iv%>%<pss%>:páay IrregularTransVozPasiva ;
 
 
 LEXICON PositionalInflections
@@ -1577,6 +1648,9 @@ LEXICON Interjections
 haah%<intj%>:haah # ;
 haah%<intj%>:hàah # ;
 
+eh%<intj%>:eh # ;
+heyin%<intj%>:heyiiin # ;
+
 aah%<intj%>:aah # ;
 eeh%<intj%>:eeh # ;
 máasima%<intj%>:máasima # ; ! verdad?
@@ -1586,20 +1660,43 @@ ay%<intj%>:ay # ;
 
 
 LEXICON Adjectives
-pochon%<adj%>%<barb%>:pochon AdjectivalEndings ;
+
+! heavy
+al%<adj%>:al AdjectivalEndings ;
+
+! small
+mehen%<adj%>:mehen AdjectivalEndings ;
+mehen%<v%>:mehen DeadjectivalVerbalEndings ; ! shrink
+mehentak%<adj%>:mehentak AdjectivalEndings ;
+
+pochón%<adj%>%<barb%>:pochon AdjectivalEndings ; ! Dir/LR
 pochón%<adj%>%<barb%>:pochón AdjectivalEndings ;
+
+! strong
+kʼaʼam%<adj%>:kʼaʼam AdjectivalEndings ;
+kʼaʼam%<v%>:kʼaʼam DeadjectivalVerbalEndings ;
+
 
 takʼan%<adj%>:takʼan AdjectivalEndings ;
 takʼan%<v%>:takʼan DeadjectivalVerbalEndings ;
 
+! old
+úuchben%<adj%>:úuchben AdjectivalEndings ;
+úuchben%<v%>:úuchben DeadjectivalVerbalEndings ;
 
 ! good
 maʼalob%<adj%>:maʼalob AdjectivalEndings ;
 maʼalob%<v%>:maʼalob DeadjectivalVerbalEndings ;
 
+! soaked
+tsʼáamal%<adj%>:tsʼáamal AdjectivalEndings ; 
 
 ! feliz
 kiʼimak%<adj%>:kiʼimak AdjectivalEndings ;
+
+! poor
+óotsil%<adj%>:óotsil AdjectivalEndings ;
+óotsil%<v%>:óotsil DeadjectivalVerbalEndings ;
 
 ! sick
 kohaʼan%<adj%>:kohaʼan AdjectivalEndings ;

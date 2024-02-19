@@ -7,8 +7,12 @@ LIST N = n ;
 LIST V = v ;
 LIST PRO = pron ;
 
+LIST Intr = iv ;
+LIST Trans = tv ;
+
 LIST Subj = subj ;
 LIST Perf = pfv ;
+LIST Impv = ipfv ;
 
 LIST SSg1 = s_sg1 ;
 LIST SSg2 = s_sg2 ;
@@ -56,6 +60,8 @@ SET 2Pl = SPl2 | Px2Pl ;
 SECTION
 
 REMOVE Poss IF (0 Poss OR Agr) (1C V) ;
+
+REMOVE Intr + Impv IF (NOT -1 PRO) ;
 
 SELECT Perf IF (-1/* Perf) ;
 
